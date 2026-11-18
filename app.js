@@ -32,6 +32,7 @@ function render() {
   $("#tabbar").innerHTML = `<i class="blob" id="tabBlob"></i>` + TABS.map(([k, e, t]) => `<a href="#${k}" data-k="${k}"><b>${e}</b><span>${t}</span></a>`).join("");
   wireGlass(); onScroll();
 }
+const ytId = u => (u.match(/(?:youtu\.be\/|[?&]v=)([\w-]{11})/) || [])[1];
 function unitSection(k, u, sem, si) {
   return `<section class="unit tone-dark" id="${k}" data-tab="${si ? "u3" : "u1"}" data-unit="${k}" style="--bg:${UNIT_BG[k]}">
     ${MESH(["rgba(255,255,255,.35)", "rgba(255,255,255,.18)", "rgba(0,0,0,.25)"])}
@@ -48,7 +49,9 @@ function unitSection(k, u, sem, si) {
     <p class="u-h"><span class="u-h-i">🎮</span> Play the games</p>
     <div class="panel glass clear"><div class="acts">${u.aktivitas.map(a => `<button class="act" onclick="openAct('${a.id}', this)"><span class="i">${a.ic}</span><span><b>${a.t}</b><small>${a.note || ""}</small></span>${best[a.id] != null ? `<span class="best">⭐ ${best[a.id]}</span>` : ""}</button>`).join("")}</div></div>
     <div class="u-row"><button class="cta" onclick="openMateri('${k}', this)">Read the Summary →</button></div>
-    <div class="u-row vids"><span class="lbl">▶ Watch the videos</span>${u.video.concat(u.inspirasi || []).map(([t, url]) => `<a class="chip glass clear" href="${url}" target="_blank" rel="noopener">▶ ${t}</a>`).join("")}</div>
+    <p class="u-h"><span class="u-h-i">🎬</span> Watch the videos</p>
+    <div class="vgrid">${u.video.map(([t, url], i) => { const id = ytId(url); return `<a class="vcard" href="${url}" target="_blank" rel="noopener"><span class="vthumb">${id ? `<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()">` : ""}<i class="vplay">▶</i><em class="vep">EP ${i + 1}</em></span><b>${t}</b></a>`; }).join("")}</div>
+    ${(u.inspirasi || []).length ? `<div class="u-row vmore"><span class="lbl">More to explore</span>${u.inspirasi.map(([t, url]) => `<a class="chip glass clear" href="${url}" target="_blank" rel="noopener">▶ ${t}</a>`).join("")}</div>` : ""}
   </section>`;
 }
 
