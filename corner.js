@@ -343,7 +343,7 @@ function viewDev() {
         <button class="btn alt" id="snd"></button></div></div>
     <div class="col"><div class="pane"><h5>Capaian Pembelajaran (CP)</h5><p>${CP[uk]}</p>
       <h5 style="margin-top:18px">Tujuan Pembelajaran (TP)</h5><table class="info">${Object.entries(D.tp).map(([k, t]) => `<tr><td>TP ${k}</td><td>${t}</td></tr>`).join("")}</table>
-      <h5 style="margin-top:18px">Note</h5><p class="small">The worksheets follow the newest LKPD and RPM files (RPPM riil Taksonomi Bloom): ${esc(D.src)}. Answers are saved only on the student's device.</p></div></div>
+      <h5 style="margin-top:18px">Note</h5><p class="small">Answers are saved only on the student's device.</p></div></div>
   </div>`;
 }
 function wireDev() {

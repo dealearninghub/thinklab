@@ -1,6 +1,5 @@
 // =====================================================================
 //  LKPD DATA (Lembar Kerja Peserta Didik) per pertemuan, Unit 1-4.
-//  Sumber: Drive "TP 2026 2027 HANG JEBAT > RPPM riil Taksonomi bloom" (versi terbaru tiap TP).
 //
 //  Cara membaca:
 //   O(soal)            = jawaban bebas (diperiksa guru)
@@ -68,7 +67,6 @@ const SELF = ["I understand", "I partly understand", "I need help"];
 const LKPD = {
   // ================================================================ UNIT 1
   u1: {
-    src: "unit 1/LKPD UNIT 1 · LKPD 1-6 (PDF) · LKPD Pertemuan 3-4 · Worksheet 11 August (P5-6)",
     tp: {
       "1.1": "Identify the structure (orientation, complication, resolution) and features of an environmental legend, understand nature words, and find the main idea with note-taking.",
       "1.2": "Analyse action verbs, the simple past tense and sequence words in environmental narrative texts.",
@@ -314,7 +312,6 @@ const LKPD = {
 
   // ================================================================ UNIT 2
   u2: {
-    src: "unit 2/FIXXXXX/versi bdr fix: TP 2.1 (19 Okt), FIX BGT TP 2.2 (28 Okt) + Kunci Jawaban, new_7nov TP 2.3 (7 Nov), FIX BGT TP 2.4 (28 Okt)",
     tp: {
       "2.1": "Identify the structure and understand the story elements (characters, setting, internal and external conflict, resolution) and the main character's change in a fairy tale, connected to teenagers' search for identity.",
       "2.2": "Understand fantastic beings / well-being words and analyse noun phrases, adverbs, clauses, reduced adjective clauses and reported speech.",
@@ -493,7 +490,6 @@ const LKPD = {
 
   // ================================================================ UNIT 3
   u3: {
-    src: "unit 3_new/LKPD_TP3.1_Pertemuan35-38, LKPD_TP3.2_Pertemuan39-42, LKPD_TP3.3_Pertemuan43-44 · RPM_TP3.4_Pertemuan45-50",
     tp: {
       "3.1": "Identify the structure (thesis, arguments, reiteration) of an analytical exposition and understand words about school environmental problems, linked to the real question \"Why are our classrooms so hot?\" at SMA Negeri 1 Batam.",
       "3.2": "Analyse the simple present, data sentences, causal connectors (because of, due to, so, therefore, as a result) and Claim-Evidence-Reasoning, using temperature data we collected ourselves.",
@@ -759,7 +755,6 @@ const LKPD = {
 
   // ================================================================ UNIT 4
   u4: {
-    src: "unit 4_new/LKPD_TP4.1_Pertemuan53-56, LKPD_TP4.2_Pertemuan57-60, LKPD_TP4.3_Pertemuan61-62 · RPM_TP4.4_Pertemuan63-68",
     tp: {
       "4.1": "Identify the structure (thesis, arguments, recommendation) of a hortatory exposition and understand words, adjectives and verbs about healthy habits, linked to real canteen habits at SMA Negeri 1 Batam.",
       "4.2": "Analyse modals (should, must, ought to, need to), imperatives, \"It is recommended that\" and persuasion (logos, pathos, ethos), and write advice from our own survey and trial data.",
