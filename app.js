@@ -46,6 +46,8 @@ function unitSection(k, u, sem, si) {
       <span class="cc-body"><em class="cc-badge">Start here</em><b class="cc-name">${CORNER_NAME[k].split(" ").slice(1).join(" ")}</b><small class="cc-sub">Theory · Steps · Simulation · LKPD</small><span class="cc-desc">Your main lab for this unit: learn the theory, practice step by step, and finish your worksheets.</span></span>
       <span class="cc-go">Enter the Corner →</span>
     </a>
+    ${((LAB.slides || {})[k] || []).length ? `<p class="u-h"><span class="u-h-i">📊</span> Slides</p>
+    <div class="sgrid">${LAB.slides[k].map(([tp, t, file, n], i) => `<a class="scard c${i % 4}" href="${file}" target="_blank" rel="noopener"><span class="s-top"><em>${tp}</em><i>SLIDES</i></span><b>${t}</b><small>${n} slides · PDF</small><span class="s-go">Open slides ↗</span></a>`).join("")}</div>` : ""}
     <p class="u-h"><span class="u-h-i">🎮</span> Play the games</p>
     <div class="panel glass clear"><div class="acts">${u.aktivitas.map(a => `<button class="act" onclick="openAct('${a.id}', this)"><span class="i">${a.ic}</span><span><b>${a.t}</b><small>${a.note || ""}</small></span>${best[a.id] != null ? `<span class="best">⭐ ${best[a.id]}</span>` : ""}</button>`).join("")}</div></div>
     <div class="u-row"><button class="cta" onclick="openMateri('${k}', this)">Read the Summary →</button></div>

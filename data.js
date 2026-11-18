@@ -23,6 +23,25 @@ const LAB = {
   ],
   // Unit yang disembunyikan dari murid. Kosongkan jadi [] atau hapus "u3", "u4" untuk menampilkannya lagi.
   sembunyi: ["u3", "u4"],
+  // Slide materi (PDF) per unit. Format: ["kode TP", "judul", "file PDF di folder slides/", jumlah slide]
+  slides: {
+    u1: [["TP 1.2", "The Legend Toolkit", "slides/unit1-tp1-2-legend-toolkit.pdf", 16]],
+    u2: [
+      ["TP 2.1", "Story Structure & Elements", "slides/unit2-tp2-1.pdf", 18],
+      ["TP 2.2", "Language Features", "slides/unit2-tp2-2.pdf", 21],
+      ["TP 2.3", "Project Day: Motion Comic", "slides/unit2-tp2-3.pdf", 20]
+    ],
+    u3: [
+      ["TP 3.1", "Why Are Our Classrooms So Hot?", "slides/unit3-tp3-1.pdf", 35],
+      ["TP 3.2", "Let the Data Speak for You", "slides/unit3-tp3-2.pdf", 29],
+      ["TP 3.3", "Is This Argument Strong Enough?", "slides/unit3-tp3-3.pdf", 19]
+    ],
+    u4: [
+      ["TP 4.1", "Why Should We Live Healthy?", "slides/unit4-tp4-1.pdf", 27],
+      ["TP 4.2", "The Language of Advice and Action", "slides/unit4-tp4-2.pdf", 23],
+      ["TP 4.3", "Is Our Idea Realistic Enough?", "slides/unit4-tp4-3.pdf", 13]
+    ]
+  },
   semester: [
     { nama: "Semester 1", sub: "Stories: legends and fairy tales", units: ["u1", "u2"] },
     { nama: "Semester 2", sub: "Opinion texts: analytical and hortatory exposition", units: ["u3", "u4"] }
