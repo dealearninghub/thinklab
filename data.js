@@ -25,7 +25,11 @@ const LAB = {
   sembunyi: ["u3", "u4"],
   // Slide materi (PDF) per unit. Format: ["kode TP", "judul", "file PDF di folder slides/", jumlah slide]
   slides: {
-    u1: [["TP 1.2", "The Legend Toolkit", "slides/unit1-tp1-2-legend-toolkit.pdf", 16]],
+    u1: [
+      ["TP 1.1", "The Legend Detectives", "slides/Materi Siswa Unit 1 - TP 1.1 The Legend Detectives.pdf", 10],
+      ["TP 1.2", "The Legend Toolkit", "slides/Materi Siswa Unit 1 - TP 1.2 The Legend Toolkit.pdf", 14],
+      ["TP 1.3", "Evaluate & Reflect", "slides/Materi Siswa Unit 1 - TP 1.3 Evaluate and Reflect.pdf", 6]
+    ],
     u2: [
       ["TP 2.1", "Story Structure & Elements", "slides/unit2-tp2-1.pdf", 18],
       ["TP 2.2", "Language Features", "slides/unit2-tp2-2.pdf", 21],
