@@ -45,7 +45,7 @@ function unitSection(k, u, sem, si) {
       <span class="cc-body"><em class="cc-badge">Start here</em><b class="cc-name">${CORNER_NAME[k].split(" ").slice(1).join(" ")}</b><small class="cc-sub">Theory · Steps · Simulation · LKPD</small><span class="cc-desc">Your main lab for this unit: learn the theory, practice step by step, and finish your worksheets.</span></span>
       <span class="cc-go">Enter the Corner →</span>
     </a>
-    <p class="u-h">Games</p>
+    <p class="u-h"><span class="u-h-i">🎮</span> Play the games</p>
     <div class="panel glass clear"><div class="acts">${u.aktivitas.map(a => `<button class="act" onclick="openAct('${a.id}', this)"><span class="i">${a.ic}</span><span><b>${a.t}</b><small>${a.note || ""}</small></span>${best[a.id] != null ? `<span class="best">⭐ ${best[a.id]}</span>` : ""}</button>`).join("")}</div></div>
     <div class="u-row"><button class="cta" onclick="openMateri('${k}', this)">Read the Summary →</button></div>
     <div class="u-row vids"><span class="lbl">▶ Watch the videos</span>${u.video.concat(u.inspirasi || []).map(([t, url]) => `<a class="chip glass clear" href="${url}" target="_blank" rel="noopener">▶ ${t}</a>`).join("")}</div>

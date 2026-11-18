@@ -141,3 +141,31 @@ body{font-family:var(--font);color:var(--ink);background:radial-gradient(rgba(42
 .u-row.vids .lbl{font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);width:100%;margin:0 0 2px}
 .u-row.vids .chip{padding:6px 12px;font-size:13px;border-radius:999px;box-shadow:2px 2px 0 var(--ink)}
 @media (max-width:600px){.cc-go{width:100%;text-align:center}}
+
+/* ---------- games: big colorful tiles ---------- */
+.u-h{display:inline-block;font-family:var(--disp);font-weight:400;font-size:clamp(1.05rem,2.6vw,1.4rem);letter-spacing:.02em;text-transform:none;
+  background:var(--ink);color:var(--yellow);padding:7px 16px;border-radius:12px;margin:30px 0 14px;transform:rotate(-1.5deg)}
+.u-h-i{margin-right:4px}
+.unit .panel.glass{background:transparent;border:0;box-shadow:none;padding:0}
+.unit .acts{grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:18px}
+.unit .act{position:relative;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:8px;min-height:158px;padding:16px 16px 14px;
+  background:var(--cream2);border:3px solid var(--ink);border-radius:20px;box-shadow:var(--sh2);transform:rotate(var(--rot,0deg));
+  transition:transform .18s,box-shadow .18s,background .18s}
+.unit .act:nth-child(4n+1){--rot:-1deg}
+.unit .act:nth-child(4n+2){--rot:.8deg;background:#E4EEFA}
+.unit .act:nth-child(4n+3){--rot:-.6deg;background:#FDF0CF}
+.unit .act:nth-child(4n+4){--rot:1deg;background:#F8DDE6}
+.unit .act:hover{transform:translate(-3px,-5px) rotate(0deg);box-shadow:10px 10px 0 var(--ink);background:#fff}
+.unit .act:active{transform:translate(4px,4px);box-shadow:none}
+.unit .act .i{width:64px;height:64px;font-size:32px;border:3px solid var(--ink);box-shadow:3px 3px 0 var(--ink)}
+.unit .act b{font-size:17px;line-height:1.2;letter-spacing:0}
+.unit .act small{font-size:13px;line-height:1.3}
+.unit .act::after{content:"PLAY ▶";margin-top:auto;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.1em;background:var(--ink);color:var(--yellow);padding:5px 12px;border-radius:999px}
+.unit .act .best{position:absolute;top:10px;right:10px;margin:0}
+@media (max-width:600px){
+  .unit .acts{grid-template-columns:1fr 1fr;gap:12px}
+  .unit .act{min-height:150px;padding:12px}
+  .unit .act .i{width:52px;height:52px;font-size:26px}
+  .unit .act b{font-size:15px}
+  .unit .act small{font-size:12px}
+}
