@@ -79,7 +79,7 @@ function viewSheet(s) {
     </div>
     <div class="goal"><b>Learning objective</b><p>${s.goal}</p></div>
     ${s.parts.map(p => `<section class="part"><div class="part-h"><h4>${p.h}</h4>${p.time ? `<span>⏱ ${p.time}</span>` : ""}</div>
-      ${p.items.map(renderItem).join("")}${p.key ? `<div class="key"><b>Answer guide</b>${p.key}</div>` : ""}</section>`).join("")}
+      ${p.items.map(renderItem).join("")}</section>`).join("")}
     <section class="part"><div class="part-h"><h4>Self-check</h4></div>
       <div class="self">${["I understand", "I partly understand", "I need help"].map(l => `<label><input type="radio" name="self" value="${l}" data-id="self-${l}"> ${l}</label>`).join("")}</div></section>
     <div class="actions">
@@ -122,19 +122,19 @@ function wireSheet(s) {
       el.classList.toggle("ok", good); el.classList.toggle("bad", !good);
       const f = el.parentElement.querySelector(".fb");
       if (f) {
-        const ans = el.dataset.auto ? showAns(JSON.parse(el.dataset.auto)[0]) : el.dataset.pick, why = f.dataset.why;
+        const why = f.dataset.why;
         const inTable = !!el.closest("td");
         f.className = "fb show " + (good ? "ok" : "bad");
-        f.innerHTML = good ? (inTable ? "✓" : "✓ Correct!" + (why ? " " + esc(why) : "")) : (inTable ? "→ " + esc(ans) : `✗ Not yet. Answer: <b>${esc(ans)}</b>${why ? "<br>" + esc(why) : ""}`);
+        f.innerHTML = good ? (inTable ? "✓" : "✓ Correct!" + (why ? " " + esc(why) : "")) : (inTable ? "✗" : "✗ Not yet. Check your answer and try again.");
       }
     });
     ws.classList.add("checked");
     const sc = $("#score");
     if (all) {
       const n = Math.round(ok / all * 100), cat = n >= 92 ? "A · Very Good" : n >= 84 ? "B · Good" : n >= 75 ? "C · Fair" : "D · Needs Improvement";
-      sc.innerHTML = `<span class="big">${n}</span><p><b>${ok} of ${all} correct</b> · ${cat}<br><small>Written answers are checked by your teacher. Read the answer guides above.</small></p>`;
+      sc.innerHTML = `<span class="big">${n}</span><p><b>${ok} of ${all} correct</b> · ${cat}<br><small>Written answers are checked by your teacher.</small></p>`;
       const best = load("lkpd-best", {}); best[`${uk}:${s.id}`] = Math.max(n, best[`${uk}:${s.id}`] || 0); save("lkpd-best", best);
-    } else sc.innerHTML = `<span class="big">✓</span><p><b>All answers here are your own ideas.</b><br><small>Read the answer guides above. Your teacher checks this worksheet.</small></p>`;
+    } else sc.innerHTML = `<span class="big">✓</span><p><b>All answers here are your own ideas.</b><br><small>Your teacher checks this worksheet.</small></p>`;
     sc.classList.add("show"); sc.scrollIntoView({ behavior: "smooth", block: "center" });
   };
   $("#bReset").onclick = () => {
@@ -310,8 +310,8 @@ function wireQuiz() {
     $("#qDone").textContent = `${done}/20`; $("#qOk").textContent = ok; $("#qPts").textContent = ok * 5;
     $("#qMain").innerHTML = `<div class="qhead"><small>QUESTION ${st.cur + 1} OF 20</small><span class="tag2">${st.cur < 10 ? K.groups[0][0].replace(/ \(.*/, "") : K.groups[1][0].replace(/ \(.*/, "")}</span></div>
       <h2 class="qq">${esc(q.q)}</h2>
-      <div class="opts">${q.o.map((o, i) => `<button data-i="${i}" class="${a == null ? "" : i === q.a ? "ok" : i === a ? "bad" : "dim"}" ${a != null ? "disabled" : ""}><span>${"ABCD"[i]}</span>${esc(o)}</button>`).join("")}</div>
-      ${a != null ? `<div class="expl ${a === q.a ? "ok" : "bad"}"><b>${a === q.a ? "✓ Correct!" : "✗ Not quite. The answer is " + "ABCD"[q.a] + "."}</b><small>EXPLANATION</small><p>${esc(q.why)}</p></div>` : ""}
+      <div class="opts">${q.o.map((o, i) => `<button data-i="${i}" class="${a == null ? "" : i === a ? (a === q.a ? "ok" : "bad") : "dim"}" ${a != null ? "disabled" : ""}><span>${"ABCD"[i]}</span>${esc(o)}</button>`).join("")}</div>
+      ${a != null ? (a === q.a ? `<div class="expl ok"><b>✓ Correct!</b><small>EXPLANATION</small><p>${esc(q.why)}</p></div>` : `<div class="expl bad"><b>✗ Not quite.</b><p>Review the Theory and Steps tabs, then use Try again to practice once more.</p></div>`) : ""}
       <div class="qnav"><button class="btn alt" id="qPrev" ${st.cur === 0 ? "disabled" : ""}>‹ Back</button><button class="btn u" id="qNext">${st.cur === 19 ? "See my score" : "Next ›"}</button></div>
       ${done === 20 ? `<div class="final"><b>${ok * 5}</b><span>${ok} of 20 correct · ${ok * 5 >= 92 ? "A · Very Good" : ok * 5 >= 84 ? "B · Good" : ok * 5 >= 75 ? "C · Fair" : "D · Needs Improvement"}</span></div>` : ""}`;
     document.querySelectorAll(".opts button").forEach(b => b.onclick = () => { st.ans[st.cur] = +b.dataset.i; beep(+b.dataset.i === q.a); save(QK, st); draw(); });
@@ -327,7 +327,7 @@ function printQuiz(st) {
   const w = window.open("", "_blank"); if (!w) return;
   w.document.write(`<title>${K.name} LKPD</title><body style="font-family:system-ui;padding:24px;max-width:760px;margin:auto"><h2>${K.name} · Unit LKPD</h2>
     <p>Name: <b>${esc(g.name || "")}</b> · Class: <b>${esc(g.kelas || "")}</b> · Date: <b>${esc(st.date || new Date().toISOString().slice(0, 10))}</b> · Score: <b>${ok * 5}</b> (${ok}/20)</p><ol>
-    ${K.quiz.map((q, n) => `<li style="margin-bottom:8px">${esc(q.q)}<br>My answer: <b>${st.ans[n] != null ? esc(q.o[st.ans[n]]) : "-"}</b> ${st.ans[n] == null ? "" : st.ans[n] === q.a ? "✓" : "✗ (answer: " + esc(q.o[q.a]) + ")"}</li>`).join("")}</ol></body>`);
+    ${K.quiz.map((q, n) => `<li style="margin-bottom:8px">${esc(q.q)}<br>My answer: <b>${st.ans[n] != null ? esc(q.o[st.ans[n]]) : "-"}</b> ${st.ans[n] == null ? "" : st.ans[n] === q.a ? "✓" : "✗"}</li>`).join("")}</ol></body>`);
   w.document.close(); w.focus(); w.print();
 }
 
