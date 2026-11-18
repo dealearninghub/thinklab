@@ -86,7 +86,6 @@ function viewSheet(s) {
       <button class="btn u" id="bCheck">✓ Check my answers</button>
       <button class="btn alt" id="bReset">↺ Try again</button>
       <button class="btn alt" id="bPrint">🖨 Print / Save PDF</button>
-      <span class="saved" id="saved">Saved on this device</span>
     </div>
     <div class="score" id="score"></div>
   </article>`;
@@ -107,7 +106,6 @@ function wireSheet(s) {
       else st[el.dataset.id] = el.type === "checkbox" ? el.checked : el.value;
       if (el.tagName === "TEXTAREA") grow(el);
       el.classList.remove("ok", "bad"); save(key, st);
-      $("#saved").textContent = "Saved ✓"; clearTimeout(on.t); on.t = setTimeout(() => $("#saved").textContent = "Saved on this device", 1200);
     };
     el.addEventListener(el.tagName === "SELECT" || el.type === "checkbox" || el.type === "radio" ? "change" : "input", on);
   });
