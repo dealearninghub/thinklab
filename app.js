@@ -39,10 +39,16 @@ function unitSection(k, u, sem, si) {
     <div class="u-top"><span class="u-emoji">${u.emoji}</span><span class="eyebrow" style="margin:0">Unit ${u.no} · ${u.jenis}</span></div>
     <h2 class="u-title">${u.judul}</h2>
     <p class="u-desk">${u.desk}</p>
-    <div class="u-tags">${u.tags.map(t => `<span class="glass clear">${t}</span>`).join("")}</div>
+    <p class="u-topics"><b>Topics</b> ${u.tags.join(" · ")}</p>
+    <a class="corner-card" href="corner.html?u=${+u.no}">
+      <span class="cc-ic">${CORNER_NAME[k].split(" ")[0]}</span>
+      <span class="cc-body"><em class="cc-badge">Start here</em><b class="cc-name">${CORNER_NAME[k].split(" ").slice(1).join(" ")}</b><small class="cc-sub">Theory · Steps · Simulation · LKPD</small><span class="cc-desc">Your main lab for this unit: learn the theory, practice step by step, and finish your worksheets.</span></span>
+      <span class="cc-go">Enter the Corner →</span>
+    </a>
+    <p class="u-h">Games</p>
     <div class="panel glass clear"><div class="acts">${u.aktivitas.map(a => `<button class="act" onclick="openAct('${a.id}', this)"><span class="i">${a.ic}</span><span><b>${a.t}</b><small>${a.note || ""}</small></span>${best[a.id] != null ? `<span class="best">⭐ ${best[a.id]}</span>` : ""}</button>`).join("")}</div></div>
-    <div class="u-row"><button class="cta" onclick="openMateri('${k}', this)">Read the Summary →</button><a class="cta" href="corner.html?u=${+u.no}" style="text-decoration:none">${CORNER_NAME[k]} →</a></div>
-    <div class="u-row"><span class="lbl">🎬 Video</span>${u.video.concat(u.inspirasi || []).map(([t, url]) => `<a class="chip glass clear" href="${url}" target="_blank" rel="noopener">▶ ${t}</a>`).join("")}</div>
+    <div class="u-row"><button class="cta" onclick="openMateri('${k}', this)">Read the Summary →</button></div>
+    <div class="u-row vids"><span class="lbl">▶ Watch the videos</span>${u.video.concat(u.inspirasi || []).map(([t, url]) => `<a class="chip glass clear" href="${url}" target="_blank" rel="noopener">▶ ${t}</a>`).join("")}</div>
   </section>`;
 }
 

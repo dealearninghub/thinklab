@@ -121,3 +121,23 @@ body{font-family:var(--font);color:var(--ink);background:radial-gradient(rgba(42
 
 @media (max-width:700px){.hero::after{height:40px}.u-emoji{width:54px;height:54px;font-size:28px}}
 .teacher-name{display:inline-block;align-self:flex-start;margin:-4px 0 18px;padding:6px 14px;border-radius:12px;background:var(--yellow);color:var(--ink);font-weight:800;font-size:1.1rem;border:3px solid var(--ink);box-shadow:var(--sh)}
+
+/* ---------- unit: Corner card is the main entry, videos are small chips ---------- */
+.u-topics{font-family:var(--mono);font-size:13px;color:var(--ink);margin:0 0 20px}
+.u-topics b{letter-spacing:.08em;text-transform:uppercase;margin-right:8px}
+.u-h{font-family:var(--mono);font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin:26px 0 8px}
+.corner-card{display:flex;align-items:center;gap:16px;flex-wrap:wrap;max-width:1080px;margin:0;padding:18px 20px;background:var(--ink);color:var(--cream2);
+  border:3px solid var(--ink);border-radius:22px;box-shadow:var(--sh2);text-decoration:none;transition:transform .15s,box-shadow .15s}
+.corner-card:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--ink)}
+.corner-card:active{transform:translate(4px,4px);box-shadow:none}
+.cc-ic{width:62px;height:62px;flex:none;border-radius:50%;display:grid;place-items:center;font-size:30px;background:var(--yellow);border:3px solid var(--cream2)}
+.cc-body{flex:1;min-width:220px;display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+.cc-badge{font-style:normal;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--red);color:#fff;padding:2px 8px;border-radius:6px}
+.cc-name{font-family:var(--disp);font-weight:400;font-size:clamp(1.3rem,3.4vw,2rem);color:#fff;line-height:1.1}
+.cc-sub{font-family:var(--mono);font-size:13px;color:var(--yellow)}
+.cc-desc{font-size:14px;line-height:1.45;color:var(--cream)}
+.cc-go{padding:12px 20px;border-radius:14px;background:var(--yellow);color:var(--ink);border:3px solid var(--cream2);font-weight:800;white-space:nowrap}
+.u-row.vids{margin-top:26px;padding-top:16px;border-top:3px dashed rgba(42,26,44,.55)}
+.u-row.vids .lbl{font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);width:100%;margin:0 0 2px}
+.u-row.vids .chip{padding:6px 12px;font-size:13px;border-radius:999px;box-shadow:2px 2px 0 var(--ink)}
+@media (max-width:600px){.cc-go{width:100%;text-align:center}}
