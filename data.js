@@ -64,12 +64,13 @@ const LAB = {
         <p><b>Vocabulary:</b> ecosystem, habitat, deforestation, pollution, flood, drought, biodiversity, sustainable.</p>`,
       aktivitas: [
         { id: "u1-asesmen", t: "Warm-up Quiz Unit 1", ic: "🧭", type: "quiz", note: "What do you know?", soal: [
-          ["A story about the origin of a place, usually with magical elements, is called a…", ["Fable", "Legend", "Biography", "News item"], 1],
-          ["Which word is the past form of \"go\"?", ["goed", "gone", "went", "going"], 2],
-          ["\"Once upon a time\" is usually found in the…", ["Orientation", "Complication", "Resolution", "Coda"], 0],
-          ["Cutting down forests on a large scale is called…", ["Pollution", "Deforestation", "Recycling", "Erosion"], 1],
-          ["What do you usually find at the end of a legend?", ["A list of materials", "A moral value", "A thesis statement", "A recommendation"], 1],
-          ["Choose the sequence word:", ["beautiful", "forest", "afterwards", "angry"], 2]
+          ["Our slides say a legend usually explains…", ["what happened in the news today", "how a place, an animal or a natural thing came to be", "how to make something step by step", "why the government made a new rule"], 1],
+          ["Which part of a legend introduces the characters, the setting and the background?", ["Orientation", "Complication", "Resolution", "Moral value"], 0],
+          ["In The Legend of Telaga Lestari, the villagers cut down many trees. This is called…", ["conservation", "extinction", "ecosystem", "deforestation"], 3],
+          ["Which sentence is in the simple past tense?", ["The villagers are apologizing and working.", "The villagers will apologize and work.", "The villagers apologized and worked together.", "The villagers apologize and work together."], 2],
+          ["Which pair shows an irregular verb from the Legend Toolkit?", ["believe → believed", "come → came", "protect → protected", "watch → watched"], 1],
+          ["Which sequence word marks a surprise in a story?", ["Suddenly", "First", "Then", "Finally"], 0],
+          ["To find the main idea, we ask WHO or WHAT, WHAT HAPPENED, and…", ["where is the nearest lake", "when was the story written", "why is the story magical", "what was the result"], 3]
         ]},
         { id: "u1-sort", t: "Lab Story Structure", ic: "🧩", type: "sort", note: "Put the story in order", intro: "Put the parts of \"The Legend of Telaga Lestari\" in the right order.", items: [
           "Orientation — Long ago, a small village stood near a green forest. The villagers lived happily and took care of the trees.",
@@ -129,11 +130,13 @@ const LAB = {
         <h3>Language Features</h3><ul><li><b>Noun phrase</b>: a brave young princess</li><li><b>Adverbs</b>: quickly, bravely, suddenly</li><li><b>Reduced adjective clause</b>: the girl <i>(who was) sitting</i> by the window → the girl sitting by the window</li><li><b>Reported speech</b>: "I am lost," she said. → She said that she was lost.</li></ul>`,
       aktivitas: [
         { id: "u2-asesmen", t: "Warm-up Quiz Unit 2", ic: "🧭", type: "quiz", note: "What do you know?", soal: [
-          ["A conflict that happens inside a character's mind is called…", ["External conflict", "Internal conflict", "Setting", "Orientation"], 1],
-          ["\"A brave young princess\" is an example of a…", ["Verb phrase", "Noun phrase", "Adverb", "Conjunction"], 1],
-          ["Which word is an adverb?", ["happy", "happiness", "happily", "happier"], 2],
-          ["The part of a story that tells the lesson learned is the…", ["Coda", "Orientation", "Complication", "Title"], 0],
-          ["Fairy tales usually contain…", ["statistics", "magical elements", "instructions", "news reports"], 1]
+          ["In The Mirror of Selara, what is Kirana's biggest problem?", ["She loses her best friends in a big storm.", "She doubts herself and feels unsure of who she is.", "She cannot find the way home from the forest.", "A wicked spirit takes all the villagers away."], 1],
+          ["Which part is optional and closes the story by showing how the character changed?", ["Re-orientation (coda)", "Orientation", "Complication", "Resolution"], 0],
+          ["In The Filter That Failed, which sentence shows an external conflict?", ["He believes his ideas are silly.", "He feels he is not smart enough.", "He whispers that he is bad at science.", "His filter fails in front of the judges."], 3],
+          ["Which one is a noun phrase with the head noun \"mirror\"?", ["at the edge of an old forest", "unsure of who she really was", "an ancient, magical mirror", "clever and kind"], 2],
+          ["In \"One evening, Kirana followed the fireflies,\" the words \"One evening\" tell us…", ["why it happened", "when it happened", "where it happened", "how it happened"], 1],
+          ["\"I am ready,\" Kirana said. Which is the correct reported speech? Kirana said that she…", ["was ready.", "is ready.", "were ready.", "has been ready."], 0],
+          ["Reduce this clause: Nadia, who was a quiet girl from class XI, joined the team.", ["Nadia, who a quiet girl from class XI, joined the team.", "Nadia, was a quiet girl from class XI, joined the team.", "Nadia, a quiet girl was from class XI, joined the team.", "Nadia, a quiet girl from class XI, joined the team."], 3]
         ]},
         { id: "u2-classify", t: "Lab Conflict Detector", ic: "🧠", type: "classify", note: "Inner or outer?", intro: "Is the conflict internal or external?", groups: ["Internal Conflict", "External Conflict"], items: [
           ["Mira is afraid she is not good enough to join the team.", 0], ["Leo cannot decide whether to tell the truth.", 0], ["The prince doubts his own courage.", 0],
@@ -195,11 +198,13 @@ const LAB = {
         <h3>Language Features</h3><ul><li>Simple present tense: Trees <b>absorb</b> carbon dioxide.</li><li>Causal conjunctions: <b>because, due to, therefore, thus, as a result</b></li><li>Academic vocabulary: biodiversity, sustainability, ecosystem, emission</li></ul>`,
       aktivitas: [
         { id: "u3-asesmen", t: "Warm-up Quiz Unit 3", ic: "🧭", type: "quiz", note: "What do you know?", soal: [
-          ["An analytical exposition aims to…", ["entertain readers", "persuade readers that an issue is important", "retell events", "describe a place"], 1],
-          ["The first part of an analytical exposition is the…", ["Thesis", "Reiteration", "Orientation", "Recommendation"], 0],
-          ["Which tense is mostly used?", ["Simple past", "Simple present", "Past perfect", "Future"], 1],
-          ["\"Therefore\" shows…", ["a result", "a time", "a place", "a comparison"], 0],
-          ["Biodiversity means…", ["the variety of living things", "a type of pollution", "a big city", "a recycling machine"], 0]
+          ["The three parts of an analytical exposition are…", ["title, body, ending", "thesis, arguments, reiteration", "orientation, complication, resolution", "thesis, arguments, recommendation"], 1],
+          ["Our slide says: \"A feeling is a start. A number is evidence.\" What does it mean?", ["A measurement is stronger proof than \"I feel hot.\"", "Numbers are always more fun than feelings.", "Feelings are wrong and we must never use them.", "Only teachers are allowed to measure the heat."], 0],
+          ["Which tense do we use for facts, and which for our own measurements?", ["facts: simple past; measurements: simple present", "facts: future; measurements: simple present", "facts and measurements: present perfect", "facts: simple present; measurements: simple past"], 3],
+          ["Complete the sentence: The temperature ___ from 28°C to 35°C.", ["was rised", "rise", "rose", "rised"], 2],
+          ["Sunlight comes straight into the room. ___, the classroom gets very hot.", ["In addition", "As a result", "In contrast", "For example"], 1],
+          ["Which sentence is evidence for the claim \"The window makes the room hotter\"?", ["At 13:00 the area near the window was 35°C.", "Everyone knows that windows are bad.", "I am sure curtains fix every hot room.", "Obviously, the sun is the only problem."], 0],
+          ["Which phrase is a biased phrase that we should change?", ["The data shows that…", "The measurements suggest that…", "Many students say that…", "Everyone knows that…"], 3]
         ]},
         { id: "u3-sort", t: "Lab Text Structure", ic: "🧩", type: "sort", note: "Build the text", intro: "Put the paragraphs in the right order.", items: [
           "Thesis — Protecting the environment around our school is very important for everyone.",
@@ -253,11 +258,13 @@ const LAB = {
         <h3>Language Features</h3><ul><li>Modals: <b>should, must, need to, ought to</b></li><li>Persuasive phrases: <b>Let's…, It is important to…</b></li><li>Health vocabulary: hydration, nutrition, balanced diet, exercise, sleep, stress</li></ul>`,
       aktivitas: [
         { id: "u4-asesmen", t: "Warm-up Quiz Unit 4", ic: "🧭", type: "quiz", note: "What do you know?", soal: [
-          ["A hortatory exposition ends with a…", ["Reiteration", "Recommendation", "Resolution", "Coda"], 1],
-          ["Choose the modal for advice.", ["should", "did", "was", "has"], 0],
-          ["\"Drink 8 glasses of water a day\" is about…", ["hydration", "pollution", "transportation", "education"], 0],
-          ["A hortatory text tries to…", ["persuade readers to do something", "tell a fairy tale", "describe a person", "report news"], 0],
-          ["\"Let's exercise every morning!\" is a(n)…", ["recommendation", "orientation", "complication", "thesis"], 0]
+          ["The three parts of a hortatory exposition are…", ["title, list, conclusion", "thesis, arguments, recommendation", "thesis, arguments, reiteration", "orientation, complication, resolution"], 1],
+          ["One drink has 24 g of sugar. The daily limit is 50 g. What percent of the limit is that?", ["48%", "24%", "52%", "12%"], 0],
+          ["Buying a sweet drink every break is a ___. (something you do regularly, almost without thinking)", ["label", "choice", "snack", "habit"], 3],
+          ["Which sentence with a modal is correct?", ["Students must wears shoes.", "Students musts wear shoes.", "Students must wear shoes.", "Students must to wear shoes."], 2],
+          ["Complete the formal recommendation: It is recommended that the canteen ___ fresh fruit.", ["to sell", "sell", "sells", "selling"], 1],
+          ["Which sentence is an imperative that fits a poster?", ["Read the label!", "Students should read the label.", "The label is on the cup.", "Why is the label there?"], 0],
+          ["Which recommendation is more realistic for our school?", ["The canteen should stop selling all fried food tomorrow.", "Students must never buy sweet drinks again.", "The school should close the canteen.", "The canteen should sell one fruit option every day."], 3]
         ]},
         { id: "u4-classify", t: "Lab Logos · Pathos · Ethos", ic: "🎯", type: "classify", note: "Spot the strategy", intro: "Which strategy does each sentence use?", groups: ["Logos (facts)", "Pathos (feelings)", "Ethos (trust)"], items: [
           ["Research shows that 30 minutes of exercise lowers stress by 25%.", 0], ["Teenagers who sleep 8 hours score higher on tests.", 0],
