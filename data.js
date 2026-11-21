@@ -11,15 +11,15 @@ const LAB = {
   judul: "Think Lab",
   tagline: "Welcome to Think Lab! This is your space to read stories, share your ideas, and think in English. Watch the videos, play the games, and finish the LKPD at your own pace. Stay curious and keep thinking!",
   heroLinks: [
-    { t: "📘 Grammar Corner", url: "grammar.html" },
-    { t: "🎬 Get Motivated", url: yt("motivational video for students learning english") },
-    { t: "❓ Why Learn English?", url: yt("why learn english importance for students") },
-    { t: "🎵 Learn With Songs", url: yt("english songs with lyrics for learning") },
-    { t: "🗣️ Speaking Practice", url: yt("english speaking practice for high school students") }
+    { t: "Grammar Corner", url: "grammar.html" },
+    { t: "Get Motivated", url: yt("motivational video for students learning english") },
+    { t: "Why Learn English?", url: yt("why learn english importance for students") },
+    { t: "Learn With Songs", url: yt("english songs with lyrics for learning") },
+    { t: "Speaking Practice", url: yt("english speaking practice for high school students") }
   ],
   driveLinks: [
-    { t: "📁 Semester 1 Files", url: "#" },
-    { t: "📁 Semester 2 Files", url: "#" }
+    { t: "Semester 1 Files", url: "#" },
+    { t: "Semester 2 Files", url: "#" }
   ],
   // Unit yang disembunyikan dari murid. Kosongkan jadi [] atau hapus "u3", "u4" untuk menampilkannya lagi.
   sembunyi: ["u3", "u4"],
@@ -53,7 +53,7 @@ const LAB = {
   units: {
     // ------------------------------------------------------------- UNIT 1
     u1: {
-      no: "01", judul: "Are We Connected to Nature?", jenis: "Narrative Text · Legend", warna: "#2f9e44", emoji: "🌿",
+      no: "01", judul: "Are We Connected to Nature?", jenis: "Narrative Text · Legend", warna: "#2f9e44", emoji: "",
       desk: "Learn how a legend is built, nature words, the simple past, action verbs, and sequence words. Project: a picture story poster.",
       tags: ["Legend", "Simple Past", "Sequence Words", "Poster Project"],
       materi: `
@@ -63,7 +63,7 @@ const LAB = {
         <h3>Language Features</h3><ul><li><b>Simple past tense</b>: lived, cried, became, went</li><li><b>Action verbs</b>: cut, ran, planted, destroyed</li><li><b>Sequence words</b>: once upon a time, one day, then, after that, finally</li></ul>
         <p><b>Vocabulary:</b> ecosystem, habitat, deforestation, pollution, flood, drought, biodiversity, sustainable.</p>`,
       aktivitas: [
-        { id: "u1-asesmen", t: "Warm-up Quiz Unit 1", ic: "🧭", type: "quiz", note: "What do you know?", soal: [
+        { id: "u1-asesmen", t: "Warm-up Quiz Unit 1", ic: "", type: "quiz", note: "What do you know?", soal: [
           ["What kind of text is a legend?", ["A text that sells a product to buyers", "A narrative text that explains the origin of something", "A text that gives steps to make something", "A text that reports an event of today"], 1],
           ["What is the generic structure of a legend?", ["Orientation, complication, resolution", "Thesis, arguments, reiteration", "Goal, materials, steps", "Title, list, conclusion"], 0],
           ["Which language feature is mostly used in a legend?", ["Imperative sentences", "Simple present tense for facts", "Modal verbs for advice", "Action verbs in the simple past tense"], 3],
@@ -71,22 +71,22 @@ const LAB = {
           ["Which words help us show the order of events in a legend?", ["Greeting words (hello, thanks)", "Sequence words (first, then, finally)", "Modal verbs (should, must)", "Question words (who, what)"], 1],
           ["Which topic is the theme of Unit 1?", ["Nature and the environment", "Robots and technology", "Fashion and shopping", "Sports and games"], 0]
         ]},
-        { id: "u1-sort", t: "Lab Story Structure", ic: "🧩", type: "sort", note: "Put the story in order", intro: "Put the parts of \"The Legend of Telaga Lestari\" in the right order.", items: [
+        { id: "u1-sort", t: "Lab Story Structure", ic: "", type: "sort", note: "Put the story in order", intro: "Put the parts of \"The Legend of Telaga Lestari\" in the right order.", items: [
           "Orientation — Long ago, a small village stood near a green forest. The villagers lived happily and took care of the trees.",
           "Complication — One day, greedy people came and cut down the trees. The river dried up and the animals lost their homes.",
           "Complication — A great drought hit the village. The people cried and prayed for water.",
           "Resolution — A kind girl planted seeds every day. Finally, rain fell and a clear lake appeared where she cried.",
           "Re-orientation — The people named it Telaga Lestari and promised to protect nature forever."
         ]},
-        { id: "u1-fill", t: "Lab Past Tense Builder", ic: "🔨", type: "fill", note: "Type the past form", intro: "Write the past form of the verb in brackets.", soal: [
+        { id: "u1-fill", t: "Lab Past Tense Builder", ic: "", type: "fill", note: "Type the past form", intro: "Write the past form of the verb in brackets.", soal: [
           ["The villagers (live) ___ near the forest.", "lived"], ["One day, a big storm (come) ___.", "came"], ["The old man (cut) ___ the tallest tree.", "cut"],
           ["The girl (cry) ___ all night.", "cried"], ["The water (become) ___ a lake.", "became"], ["They (plant) ___ new trees.", "planted"],
           ["The animals (run) ___ away from the fire.", "ran"], ["The king (find) ___ a magic stone.", "found"]
         ]},
-        { id: "u1-classify", t: "Lab Word Explorers", ic: "🔤", type: "classify", note: "Sort the words", intro: "Put each word in the right group.", groups: ["Action Verb", "Sequence Word", "Environment Noun"], items: [
+        { id: "u1-classify", t: "Lab Word Explorers", ic: "", type: "classify", note: "Sort the words", intro: "Put each word in the right group.", groups: ["Action Verb", "Sequence Word", "Environment Noun"], items: [
           ["planted", 0], ["destroyed", 0], ["ran", 0], ["first", 1], ["after that", 1], ["finally", 1], ["habitat", 2], ["drought", 2], ["ecosystem", 2]
         ]},
-        { id: "u1-game", t: "English Master Game · Unit 1", ic: "🎮", type: "game", note: "Answer 8 questions to win", soal: [
+        { id: "u1-game", t: "English Master Game · Unit 1", ic: "", type: "game", note: "Answer 8 questions to win", soal: [
           ["Which part introduces the characters?", ["Orientation", "Complication", "Resolution", "Coda"], 0],
           ["The past form of \"see\" is…", ["seed", "saw", "seen", "sees"], 1],
           ["\"The river dried up and the fish died.\" This is part of the…", ["Orientation", "Complication", "Coda", "Title"], 1],
@@ -96,7 +96,7 @@ const LAB = {
           ["The moral value of a legend about cutting trees is probably…", ["Trees are useless", "We must protect nature", "Rivers are dangerous", "Money is everything"], 1],
           ["Which is NOT a characteristic of a legend?", ["Magical elements", "Real setting", "Moral value", "Statistical data"], 3]
         ]},
-        { id: "u1-latihan", t: "Practice Unit 1", ic: "📝", type: "quiz", note: "Mixed questions", soal: [
+        { id: "u1-latihan", t: "Practice Unit 1", ic: "", type: "quiz", note: "Mixed questions", soal: [
           ["Which one is NOT a characteristic of a legend?", ["It delivers a moral value or lesson", "It gives step-by-step instructions", "It explains the origin of something real", "It has magical or supernatural elements"], 1],
           ["Which signal words usually appear in the complication of a legend?", ["One day… / Suddenly… / However…", "Once upon a time… / A long time ago…", "Finally… / From that day on…", "There lived a… / In a village near…"], 0],
           ["What does the resolution of a legend usually explain?", ["Who the characters are and where they live", "What problem changes the calm situation", "What the writer thinks about an issue", "How the problem is solved and the origin of a real place or thing"], 3],
@@ -123,11 +123,11 @@ const LAB = {
         ["Indonesian Legends", "https://www.youtube.com/watch?v=kdKFvjumOOo"],
         ["Peatland Fires and Our Air", "https://www.youtube.com/watch?v=Nr_oH50-0wE"]
       ],
-      inspirasi: [["🎬 Mangrove Forests in Batam", yt("hutan mangrove batam")]]
+      inspirasi: [["Mangrove Forests in Batam", yt("hutan mangrove batam")]]
     },
     // ------------------------------------------------------------- UNIT 2
     u2: {
-      no: "02", judul: "Discovering Ourselves", jenis: "Narrative Text · Fairy Tale & Fantasy", warna: "#8e44ff", emoji: "🦄",
+      no: "02", judul: "Discovering Ourselves", jenis: "Narrative Text · Fairy Tale & Fantasy", warna: "#8e44ff", emoji: "",
       desk: "Learn story elements, inner and outer conflict, noun phrases, adverbs, and reported speech. Project: a motion comic.",
       tags: ["Fairy Tale", "Story Elements", "Reported Speech", "Motion Comic"],
       materi: `
@@ -135,7 +135,7 @@ const LAB = {
         <h3>Story Elements</h3><ul><li><b>Characters</b> (protagonist, antagonist)</li><li><b>Setting</b> (time & place)</li><li><b>Conflict</b>: <i>internal</i> (inside the character: fear, doubt) and <i>external</i> (with others, nature, society)</li><li><b>Resolution</b> & <b>Coda</b> (lesson learned)</li></ul>
         <h3>Language Features</h3><ul><li><b>Noun phrase</b>: a brave young princess</li><li><b>Adverbs</b>: quickly, bravely, suddenly</li><li><b>Reduced adjective clause</b>: the girl <i>(who was) sitting</i> by the window → the girl sitting by the window</li><li><b>Reported speech</b>: "I am lost," she said. → She said that she was lost.</li></ul>`,
       aktivitas: [
-        { id: "u2-asesmen", t: "Warm-up Quiz Unit 2", ic: "🧭", type: "quiz", note: "What do you know?", soal: [
+        { id: "u2-asesmen", t: "Warm-up Quiz Unit 2", ic: "", type: "quiz", note: "What do you know?", soal: [
           ["What does self-discovery mean in a story?", ["A character travels to another country", "A character wins a big competition", "A character learns something true about who they really are", "A character finds a hidden treasure"], 2],
           ["Which types of text do we learn in Unit 2?", ["Business letters", "Fairy tale and fantasy stories", "News reports", "Procedure texts"], 1],
           ["What is the generic structure of a fairy tale or fantasy story?", ["Orientation, complication, resolution, re-orientation", "Thesis, arguments, reiteration", "Thesis, arguments, recommendation", "Goal, materials, steps"], 0],
@@ -143,24 +143,24 @@ const LAB = {
           ["Which language features do we study in Unit 2?", ["Only greetings and invitations", "Only advice with should and must", "Noun phrases, adverbs, clauses and reported speech", "Only numbers, tables and graphs"], 2],
           ["Which is a main idea of a story about self-discovery?", ["The writer gives steps to cook a meal", "The character faces a problem and learns about themselves", "The character sells a product to customers", "The writer reports a news event"], 1]
         ]},
-        { id: "u2-classify", t: "Lab Conflict Detector", ic: "🧠", type: "classify", note: "Inner or outer?", intro: "Is the conflict internal or external?", groups: ["Internal Conflict", "External Conflict"], items: [
+        { id: "u2-classify", t: "Lab Conflict Detector", ic: "", type: "classify", note: "Inner or outer?", intro: "Is the conflict internal or external?", groups: ["Internal Conflict", "External Conflict"], items: [
           ["Mira is afraid she is not good enough to join the team.", 0], ["Leo cannot decide whether to tell the truth.", 0], ["The prince doubts his own courage.", 0],
           ["A dragon attacks the village.", 1], ["Two friends argue about a secret.", 1], ["A storm destroys the girl's house.", 1]
         ]},
-        { id: "u2-reported", t: "Lab Reported Speech", ic: "💬", type: "quiz", note: "Change what people said", soal: [
+        { id: "u2-reported", t: "Lab Reported Speech", ic: "", type: "quiz", note: "Change what people said", soal: [
           ["\"I am happy,\" said Ana. → Ana said that she ___ happy.", ["is", "was", "were", "be"], 1],
           ["\"I can fly,\" said the fairy. → The fairy said that she ___ fly.", ["can", "could", "will", "may"], 1],
           ["\"I will help you,\" he told me. → He told me that he ___ help me.", ["will", "would", "shall", "can"], 1],
           ["\"I lost my way,\" said the boy. → The boy said that he ___ his way.", ["lost", "had lost", "loses", "has lost"], 1],
           ["\"We are in the forest,\" they said. → They said that they ___ in the forest.", ["are", "were", "was", "be"], 1]
         ]},
-        { id: "u2-sort", t: "Lab Motion Comic Planner", ic: "🎞️", type: "sort", note: "Put the panels in order", intro: "Put the comic panels in the right order.", items: [
+        { id: "u2-sort", t: "Lab Motion Comic Planner", ic: "", type: "sort", note: "Put the panels in order", intro: "Put the comic panels in the right order.", items: [
           "Orientation — Rina, a shy girl, loved drawing but never showed anyone her work.",
           "Complication — Her class held an art competition, but she was afraid her friends would laugh at her.",
           "Resolution — Encouraged by her teacher, Rina joined and her drawing won second place.",
           "Coda — Rina learned that believing in herself was the first step to growing up."
         ]},
-        { id: "u2-game", t: "English Master Game · Unit 2", ic: "🎮", type: "game", note: "Answer 8 questions to win", soal: [
+        { id: "u2-game", t: "English Master Game · Unit 2", ic: "", type: "game", note: "Answer 8 questions to win", soal: [
           ["The main character of a story is called the…", ["antagonist", "protagonist", "narrator", "audience"], 1],
           ["\"Suddenly\" is a(n)…", ["noun", "adjective", "adverb", "verb"], 2],
           ["\"The boy wearing a red hat\" contains a…", ["reduced adjective clause", "question tag", "passive voice", "conditional"], 0],
@@ -170,7 +170,7 @@ const LAB = {
           ["A motion comic is…", ["a printed newspaper", "a digital comic with movement and sound", "a song", "a speech"], 1],
           ["Fairy tales often teach us about…", ["math formulas", "growing up and values", "weather reports", "recipes"], 1]
         ]},
-        { id: "u2-latihan", t: "Practice Unit 2", ic: "📝", type: "quiz", note: "Mixed questions", soal: [
+        { id: "u2-latihan", t: "Practice Unit 2", ic: "", type: "quiz", note: "Mixed questions", soal: [
           ["Which question does the complication of a story answer?", ["How is it solved?", "What did the character discover?", "What goes wrong?", "Who? Where? When?"], 2],
           ["Conflict in a story means…", ["the lesson at the end", "the problem the main character must face", "the place where the story happens", "the person who tells the story"], 1],
           ["The helper in a story is the character who…", ["guides or supports the main character", "creates the main problem", "tells the lesson to the readers", "writes the story"], 0],
@@ -197,11 +197,11 @@ const LAB = {
         ["How to Make a Motion Comic", "https://www.youtube.com/watch?v=n6_6CRypDls"],
         ["Short Animated Films", "https://www.youtube.com/watch?v=88aM_ywuNbA"]
       ],
-      inspirasi: [["🎬 Short Animated Films", yt("short animated film self discovery")]]
+      inspirasi: [["Short Animated Films", yt("short animated film self discovery")]]
     },
     // ------------------------------------------------------------- UNIT 3
     u3: {
-      no: "03", judul: "The Importance of Environmental Protection", jenis: "Analytical Exposition", warna: "#0a84ff", emoji: "🌍",
+      no: "03", judul: "The Importance of Environmental Protection", jenis: "Analytical Exposition", warna: "#0a84ff", emoji: "",
       desk: "Learn to give an opinion with reasons and data, the simple present, and words like because and therefore. Project: Green Street Journalism.",
       tags: ["Thesis", "CER", "Causal Conjunctions", "Green Journalism"],
       materi: `
@@ -210,7 +210,7 @@ const LAB = {
         <h3>Claim–Evidence–Reasoning (CER)</h3><ul><li><b>Claim</b>: Plastic waste harms marine life.</li><li><b>Evidence</b>: Millions of tons of plastic enter the ocean every year.</li><li><b>Reasoning</b>: Animals mistake plastic for food, so they get sick or die.</li></ul>
         <h3>Language Features</h3><ul><li>Simple present tense: Trees <b>absorb</b> carbon dioxide.</li><li>Causal conjunctions: <b>because, due to, therefore, thus, as a result</b></li><li>Academic vocabulary: biodiversity, sustainability, ecosystem, emission</li></ul>`,
       aktivitas: [
-        { id: "u3-asesmen", t: "Warm-up Quiz Unit 3", ic: "🧭", type: "quiz", note: "What do you know?", soal: [
+        { id: "u3-asesmen", t: "Warm-up Quiz Unit 3", ic: "", type: "quiz", note: "What do you know?", soal: [
           ["What is the purpose of an analytical exposition?", ["To entertain readers with a story", "To explain how to make something", "To describe a person or a place", "To persuade readers that something is important, with arguments"], 3],
           ["What is the generic structure of an analytical exposition?", ["Thesis, arguments, recommendation", "Goal, materials, steps", "Thesis, arguments, reiteration", "Orientation, complication, resolution"], 2],
           ["Which tense is mostly used in an analytical exposition?", ["Future tense only", "Simple present tense", "Simple past tense", "Past perfect tense"], 1],
@@ -218,19 +218,19 @@ const LAB = {
           ["A strong argument is supported by…", ["personal feelings only", "long and difficult words", "a funny title", "evidence such as data and facts"], 3],
           ["Which pattern helps us build an argument?", ["Goal, materials, steps", "Greeting, body, closing", "Claim, evidence, reasoning", "Orientation, complication, resolution"], 2]
         ]},
-        { id: "u3-sort", t: "Lab Text Structure", ic: "🧩", type: "sort", note: "Build the text", intro: "Put the paragraphs in the right order.", items: [
+        { id: "u3-sort", t: "Lab Text Structure", ic: "", type: "sort", note: "Build the text", intro: "Put the paragraphs in the right order.", items: [
           "Thesis — Protecting the environment around our school is very important for everyone.",
           "Argument 1 — Firstly, trees around the school reduce heat and make the air cleaner.",
           "Argument 2 — Moreover, a clean environment prevents diseases such as dengue fever.",
           "Argument 3 — Furthermore, a green school helps students feel calm and focus better.",
           "Reiteration — Therefore, it is clear that protecting our school environment is essential."
         ]},
-        { id: "u3-cer", t: "Lab CER Builder", ic: "🔬", type: "classify", note: "Claim, evidence, or reason?", intro: "Is it a Claim, Evidence, or Reasoning?", groups: ["Claim", "Evidence", "Reasoning"], items: [
+        { id: "u3-cer", t: "Lab CER Builder", ic: "", type: "classify", note: "Claim, evidence, or reason?", intro: "Is it a Claim, Evidence, or Reasoning?", groups: ["Claim", "Evidence", "Reasoning"], items: [
           ["Plastic bags should be reduced in our canteen.", 0], ["Mangrove forests must be protected.", 0],
           ["Our class survey found 200 plastic bags thrown away in one week.", 1], ["Data shows mangroves can store up to four times more carbon than other forests.", 1],
           ["Because plastic takes hundreds of years to decompose, it fills our land and sea.", 2], ["Since mangroves protect the coast from waves, losing them puts villages at risk.", 2]
         ]},
-        { id: "u3-game", t: "English Master Game · Unit 3", ic: "🎮", type: "game", note: "Answer 8 questions to win", soal: [
+        { id: "u3-game", t: "English Master Game · Unit 3", ic: "", type: "game", note: "Answer 8 questions to win", soal: [
           ["The last part of an analytical exposition is the…", ["Thesis", "Argument", "Reiteration", "Resolution"], 2],
           ["Choose the causal conjunction.", ["however", "due to", "although", "whereas"], 1],
           ["\"Trees absorb carbon dioxide.\" The verb is in…", ["simple present", "simple past", "future", "past perfect"], 0],
@@ -240,7 +240,7 @@ const LAB = {
           ["Sustainability means…", ["using resources so they last for the future", "wasting energy", "building more factories", "cutting trees"], 0],
           ["Green Street Journalism produces…", ["a song", "a written text and a campaign video", "a poem", "a comic"], 1]
         ]},
-        { id: "u3-latihan", t: "Practice Unit 3", ic: "📝", type: "quiz", note: "Mixed questions", soal: [
+        { id: "u3-latihan", t: "Practice Unit 3", ic: "", type: "quiz", note: "Mixed questions", soal: [
           ["What is the purpose of an analytical exposition?", ["To entertain readers with a story", "To explain how to make something", "To describe a person or a place", "To persuade readers that something is important, with arguments"], 3],
           ["What does the reiteration do in an analytical exposition?", ["It gives the evidence for each argument", "It tells readers what to do", "It restates the thesis and closes the text", "It introduces the topic and the writer's position"], 2],
           ["The thesis of an analytical exposition is…", ["the title of the text", "the writer's position on the issue", "a list of facts only", "the final recommendation"], 1],
@@ -264,11 +264,11 @@ const LAB = {
         ["Analytical Exposition Text", "https://www.youtube.com/watch?v=Z6n6WBr88eY"],
         ["Claim, Evidence, Reasoning (CER)", "https://www.youtube.com/watch?v=kcDudJcMbDw"]
       ],
-      inspirasi: [["🎬 Environmental Campaign Videos", yt("environmental campaign video students")]]
+      inspirasi: [["Environmental Campaign Videos", yt("environmental campaign video students")]]
     },
     // ------------------------------------------------------------- UNIT 4
     u4: {
-      no: "04", judul: "Why Should We Live a Healthy Lifestyle?", jenis: "Hortatory Exposition", warna: "#ff5e3a", emoji: "🍎",
+      no: "04", judul: "Why Should We Live a Healthy Lifestyle?", jenis: "Hortatory Exposition", warna: "#ff5e3a", emoji: "",
       desk: "Learn to persuade people, health words, modals like should and must, and logos, pathos, ethos. Project: a podcast.",
       tags: ["Recommendation", "Modals", "Logos-Pathos-Ethos", "Podcast"],
       materi: `
@@ -277,7 +277,7 @@ const LAB = {
         <h3>Persuasive Strategies</h3><ul><li><b>Logos</b> (logic & data): Studies show teenagers need 8–10 hours of sleep.</li><li><b>Pathos</b> (emotion): Imagine how your parents feel when you are sick.</li><li><b>Ethos</b> (credibility): According to the WHO / doctors…</li></ul>
         <h3>Language Features</h3><ul><li>Modals: <b>should, must, need to, ought to</b></li><li>Persuasive phrases: <b>Let's…, It is important to…</b></li><li>Health vocabulary: hydration, nutrition, balanced diet, exercise, sleep, stress</li></ul>`,
       aktivitas: [
-        { id: "u4-asesmen", t: "Warm-up Quiz Unit 4", ic: "🧭", type: "quiz", note: "What do you know?", soal: [
+        { id: "u4-asesmen", t: "Warm-up Quiz Unit 4", ic: "", type: "quiz", note: "What do you know?", soal: [
           ["What is the purpose of a hortatory exposition?", ["To persuade readers to do something", "To retell a past event", "To describe how something works", "To entertain with a magic story"], 0],
           ["What is the generic structure of a hortatory exposition?", ["Thesis, arguments, reiteration", "Orientation, complication, resolution", "Title, list, conclusion", "Thesis, arguments, recommendation"], 3],
           ["Which language features are common in a hortatory exposition?", ["Noun phrases for characters", "Reported speech for dialogue", "Modal verbs and imperatives", "Action verbs in the simple past"], 2],
@@ -285,18 +285,18 @@ const LAB = {
           ["Which persuasion strategies do we learn in Unit 4?", ["Logos, pathos and ethos", "Orientation, complication and resolution", "Past, present and future", "Character, setting and conflict"], 0],
           ["Which topic fits Unit 4?", ["Space travel", "Ancient kings", "Fashion trends", "A healthy lifestyle"], 3]
         ]},
-        { id: "u4-classify", t: "Lab Logos · Pathos · Ethos", ic: "🎯", type: "classify", note: "Spot the strategy", intro: "Which strategy does each sentence use?", groups: ["Logos (facts)", "Pathos (feelings)", "Ethos (trust)"], items: [
+        { id: "u4-classify", t: "Lab Logos · Pathos · Ethos", ic: "", type: "classify", note: "Spot the strategy", intro: "Which strategy does each sentence use?", groups: ["Logos (facts)", "Pathos (feelings)", "Ethos (trust)"], items: [
           ["Research shows that 30 minutes of exercise lowers stress by 25%.", 0], ["Teenagers who sleep 8 hours score higher on tests.", 0],
           ["Imagine how sad your family would be if you got sick.", 1], ["Don't let junk food steal your dreams!", 1],
           ["According to the World Health Organization, teens need daily physical activity.", 2], ["As a doctor with 20 years of experience, I recommend eating more vegetables.", 2]
         ]},
-        { id: "u4-sort", t: "Lab Podcast Script", ic: "🎙️", type: "sort", note: "Put the script in order", intro: "Put the podcast script in the right order.", items: [
+        { id: "u4-sort", t: "Lab Podcast Script", ic: "", type: "sort", note: "Put the script in order", intro: "Put the podcast script in the right order.", items: [
           "Thesis — Hi listeners! Today we believe that every student should drink enough water every day.",
           "Argument 1 — First, water keeps our brain focused. Studies show dehydration lowers concentration.",
           "Argument 2 — Second, water helps our body recover after sports and keeps our skin healthy.",
           "Recommendation — So, let's bring a water bottle to school and stop buying sugary drinks!"
         ]},
-        { id: "u4-game", t: "English Master Game · Unit 4", ic: "🎮", type: "game", note: "Answer 8 questions to win", soal: [
+        { id: "u4-game", t: "English Master Game · Unit 4", ic: "", type: "game", note: "Answer 8 questions to win", soal: [
           ["Analytical vs hortatory: hortatory adds a…", ["recommendation", "complication", "orientation", "coda"], 0],
           ["\"You ___ eat more fruit.\"", ["should", "did", "were", "has"], 0],
           ["\"According to doctors…\" uses the strategy of…", ["Logos", "Pathos", "Ethos", "Coda"], 2],
@@ -306,7 +306,7 @@ const LAB = {
           ["A good recommendation should be…", ["realistic and relevant", "impossible", "unrelated", "very long"], 0],
           ["A podcast is…", ["an audio program", "a printed poster", "a short story", "a math test"], 0]
         ]},
-        { id: "u4-latihan", t: "Practice Unit 4", ic: "📝", type: "quiz", note: "Mixed questions", soal: [
+        { id: "u4-latihan", t: "Practice Unit 4", ic: "", type: "quiz", note: "Mixed questions", soal: [
           ["What does the thesis of a hortatory exposition state?", ["The writer's position on the issue", "The steps to follow", "The characters of the story", "A list of materials"], 0],
           ["In a hortatory exposition, the arguments…", ["retell events in order", "describe the characters", "list the materials needed", "give reasons and evidence why action is needed"], 3],
           ["\"Concentrate\" means…", ["to cook food in hot oil", "to choose between two things", "to give all your attention to one thing", "to feel very sleepy"], 2],
@@ -331,7 +331,7 @@ const LAB = {
         ["Modal Verbs for Advice", "https://www.youtube.com/watch?v=MHhA8NjMmpk"],
         ["Logos, Pathos, Ethos", "https://www.youtube.com/watch?v=_1AE-bj-UQ0"]
       ],
-      inspirasi: [["🎬 Healthy Lifestyle for Teens", yt("healthy lifestyle tips for teenagers")]]
+      inspirasi: [["Healthy Lifestyle for Teens", yt("healthy lifestyle tips for teenagers")]]
     }
   }
 };
