@@ -6,13 +6,13 @@
    ========================================================= */
 :root,body.corner{
   --ink:#2B2523; --ink2:#6F625E;
-  --cream:#FBF6EE; --cream2:#FFFDF9;
-  --peach:#F4CBBB; --peach2:#F9E1D6; --peach3:#FCEFE8;
-  --mint:#CDE6DB; --mint2:#B4D9CA; --lilac:#DDD5EE;
+  --cream:#FFF9EE; --cream2:#FFFDF8;
+  --peach:#F9B8D0; --peach2:#FCD9E6; --peach3:#FEEEF4;
+  --mint:#CBE79A; --mint2:#AAD66A; --lilac:#F2E8CF;
   /* old palette names now point to the calm palette */
-  --blue:#3A322F; --yellow:#CDE6DB; --red:#B8604E; --wine:#7E4A40;
-  --ok:#B4D9CA; --bad:#B8604E;
-  --paper:var(--cream); --paper2:var(--cream2); --accent:#3A322F; --u:#3A322F;
+  --blue:#1F6B43; --yellow:#CBE79A; --red:#C23B7A; --wine:#A02E63;
+  --ok:#AAD66A; --bad:#C23B7A;
+  --paper:var(--cream); --paper2:var(--cream2); --accent:#1F6B43; --u:#1F6B43;
   --disp:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;
   --font:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --serif:"Instrument Serif",Georgia,serif;
@@ -25,7 +25,7 @@
   --search:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232B2523' stroke-width='2.6' stroke-linecap='round'%3E%3Ccircle cx='10.5' cy='10.5' r='6.5'/%3E%3Cpath d='M15.5 15.5L21 21'/%3E%3C/svg%3E");
 }
 @media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){--ink:#2B2523;--ink2:#6F625E;--paper:#FBF6EE;--paper2:#FFFDF9}
+  :root:not([data-theme="light"]){--ink:#2B2523;--ink2:#6F625E;--paper:#FFF9EE;--paper2:#FFFDF8}
 }
 html{background:var(--cream)}
 body,body.corner{
@@ -76,9 +76,9 @@ body.compact .tabbar a span{max-height:16px;opacity:1}
 /* ---------- sections ---------- */
 .hero{color:var(--ink);border-bottom:2.5px solid var(--ink);
   background:
-    radial-gradient(55% 60% at 88% 8%,rgba(244,203,187,.85),transparent 70%),
-    radial-gradient(50% 55% at 6% 96%,rgba(205,230,219,.9),transparent 70%),
-    linear-gradient(180deg,#FEF8F1,#FBEBE1)!important}
+    radial-gradient(55% 60% at 88% 8%,rgba(249,184,208,.8),transparent 70%),
+    radial-gradient(50% 55% at 6% 96%,rgba(203,231,154,.75),transparent 70%),
+    linear-gradient(180deg,#FFFAF0,#FDEFE6)!important}
 .hero .eyebrow{color:var(--ink)}
 .unit{color:var(--ink);border-top:0;border-bottom:2.5px solid var(--ink);min-height:0}
 #u1,#u3{background:radial-gradient(rgba(43,37,35,.055) 1.2px,transparent 1.4px) 0 0/22px 22px,var(--cream)!important}
