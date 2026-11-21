@@ -6,7 +6,7 @@
 const CORNER = {
   // ================================================================ UNIT 1
   u1: {
-    name: "Nature Corner", icon: "🌿", sub: "Narrative Text · Legend",
+    name: "Nature Corner", icon: "U1", sub: "Narrative Text · Legend",
     crumb: ["Narrative Text", "Legend", "Are We Connected to Nature?"],
     head: `Getting to Know <em>Legends</em> & <em>Nature</em>`,
     cards: [
@@ -69,7 +69,7 @@ const CORNER = {
 
   // ================================================================ UNIT 2
   u2: {
-    name: "Self-Discovery Corner", icon: "🪞", sub: "Narrative Text · Fairy Tale / Fantasy",
+    name: "Self-Discovery Corner", icon: "U2", sub: "Narrative Text · Fairy Tale / Fantasy",
     crumb: ["Narrative Text", "Fairy Tale / Fantasy", "Discovering Ourselves"],
     head: `Getting to Know <em>Fantasy Stories</em> & <em>Ourselves</em>`,
     cards: [
@@ -133,7 +133,7 @@ const CORNER = {
 
   // ================================================================ UNIT 3
   u3: {
-    name: "Green School Corner", icon: "🌍", sub: "Analytical Exposition",
+    name: "Green School Corner", icon: "U3", sub: "Analytical Exposition",
     crumb: ["Exposition", "Analytical Exposition", "The Importance of Environmental Protection"],
     head: `Getting to Know <em>Analytical Exposition</em> & <em>Our Data</em>`,
     cards: [
@@ -196,7 +196,7 @@ const CORNER = {
 
   // ================================================================ UNIT 4
   u4: {
-    name: "Healthy Life Corner", icon: "🥗", sub: "Hortatory Exposition",
+    name: "Healthy Life Corner", icon: "U4", sub: "Hortatory Exposition",
     crumb: ["Exposition", "Hortatory Exposition", "Why Should We Live a Healthy Lifestyle?"],
     head: `Getting to Know <em>Hortatory Exposition</em> & <em>Healthy Habits</em>`,
     cards: [
