@@ -136,7 +136,7 @@ const LAB = {
           ["Which one is a noun phrase?", ["slowly and carefully", "because she was afraid", "a quiet village near the forest", "clever and kind"], 2],
           ["Which adverb tells us HOW something happens (manner)?", ["always", "slowly", "yesterday", "there"], 1],
           ["\"I am tired,\" Dina said. Which is the correct reported speech? Dina said that she…", ["was tired.", "is tired.", "were tired.", "has been tired."], 0],
-          ["Reduce this clause: Nadia, who was a quiet girl from class XI, joined the team.", ["Nadia, who a quiet girl from class XI, joined the team.", "Nadia, was a quiet girl from class XI, joined the team.", "Nadia, a quiet girl was from class XI, joined the team.", "Nadia, a quiet girl from class XI, joined the team."], 3]
+          ["Reduce this clause: Rina, who was a kind girl from class XI, joined the club.", ["Rina, who a kind girl from class XI, joined the club.", "Rina, was a kind girl from class XI, joined the club.", "Rina, a kind girl was from class XI, joined the club.", "Rina, a kind girl from class XI, joined the club."], 3]
         ]},
         { id: "u2-classify", t: "Lab Conflict Detector", ic: "🧠", type: "classify", note: "Inner or outer?", intro: "Is the conflict internal or external?", groups: ["Internal Conflict", "External Conflict"], items: [
           ["Mira is afraid she is not good enough to join the team.", 0], ["Leo cannot decide whether to tell the truth.", 0], ["The prince doubts his own courage.", 0],
@@ -199,12 +199,12 @@ const LAB = {
       aktivitas: [
         { id: "u3-asesmen", t: "Warm-up Quiz Unit 3", ic: "🧭", type: "quiz", note: "What do you know?", soal: [
           ["The three parts of an analytical exposition are…", ["title, body, ending", "thesis, arguments, reiteration", "orientation, complication, resolution", "thesis, arguments, recommendation"], 1],
-          ["Why is a measurement (a number) better than saying \"I feel hot\"?", ["It is evidence that other people can check.", "Numbers are always more fun than feelings.", "Feelings are wrong and must never be used.", "Only teachers are allowed to measure heat."], 0],
-          ["Which tense do we use for facts, and which for our own measurements?", ["facts: simple past; measurements: simple present", "facts: future; measurements: simple present", "facts and measurements: present perfect", "facts: simple present; measurements: simple past"], 3],
-          ["Complete the sentence: The temperature ___ from 28°C to 35°C.", ["was rised", "rise", "rose", "rised"], 2],
-          ["Sunlight comes straight into the room. ___, the classroom gets very hot.", ["In addition", "As a result", "In contrast", "For example"], 1],
-          ["Which sentence is evidence for the claim \"The window makes the room hotter\"?", ["At 13:00 the area near the window was 35°C.", "Everyone knows that windows are bad.", "I am sure curtains fix every hot room.", "Obviously, the sun is the only problem."], 0],
-          ["Which phrase is a biased phrase that we should change?", ["The data shows that…", "The measurements suggest that…", "Many students say that…", "Everyone knows that…"], 3]
+          ["In the Claim-Evidence-Reasoning pattern, what does the reasoning do?", ["It explains why the evidence supports the claim.", "It gives a number or a fact as data.", "It states the main opinion of the writer.", "It says goodbye to the reader."], 0],
+          ["Which tense do we use for general facts, and which for results we measured in the past?", ["facts: simple past; results: simple present", "facts: future; results: simple present", "facts and results: present perfect", "facts: simple present; results: simple past"], 3],
+          ["Complete the sentence: The number ___ from 20 to 35.", ["was rised", "rise", "rose", "rised"], 2],
+          ["Plastic takes hundreds of years to decompose. ___, it fills our land and sea.", ["In addition", "Therefore", "In contrast", "For example"], 1],
+          ["Which phrase is a biased phrase that we should change?", ["Everyone knows that…", "The data shows that…", "The evidence suggests that…", "Many students say that…"], 0],
+          ["Which question helps us judge if an argument is strong?", ["Is the text very long?", "Does the writer use difficult words?", "Does the text have a colorful title?", "Is there data, and can we trust the source?"], 3]
         ]},
         { id: "u3-sort", t: "Lab Text Structure", ic: "🧩", type: "sort", note: "Build the text", intro: "Put the paragraphs in the right order.", items: [
           "Thesis — Protecting the environment around our school is very important for everyone.",
@@ -259,12 +259,12 @@ const LAB = {
       aktivitas: [
         { id: "u4-asesmen", t: "Warm-up Quiz Unit 4", ic: "🧭", type: "quiz", note: "What do you know?", soal: [
           ["The three parts of a hortatory exposition are…", ["title, list, conclusion", "thesis, arguments, recommendation", "thesis, arguments, reiteration", "orientation, complication, resolution"], 1],
-          ["One drink has 24 g of sugar. The daily limit is 50 g. What percent of the limit is that?", ["48%", "24%", "52%", "12%"], 0],
-          ["Buying a sweet drink every break is a ___. (something you do regularly, almost without thinking)", ["label", "choice", "snack", "habit"], 3],
-          ["Which sentence with a modal is correct?", ["Students must wears shoes.", "Students musts wear shoes.", "Students must wear shoes.", "Students must to wear shoes."], 2],
-          ["Complete the formal recommendation: It is recommended that the canteen ___ fresh fruit.", ["to sell", "sell", "sells", "selling"], 1],
-          ["Which sentence is an imperative that fits a poster?", ["Read the label!", "Students should read the label.", "The label is on the cup.", "Why is the label there?"], 0],
-          ["Which recommendation is more realistic for our school?", ["The canteen should stop selling all fried food tomorrow.", "Students must never buy sweet drinks again.", "The school should close the canteen.", "The canteen should sell one fruit option every day."], 3]
+          ["The word \"habit\" means…", ["something you do regularly, almost without thinking", "a small amount of food between meals", "the power that helps your body and brain work", "a piece of paper with information on a product"], 0],
+          ["Which sentence with a modal is correct?", ["Students must to wear shoes.", "Students must wears shoes.", "Students musts wear shoes.", "Students must wear shoes."], 3],
+          ["Complete the formal recommendation: It is recommended that students ___ eight hours every night.", ["sleeping", "to sleep", "sleep", "sleeps"], 2],
+          ["Which sentence is an imperative?", ["Do students drink water?", "Drink more water.", "Students should drink water.", "The water is cold."], 1],
+          ["Which persuasion strategy uses facts and data?", ["Logos", "Pathos", "Ethos", "Thesis"], 0],
+          ["Which one is NOT a question for testing a recommendation?", ["Is it realistic?", "Is it affordable?", "Is it effective?", "Is it colorful?"], 3]
         ]},
         { id: "u4-classify", t: "Lab Logos · Pathos · Ethos", ic: "🎯", type: "classify", note: "Spot the strategy", intro: "Which strategy does each sentence use?", groups: ["Logos (facts)", "Pathos (feelings)", "Ethos (trust)"], items: [
           ["Research shows that 30 minutes of exercise lowers stress by 25%.", 0], ["Teenagers who sleep 8 hours score higher on tests.", 0],
