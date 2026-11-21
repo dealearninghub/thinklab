@@ -64,13 +64,12 @@ const LAB = {
         <p><b>Vocabulary:</b> ecosystem, habitat, deforestation, pollution, flood, drought, biodiversity, sustainable.</p>`,
       aktivitas: [
         { id: "u1-asesmen", t: "Warm-up Quiz Unit 1", ic: "🧭", type: "quiz", note: "What do you know?", soal: [
-          ["A legend usually explains…", ["what happened in the news today", "how a place, an animal or a natural thing came to be", "how to make something step by step", "why the government made a new rule"], 1],
-          ["Which part of a legend introduces the characters, the setting and the background?", ["Orientation", "Complication", "Resolution", "Moral value"], 0],
-          ["Cutting down trees in a large area of forest is called…", ["conservation", "extinction", "ecosystem", "deforestation"], 3],
-          ["Which sentence is in the simple past tense?", ["The farmers are planting new trees.", "The farmers will plant new trees.", "The farmers planted new trees.", "The farmers plant new trees."], 2],
-          ["Which pair shows an irregular verb (V1 → V2)?", ["believe → believed", "come → came", "protect → protected", "watch → watched"], 1],
-          ["Which sequence word marks a surprise in a story?", ["Suddenly", "First", "Then", "Finally"], 0],
-          ["To find the main idea, we ask WHO or WHAT, WHAT HAPPENED, and…", ["where is the nearest lake", "when was the story written", "why is the story magical", "what was the result"], 3]
+          ["What kind of text is a legend?", ["A text that sells a product to buyers", "A narrative text that explains the origin of something", "A text that gives steps to make something", "A text that reports an event of today"], 1],
+          ["What is the generic structure of a legend?", ["Orientation, complication, resolution", "Thesis, arguments, reiteration", "Goal, materials, steps", "Title, list, conclusion"], 0],
+          ["Which language feature is mostly used in a legend?", ["Imperative sentences", "Simple present tense for facts", "Modal verbs for advice", "Action verbs in the simple past tense"], 3],
+          ["A legend usually delivers a…", ["product price", "news headline", "moral value or lesson", "list of materials"], 2],
+          ["Which words help us show the order of events in a legend?", ["Greeting words (hello, thanks)", "Sequence words (first, then, finally)", "Modal verbs (should, must)", "Question words (who, what)"], 1],
+          ["Which topic is the theme of Unit 1?", ["Nature and the environment", "Robots and technology", "Fashion and shopping", "Sports and games"], 0]
         ]},
         { id: "u1-sort", t: "Lab Story Structure", ic: "🧩", type: "sort", note: "Put the story in order", intro: "Put the parts of \"The Legend of Telaga Lestari\" in the right order.", items: [
           "Orientation — Long ago, a small village stood near a green forest. The villagers lived happily and took care of the trees.",
@@ -130,13 +129,12 @@ const LAB = {
         <h3>Language Features</h3><ul><li><b>Noun phrase</b>: a brave young princess</li><li><b>Adverbs</b>: quickly, bravely, suddenly</li><li><b>Reduced adjective clause</b>: the girl <i>(who was) sitting</i> by the window → the girl sitting by the window</li><li><b>Reported speech</b>: "I am lost," she said. → She said that she was lost.</li></ul>`,
       aktivitas: [
         { id: "u2-asesmen", t: "Warm-up Quiz Unit 2", ic: "🧭", type: "quiz", note: "What do you know?", soal: [
-          ["A problem that happens inside the main character's mind, such as fear or self-doubt, is called…", ["orientation", "internal conflict", "external conflict", "setting"], 1],
-          ["Which part is optional and closes the story by showing how the character changed?", ["Re-orientation (coda)", "Orientation", "Complication", "Resolution"], 0],
-          ["Which sentence shows an external conflict?", ["The character is afraid of failing.", "The character doubts her own ideas.", "The character thinks she is not good enough.", "A big storm destroys the main character's boat."], 3],
-          ["Which one is a noun phrase?", ["slowly and carefully", "because she was afraid", "a quiet village near the forest", "clever and kind"], 2],
-          ["Which adverb tells us HOW something happens (manner)?", ["always", "slowly", "yesterday", "there"], 1],
-          ["\"I am tired,\" Dina said. Which is the correct reported speech? Dina said that she…", ["was tired.", "is tired.", "were tired.", "has been tired."], 0],
-          ["Reduce this clause: Rina, who was a kind girl from class XI, joined the club.", ["Rina, who a kind girl from class XI, joined the club.", "Rina, was a kind girl from class XI, joined the club.", "Rina, a kind girl was from class XI, joined the club.", "Rina, a kind girl from class XI, joined the club."], 3]
+          ["What does self-discovery mean in a story?", ["A character travels to another country", "A character wins a big competition", "A character learns something true about who they really are", "A character finds a hidden treasure"], 2],
+          ["Which types of text do we learn in Unit 2?", ["Business letters", "Fairy tale and fantasy stories", "News reports", "Procedure texts"], 1],
+          ["What is the generic structure of a fairy tale or fantasy story?", ["Orientation, complication, resolution, re-orientation", "Thesis, arguments, reiteration", "Thesis, arguments, recommendation", "Goal, materials, steps"], 0],
+          ["Which are the story elements?", ["Claim, evidence, reasoning", "Thesis, argument, reiteration", "Goal, materials, steps", "Character, setting, conflict, resolution"], 3],
+          ["Which language features do we study in Unit 2?", ["Only greetings and invitations", "Only advice with should and must", "Noun phrases, adverbs, clauses and reported speech", "Only numbers, tables and graphs"], 2],
+          ["Which is a main idea of a story about self-discovery?", ["The writer gives steps to cook a meal", "The character faces a problem and learns about themselves", "The character sells a product to customers", "The writer reports a news event"], 1]
         ]},
         { id: "u2-classify", t: "Lab Conflict Detector", ic: "🧠", type: "classify", note: "Inner or outer?", intro: "Is the conflict internal or external?", groups: ["Internal Conflict", "External Conflict"], items: [
           ["Mira is afraid she is not good enough to join the team.", 0], ["Leo cannot decide whether to tell the truth.", 0], ["The prince doubts his own courage.", 0],
@@ -198,13 +196,12 @@ const LAB = {
         <h3>Language Features</h3><ul><li>Simple present tense: Trees <b>absorb</b> carbon dioxide.</li><li>Causal conjunctions: <b>because, due to, therefore, thus, as a result</b></li><li>Academic vocabulary: biodiversity, sustainability, ecosystem, emission</li></ul>`,
       aktivitas: [
         { id: "u3-asesmen", t: "Warm-up Quiz Unit 3", ic: "🧭", type: "quiz", note: "What do you know?", soal: [
-          ["The three parts of an analytical exposition are…", ["title, body, ending", "thesis, arguments, reiteration", "orientation, complication, resolution", "thesis, arguments, recommendation"], 1],
-          ["In the Claim-Evidence-Reasoning pattern, what does the reasoning do?", ["It explains why the evidence supports the claim.", "It gives a number or a fact as data.", "It states the main opinion of the writer.", "It says goodbye to the reader."], 0],
-          ["Which tense do we use for general facts, and which for results we measured in the past?", ["facts: simple past; results: simple present", "facts: future; results: simple present", "facts and results: present perfect", "facts: simple present; results: simple past"], 3],
-          ["Complete the sentence: The number ___ from 20 to 35.", ["was rised", "rise", "rose", "rised"], 2],
-          ["Plastic takes hundreds of years to decompose. ___, it fills our land and sea.", ["In addition", "Therefore", "In contrast", "For example"], 1],
-          ["Which phrase is a biased phrase that we should change?", ["Everyone knows that…", "The data shows that…", "The evidence suggests that…", "Many students say that…"], 0],
-          ["Which question helps us judge if an argument is strong?", ["Is the text very long?", "Does the writer use difficult words?", "Does the text have a colorful title?", "Is there data, and can we trust the source?"], 3]
+          ["What is the purpose of an analytical exposition?", ["To entertain readers with a story", "To explain how to make something", "To describe a person or a place", "To persuade readers that something is important, with arguments"], 3],
+          ["What is the generic structure of an analytical exposition?", ["Thesis, arguments, recommendation", "Goal, materials, steps", "Thesis, arguments, reiteration", "Orientation, complication, resolution"], 2],
+          ["Which tense is mostly used in an analytical exposition?", ["Future tense only", "Simple present tense", "Simple past tense", "Past perfect tense"], 1],
+          ["Which language feature shows cause and effect?", ["Causal connectors such as because and therefore", "Direct speech with quotation marks", "Imperatives such as read and drink", "Rhymes as in a poem"], 0],
+          ["A strong argument is supported by…", ["personal feelings only", "long and difficult words", "a funny title", "evidence such as data and facts"], 3],
+          ["Which pattern helps us build an argument?", ["Goal, materials, steps", "Greeting, body, closing", "Claim, evidence, reasoning", "Orientation, complication, resolution"], 2]
         ]},
         { id: "u3-sort", t: "Lab Text Structure", ic: "🧩", type: "sort", note: "Build the text", intro: "Put the paragraphs in the right order.", items: [
           "Thesis — Protecting the environment around our school is very important for everyone.",
@@ -258,13 +255,12 @@ const LAB = {
         <h3>Language Features</h3><ul><li>Modals: <b>should, must, need to, ought to</b></li><li>Persuasive phrases: <b>Let's…, It is important to…</b></li><li>Health vocabulary: hydration, nutrition, balanced diet, exercise, sleep, stress</li></ul>`,
       aktivitas: [
         { id: "u4-asesmen", t: "Warm-up Quiz Unit 4", ic: "🧭", type: "quiz", note: "What do you know?", soal: [
-          ["The three parts of a hortatory exposition are…", ["title, list, conclusion", "thesis, arguments, recommendation", "thesis, arguments, reiteration", "orientation, complication, resolution"], 1],
-          ["The word \"habit\" means…", ["something you do regularly, almost without thinking", "a small amount of food between meals", "the power that helps your body and brain work", "a piece of paper with information on a product"], 0],
-          ["Which sentence with a modal is correct?", ["Students must to wear shoes.", "Students must wears shoes.", "Students musts wear shoes.", "Students must wear shoes."], 3],
-          ["Complete the formal recommendation: It is recommended that students ___ eight hours every night.", ["sleeping", "to sleep", "sleep", "sleeps"], 2],
-          ["Which sentence is an imperative?", ["Do students drink water?", "Drink more water.", "Students should drink water.", "The water is cold."], 1],
-          ["Which persuasion strategy uses facts and data?", ["Logos", "Pathos", "Ethos", "Thesis"], 0],
-          ["Which one is NOT a question for testing a recommendation?", ["Is it realistic?", "Is it affordable?", "Is it effective?", "Is it colorful?"], 3]
+          ["What is the purpose of a hortatory exposition?", ["To persuade readers to do something", "To retell a past event", "To describe how something works", "To entertain with a magic story"], 0],
+          ["What is the generic structure of a hortatory exposition?", ["Thesis, arguments, reiteration", "Orientation, complication, resolution", "Title, list, conclusion", "Thesis, arguments, recommendation"], 3],
+          ["Which language features are common in a hortatory exposition?", ["Noun phrases for characters", "Reported speech for dialogue", "Modal verbs and imperatives", "Action verbs in the simple past"], 2],
+          ["What does the recommendation part do?", ["It gives the title of the text", "It tells readers what they should do", "It introduces the characters", "It retells a past event"], 1],
+          ["Which persuasion strategies do we learn in Unit 4?", ["Logos, pathos and ethos", "Orientation, complication and resolution", "Past, present and future", "Character, setting and conflict"], 0],
+          ["Which topic fits Unit 4?", ["Space travel", "Ancient kings", "Fashion trends", "A healthy lifestyle"], 3]
         ]},
         { id: "u4-classify", t: "Lab Logos · Pathos · Ethos", ic: "🎯", type: "classify", note: "Spot the strategy", intro: "Which strategy does each sentence use?", groups: ["Logos (facts)", "Pathos (feelings)", "Ethos (trust)"], items: [
           ["Research shows that 30 minutes of exercise lowers stress by 25%.", 0], ["Teenagers who sleep 8 hours score higher on tests.", 0],
