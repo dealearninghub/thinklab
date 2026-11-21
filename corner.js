@@ -16,7 +16,7 @@ const CP = {
   u4: "Pada akhir Fase F, murid memahami (C2) gagasan utama dan struktur generik (thesis-arguments-recommendation) teks eksposisi hortatori tentang pentingnya menjalani gaya hidup sehat; menganalisis (C4) unsur kebahasaan dan strategi persuasi (logos-pathos-ethos); mengevaluasi (C5) kelayakan rekomendasi dengan mengaitkannya pada kebiasaan hidup nyata siswa; serta mencipta (C6) teks eksposisi hortatori dalam bentuk podcast berisi ajakan (rekomendasi) yang didukung data, sesuai kompetensi CEFR Level B2."
 };
 const EVAL = { u1: "Meeting 17-18", u2: "Meeting 33-34", u3: "Meeting 51-52", u4: "Meeting 69-70" };
-const _OLD_TABS = [["theory", "<i>📘 </i>Theory"], ["steps", "<i>🧭 </i>Steps"], ["practice", "<i>🎮 </i>Practice"], ["ws", "<i>📝 </i>LKPD"], ["about", "<i>ℹ️ </i>About"]];
+const _OLD_TABS = [["theory", "<i></i>Theory"], ["steps", "<i></i>Steps"], ["practice", "<i></i>Practice"], ["ws", "<i></i>LKPD"], ["about", "<i></i>About"]];
 
 const uk0 = "u" + (Math.min(4, Math.max(1, +new URLSearchParams(location.search).get("u") || 1)));
 const uk = (LAB.sembunyi || []).includes(uk0) ? "u1" : uk0;
@@ -78,14 +78,14 @@ function viewSheet(s) {
       <label>Date<input class="in" type="date" data-id="date"></label>
     </div>
     <div class="goal"><b>Learning objective</b><p>${s.goal}</p></div>
-    ${s.parts.map(p => `<section class="part"><div class="part-h"><h4>${p.h}</h4>${p.time ? `<span>⏱ ${p.time}</span>` : ""}</div>
+    ${s.parts.map(p => `<section class="part"><div class="part-h"><h4>${p.h}</h4>${p.time ? `<span>${p.time}</span>` : ""}</div>
       ${p.items.map(renderItem).join("")}</section>`).join("")}
     <section class="part"><div class="part-h"><h4>Self-check</h4></div>
       <div class="self">${["I understand", "I partly understand", "I need help"].map(l => `<label><input type="radio" name="self" value="${l}" data-id="self-${l}"> ${l}</label>`).join("")}</div></section>
     <div class="actions">
       <button class="btn u" id="bCheck">✓ Check my answers</button>
       <button class="btn alt" id="bReset">↺ Try again</button>
-      <button class="btn alt" id="bPrint">🖨 Print / Save PDF</button>
+      <button class="btn alt" id="bPrint">Print / Save PDF</button>
     </div>
     <div class="score" id="score"></div>
   </article>`;
@@ -270,7 +270,7 @@ function drawSim() {
     $("#simOut").innerHTML = ps.map((p, i) => {
       const c = SIMST.pick[i], ok = c && c === parts[i];
       return `<div class="para ${c ? (ok ? "ok" : "bad") : ""}" data-c="${c || ""}"><span class="lab">${c ? P[c] + (ok ? " ✓" : " ✗") : "¶" + (i + 1) + " · ?"}</span><p>${esc(p)}</p></div>`;
-    }).join("") + (good === ps.length ? `<div class="win">🎉 Great! You found the structure: ${order.map(c => P[c]).join(" → ")}.</div>` : "");
+    }).join("") + (good === ps.length ? `<div class="win">Great! You found the structure: ${order.map(c => P[c]).join(" → ")}.</div>` : "");
   } else {
     $("#simCtrl").innerHTML = `<p class="hint">Switch on a feature to see it in the text.</p>` +
       K.sim.feats.map((f, i) => `<label class="feat"><input type="checkbox" data-i="${i}" ${SIMST.on[i] ? "checked" : ""}><i class="sw m${i}"></i><span>${f.k}</span><b>${ps.reduce((n, p) => n + count(p, f), 0)}</b></label>`).join("");
@@ -282,7 +282,7 @@ function drawSim() {
 
 // ---------- unit quiz (20 questions) ----------
 function pillsHTML(cur) {
-  return `<div class="pills"><a class="pill ${cur === "quiz" ? "on" : ""}" href="#quiz"><b>⚡ Unit LKPD</b><small>20 questions</small></a>${D.sheets.map(x => `<a class="pill ${x.id === cur ? "on" : ""}" href="#${x.id}"><b>${x.p}</b><small>${x.title}</small></a>`).join("")}</div>`;
+  return `<div class="pills"><a class="pill ${cur === "quiz" ? "on" : ""}" href="#quiz"><b>Unit LKPD</b><small>20 questions</small></a>${D.sheets.map(x => `<a class="pill ${x.id === cur ? "on" : ""}" href="#${x.id}"><b>${x.p}</b><small>${x.title}</small></a>`).join("")}</div>`;
 }
 const QK = "corner-quiz-" + uk;
 function viewQuiz() {
@@ -292,7 +292,7 @@ function viewQuiz() {
       <div class="qscore"><div><small>ANSWERED</small><b id="qDone">0/20</b></div><div><small>CORRECT</small><b id="qOk">0</b></div><div><small>SCORE</small><b id="qPts">0</b></div></div>
       ${K.groups.map(([g, a, b]) => `<h5>${g}</h5><div class="nums">${K.quiz.slice(a, b).map((_, j) => `<button data-n="${a + j}">${a + j + 1}</button>`).join("")}</div>`).join("")}
       <div class="legend"><span><i></i>Not yet</span><span><i class="ok"></i>Correct</span><span><i class="bad"></i>Wrong</span></div>
-      <div class="qbtns"><button class="btn alt" id="qReset">↺ Try again</button><button class="btn alt" id="qPrint">🖨 Print</button></div>
+      <div class="qbtns"><button class="btn alt" id="qReset">↺ Try again</button><button class="btn alt" id="qPrint">Print</button></div>
     </div>
     <div class="pane qmain" id="qMain"></div>
   </div>`;
@@ -345,7 +345,7 @@ function viewDev() {
   </div>`;
 }
 function wireDev() {
-  const b = $("#snd"); const t = () => b.textContent = `🔊 Sound effects: ${soundOn ? "ON" : "OFF"} (tap to change)`; t();
+  const b = $("#snd"); const t = () => b.textContent = `Sound effects: ${soundOn ? "ON" : "OFF"} (tap to change)`; t();
   b.onclick = () => { soundOn = !soundOn; save("corner-sound", soundOn); t(); beep(true); };
 }
 
