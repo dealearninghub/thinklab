@@ -290,6 +290,73 @@ body.compact .tabbar a span{max-height:16px;opacity:1}
 .vcard:nth-child(4n+3){--p:80%}
 .vcard:nth-child(4n){--p:40%}
 
+/* =========================================================
+   PALETTE: Raiz #552415 · Trama #A13413 · Barbante #FFE5BF · Afeto #960911 (dominant red) · Entremeio #55521F
+   ========================================================= */
+:root,body.corner{
+  --ink:#552415; --ink2:#7A4A3A;
+  --cream:#FFF8EE; --cream2:#FFFCF7;
+  --peach:#FFE5BF; --peach2:#FFEFD9; --peach3:#FFF6E8;
+  --mint:#DAD8A4; --mint2:#C4C17F; --lilac:#F3D4A8;
+  --blue:#55521F; --yellow:#FFE5BF; --red:#960911; --wine:#A13413;
+  --ok:#C9C98A; --bad:#960911;
+  --accent:#960911; --u:#960911;
+  --rust:#A13413; --olive:#55521F;
+  --dots:
+    radial-gradient(circle at 17px 50%,transparent 0 3.6px,#552415 3.6px 5.2px,transparent 5.6px),
+    radial-gradient(circle at 35px 50%,transparent 0 3.6px,#552415 3.6px 5.2px,transparent 5.6px),
+    radial-gradient(circle at 53px 50%,transparent 0 3.6px,#552415 3.6px 5.2px,transparent 5.6px);
+  --dots-c:
+    radial-gradient(circle at 17px 50%,transparent 0 3.6px,#FFE5BF 3.6px 5.2px,transparent 5.6px),
+    radial-gradient(circle at 35px 50%,transparent 0 3.6px,#FFE5BF 3.6px 5.2px,transparent 5.6px),
+    radial-gradient(circle at 53px 50%,transparent 0 3.6px,#FFE5BF 3.6px 5.2px,transparent 5.6px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--ink:#552415;--ink2:#7A4A3A;--paper:#FFF8EE;--paper2:#FFFCF7}
+}
+.hero{color:var(--peach);
+  background:
+    radial-gradient(60% 70% at 92% 0%,rgba(161,52,19,.8),transparent 70%),
+    radial-gradient(55% 60% at 0% 100%,rgba(85,36,21,.6),transparent 70%),
+    linear-gradient(180deg,#960911,#7C0710)!important}
+.hero .display{color:var(--peach)}
+.display em{background:linear-gradient(transparent 60%,var(--rust) 60% 90%,transparent 90%)}
+.hero .lede{color:#FFEBD0}
+.u-title,#u1 .u-title,#u2 .u-title,#u3 .u-title,#u4 .u-title{color:var(--red);text-shadow:3px 3px 0 var(--peach)}
+.plain h2{color:var(--red);text-shadow:3px 3px 0 var(--peach)}
+.blob,.on-light .blob{background:var(--red)}
+.seg a.on,.tabbar a.on{color:var(--peach)}
+.cta + .cta,#u1 .cta + .cta,#u2 .cta + .cta,#u3 .cta + .cta,#u4 .cta + .cta,.btn,.cc-go,.s-go{background:var(--red);color:var(--peach)}
+.teacher-name{background:var(--peach);color:var(--ink)}
+.corner-card::before{background-color:var(--red);background-image:var(--dots-c)}
+.cc-badge{background:var(--red);color:var(--peach)}
+.scard .s-top em{color:var(--red)}
+.sheet-head{background:var(--red)}
+.sheet-head::before{background-image:var(--dots-c)}
+.opt.wrong,.sort li.wrong,.cl.wrong,.fi.wrong,.nums button.bad,.opts button.bad span{background:#F2B49A}
+.logo{background:var(--red);color:var(--peach)}
+.tabs2 a.on,.units a.on{background:var(--red);color:var(--peach)}
+.corner .pill.on,.pills a.on{background:var(--red)!important;color:var(--peach)!important}
+.h-games{background:#F2B79A}
+.h-videos{background:var(--mint)}
+
+/* games: shake on hover */
+.unit .acts .act:nth-child(n){background:#FFF1E4}
+.unit .acts .act:nth-child(n)::after{background:var(--red);color:var(--peach)}
+.unit .acts .act:nth-child(n):hover{background:#FFF1E4;animation:buzz .32s linear infinite}
+.unit .acts .act:nth-child(n):hover::after{background:var(--rust)}
+@keyframes buzz{
+  0%,100%{transform:translate(-3px,-5px) rotate(0deg)}
+  20%{transform:translate(-5px,-4px) rotate(-1.3deg)}
+  40%{transform:translate(-1px,-6px) rotate(1.3deg)}
+  60%{transform:translate(-5px,-6px) rotate(-1deg)}
+  80%{transform:translate(-1px,-4px) rotate(1deg)}
+}
+
+/* videos: olive film header, red timeline */
+.vgrid .vcard:nth-child(n)::before{color:var(--peach);background:radial-gradient(circle at 17px 50%,var(--peach) 0 5px,transparent 5.6px),var(--olive)}
+.vgrid .vcard::after{background:linear-gradient(90deg,var(--red) var(--p,40%),var(--cream2) var(--p,40%))}
+
 @media (max-width:700px){
   .display{font-size:clamp(2.8rem,15vw,5rem)}
   .unit .act b{font-size:1.15rem}
