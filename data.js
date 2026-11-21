@@ -64,11 +64,11 @@ const LAB = {
         <p><b>Vocabulary:</b> ecosystem, habitat, deforestation, pollution, flood, drought, biodiversity, sustainable.</p>`,
       aktivitas: [
         { id: "u1-asesmen", t: "Warm-up Quiz Unit 1", ic: "🧭", type: "quiz", note: "What do you know?", soal: [
-          ["Our slides say a legend usually explains…", ["what happened in the news today", "how a place, an animal or a natural thing came to be", "how to make something step by step", "why the government made a new rule"], 1],
+          ["A legend usually explains…", ["what happened in the news today", "how a place, an animal or a natural thing came to be", "how to make something step by step", "why the government made a new rule"], 1],
           ["Which part of a legend introduces the characters, the setting and the background?", ["Orientation", "Complication", "Resolution", "Moral value"], 0],
-          ["In The Legend of Telaga Lestari, the villagers cut down many trees. This is called…", ["conservation", "extinction", "ecosystem", "deforestation"], 3],
-          ["Which sentence is in the simple past tense?", ["The villagers are apologizing and working.", "The villagers will apologize and work.", "The villagers apologized and worked together.", "The villagers apologize and work together."], 2],
-          ["Which pair shows an irregular verb from the Legend Toolkit?", ["believe → believed", "come → came", "protect → protected", "watch → watched"], 1],
+          ["Cutting down trees in a large area of forest is called…", ["conservation", "extinction", "ecosystem", "deforestation"], 3],
+          ["Which sentence is in the simple past tense?", ["The farmers are planting new trees.", "The farmers will plant new trees.", "The farmers planted new trees.", "The farmers plant new trees."], 2],
+          ["Which pair shows an irregular verb (V1 → V2)?", ["believe → believed", "come → came", "protect → protected", "watch → watched"], 1],
           ["Which sequence word marks a surprise in a story?", ["Suddenly", "First", "Then", "Finally"], 0],
           ["To find the main idea, we ask WHO or WHAT, WHAT HAPPENED, and…", ["where is the nearest lake", "when was the story written", "why is the story magical", "what was the result"], 3]
         ]},
@@ -130,12 +130,12 @@ const LAB = {
         <h3>Language Features</h3><ul><li><b>Noun phrase</b>: a brave young princess</li><li><b>Adverbs</b>: quickly, bravely, suddenly</li><li><b>Reduced adjective clause</b>: the girl <i>(who was) sitting</i> by the window → the girl sitting by the window</li><li><b>Reported speech</b>: "I am lost," she said. → She said that she was lost.</li></ul>`,
       aktivitas: [
         { id: "u2-asesmen", t: "Warm-up Quiz Unit 2", ic: "🧭", type: "quiz", note: "What do you know?", soal: [
-          ["In The Mirror of Selara, what is Kirana's biggest problem?", ["She loses her best friends in a big storm.", "She doubts herself and feels unsure of who she is.", "She cannot find the way home from the forest.", "A wicked spirit takes all the villagers away."], 1],
+          ["A problem that happens inside the main character's mind, such as fear or self-doubt, is called…", ["orientation", "internal conflict", "external conflict", "setting"], 1],
           ["Which part is optional and closes the story by showing how the character changed?", ["Re-orientation (coda)", "Orientation", "Complication", "Resolution"], 0],
-          ["In The Filter That Failed, which sentence shows an external conflict?", ["He believes his ideas are silly.", "He feels he is not smart enough.", "He whispers that he is bad at science.", "His filter fails in front of the judges."], 3],
-          ["Which one is a noun phrase with the head noun \"mirror\"?", ["at the edge of an old forest", "unsure of who she really was", "an ancient, magical mirror", "clever and kind"], 2],
-          ["In \"One evening, Kirana followed the fireflies,\" the words \"One evening\" tell us…", ["why it happened", "when it happened", "where it happened", "how it happened"], 1],
-          ["\"I am ready,\" Kirana said. Which is the correct reported speech? Kirana said that she…", ["was ready.", "is ready.", "were ready.", "has been ready."], 0],
+          ["Which sentence shows an external conflict?", ["The character is afraid of failing.", "The character doubts her own ideas.", "The character thinks she is not good enough.", "A big storm destroys the main character's boat."], 3],
+          ["Which one is a noun phrase?", ["slowly and carefully", "because she was afraid", "a quiet village near the forest", "clever and kind"], 2],
+          ["Which adverb tells us HOW something happens (manner)?", ["always", "slowly", "yesterday", "there"], 1],
+          ["\"I am tired,\" Dina said. Which is the correct reported speech? Dina said that she…", ["was tired.", "is tired.", "were tired.", "has been tired."], 0],
           ["Reduce this clause: Nadia, who was a quiet girl from class XI, joined the team.", ["Nadia, who a quiet girl from class XI, joined the team.", "Nadia, was a quiet girl from class XI, joined the team.", "Nadia, a quiet girl was from class XI, joined the team.", "Nadia, a quiet girl from class XI, joined the team."], 3]
         ]},
         { id: "u2-classify", t: "Lab Conflict Detector", ic: "🧠", type: "classify", note: "Inner or outer?", intro: "Is the conflict internal or external?", groups: ["Internal Conflict", "External Conflict"], items: [
@@ -199,7 +199,7 @@ const LAB = {
       aktivitas: [
         { id: "u3-asesmen", t: "Warm-up Quiz Unit 3", ic: "🧭", type: "quiz", note: "What do you know?", soal: [
           ["The three parts of an analytical exposition are…", ["title, body, ending", "thesis, arguments, reiteration", "orientation, complication, resolution", "thesis, arguments, recommendation"], 1],
-          ["Our slide says: \"A feeling is a start. A number is evidence.\" What does it mean?", ["A measurement is stronger proof than \"I feel hot.\"", "Numbers are always more fun than feelings.", "Feelings are wrong and we must never use them.", "Only teachers are allowed to measure the heat."], 0],
+          ["Why is a measurement (a number) better than saying \"I feel hot\"?", ["It is evidence that other people can check.", "Numbers are always more fun than feelings.", "Feelings are wrong and must never be used.", "Only teachers are allowed to measure heat."], 0],
           ["Which tense do we use for facts, and which for our own measurements?", ["facts: simple past; measurements: simple present", "facts: future; measurements: simple present", "facts and measurements: present perfect", "facts: simple present; measurements: simple past"], 3],
           ["Complete the sentence: The temperature ___ from 28°C to 35°C.", ["was rised", "rise", "rose", "rised"], 2],
           ["Sunlight comes straight into the room. ___, the classroom gets very hot.", ["In addition", "As a result", "In contrast", "For example"], 1],
