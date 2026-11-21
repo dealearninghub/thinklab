@@ -21,7 +21,7 @@ const TABS = TABS0.filter(t => vis(t[0]));
 function render() {
   $("#beranda").innerHTML = MESH(["#7b7cff", "#ff8cc6", "#ffc16b"]) + `
     <p class="eyebrow">Bahasa Inggris Tingkat Lanjut · Grade XI</p>
-    <h1 class="display">Welcome to<br>Think Lab</h1>
+    <h1 class="display">Welcome to<br><em>Think Lab</em></h1>
     <p class="teacher-name">${L.guru}</p>
     <p class="lede">${L.tagline}</p>
     <div class="chips">${L.heroLinks.concat(L.driveLinks.filter(d => d.url !== "#")).map(l => `<a class="chip glass clear" href="${l.url}"${/^https?:/.test(l.url) ? ' target="_blank" rel="noopener"' : ""}>${l.t}</a>`).join("")}</div>`;
