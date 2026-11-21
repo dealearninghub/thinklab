@@ -726,7 +726,7 @@ const LKPD = {
           { h: "Part A · Evaluate Our Arguments", time: "25 minutes", items: [
             T(["Argument", "Data enough?", "Source clear?", "No biased word?", "What we will improve"], [1, 2, 3].map(n => [`Argument ${n}`, S("", YN), S("", YN), S("", YN), _]))
           ] },
-          { h: "Part B · Peer Review: 2 Stars 1 Wish", time: "15 minutes", items: [T(["", ""], [["Group reviewed", _], ["⭐ Star 1", _], ["⭐ Star 2", _], ["🌠 Wish", _]])] },
+          { h: "Part B · Peer Review: 2 Stars 1 Wish", time: "15 minutes", items: [T(["", ""], [["Group reviewed", _], ["Star 1", _], ["Star 2", _], ["Wish", _]])] },
           { h: "Part C · Our Final Thesis", time: "10 minutes", items: [O("Write your final thesis after the feedback. What did you change, and why?", 3)] }
         ]
       },
