@@ -48,7 +48,7 @@ textarea.in{resize:vertical;min-height:46px;line-height:1.45}
 .box{border-radius:18px;padding:12px 16px;background:rgba(127,127,140,.09);font-size:14.5px;margin:0 0 12px}
 .read{border-radius:20px;margin:0 0 14px;background:rgba(127,127,140,.07);overflow:hidden}
 .read summary{cursor:pointer;padding:13px 18px;font-weight:700;list-style:none}
-.read summary::before{content:"📖 "}
+.read summary::before{content:""}
 .read summary::after{content:"Show";float:right;font-size:12px;font-weight:700;color:var(--u)}
 .read[open] summary::after{content:"Hide"}
 .read .txt{padding:0 18px 12px;font-size:15.5px;line-height:1.65}
