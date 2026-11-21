@@ -109,7 +109,12 @@ const LAB = {
         ["Main Idea", "https://youtu.be/zTVYadNxK2Q?si=tHjrTz1F67vSTlw8"],
         ["Simple Past", "https://youtu.be/nWrPtY0hdxw?si=CQCcylxOuOSj4dMm"],
         ["Sequence Words", "https://youtu.be/_wduLjbnrGs?si=YIeiQRSqJI1eeWhm"],
-        ["Poster Project", "https://youtu.be/O1Q3TH8W-zM?si=JW5CmACh-NyUyYNx"]
+        ["Poster Project", "https://youtu.be/O1Q3TH8W-zM?si=JW5CmACh-NyUyYNx"],
+        ["Generic Structure", "https://www.youtube.com/watch?v=O9sCEGfMHRs"],
+        ["Simple Past: Regular and Irregular", "https://www.youtube.com/watch?v=K2zCyFS0CJI"],
+        ["Sequence Words in Stories", "https://www.youtube.com/watch?v=IQQCrhEgpRc"],
+        ["Indonesian Legends", "https://www.youtube.com/watch?v=kdKFvjumOOo"],
+        ["Peatland Fires and Our Air", "https://www.youtube.com/watch?v=Nr_oH50-0wE"]
       ],
       inspirasi: [["🎬 Mangrove Forests in Batam", yt("hutan mangrove batam")]]
     },
@@ -169,7 +174,12 @@ const LAB = {
         ["Conflict & Change", "https://youtu.be/7MSCJ8-qkkA?si=0hY4uFwkTH1EYC0N"],
         ["Noun Phrases", "https://youtu.be/W1T7jsn3QD4?si=r7YMfZ0Flq4jyiZ0"],
         ["Adjective Clauses", "https://youtu.be/78zAJloytSk?si=Yg47CQUPk1UA51hu"],
-        ["Reported Speech", "https://youtu.be/wMO-wSBmgnI?si=xaNTX40QOny6YbE7"]
+        ["Reported Speech", "https://youtu.be/wMO-wSBmgnI?si=xaNTX40QOny6YbE7"],
+        ["Elements of a Story", "https://www.youtube.com/watch?v=Uxxa2Mu_-ec"],
+        ["Internal vs External Conflict", "https://www.youtube.com/watch?v=34QDge1BnJM"],
+        ["Describing Words: Noun Phrases and Adverbs", "https://www.youtube.com/watch?v=Sj2ztFjBBuE"],
+        ["How to Make a Motion Comic", "https://www.youtube.com/watch?v=n6_6CRypDls"],
+        ["Short Animated Films", "https://www.youtube.com/watch?v=88aM_ywuNbA"]
       ],
       inspirasi: [["🎬 Short Animated Films", yt("short animated film self discovery")]]
     },
@@ -225,7 +235,9 @@ const LAB = {
         ["Text Structure", "https://www.youtube.com/watch?v=KWtVyF5n9Uk"],
         ["Causal Conjunctions", "https://www.youtube.com/watch?v=CO8Cr3jo9MY"],
         ["Claim-Evidence-Reasoning", "https://www.youtube.com/watch?v=nKgKZGP4LrU"],
-        ["Green Journalism", "https://www.youtube.com/watch?v=znuw7j49cTw"]
+        ["Green Journalism", "https://www.youtube.com/watch?v=znuw7j49cTw"],
+        ["Analytical Exposition Text", "https://www.youtube.com/watch?v=Z6n6WBr88eY"],
+        ["Claim, Evidence, Reasoning (CER)", "https://www.youtube.com/watch?v=kcDudJcMbDw"]
       ],
       inspirasi: [["🎬 Environmental Campaign Videos", yt("environmental campaign video students")]]
     },
@@ -280,7 +292,10 @@ const LAB = {
         ["Call to Action", "https://www.youtube.com/watch?v=I2VrFwGQ9uw"],
         ["Modal Verbs", "https://www.youtube.com/watch?v=IALWOVw5Lhg"],
         ["Imperatives & Ethos", "https://www.youtube.com/watch?v=T3J3cnG-kAg"],
-        ["Evaluate Advice", "https://www.youtube.com/watch?v=AFpnDNF6kpI"]
+        ["Evaluate Advice", "https://www.youtube.com/watch?v=AFpnDNF6kpI"],
+        ["Hortatory Exposition Text", "https://www.youtube.com/watch?v=zzzugRNToe0"],
+        ["Modal Verbs for Advice", "https://www.youtube.com/watch?v=MHhA8NjMmpk"],
+        ["Logos, Pathos, Ethos", "https://www.youtube.com/watch?v=_1AE-bj-UQ0"]
       ],
       inspirasi: [["🎬 Healthy Lifestyle for Teens", yt("healthy lifestyle tips for teenagers")]]
     }
