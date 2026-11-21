@@ -46,12 +46,12 @@ function unitSection(k, u, sem, si) {
       <span class="cc-body"><em class="cc-badge">Start here</em><b class="cc-name">${CORNER_NAME[k]}</b><small class="cc-sub">Theory · Steps · Simulation · LKPD</small><span class="cc-desc">Your main lab for this unit: learn the theory, practice step by step, and finish your worksheets.</span></span>
       <span class="cc-go">Enter the Corner →</span>
     </a>
-    ${((LAB.slides || {})[k] || []).length ? `<p class="u-h"><span class="u-h-i"></span> Slides</p>
+    ${((LAB.slides || {})[k] || []).length ? `<p class="u-h h-slides"><span class="u-h-i"></span> Slides <b class="u-n">${LAB.slides[k].length}</b></p>
     <div class="sgrid">${LAB.slides[k].map(([tp, t, file, n], i) => `<a class="scard c${i % 4}" href="${file}" target="_blank" rel="noopener"><span class="s-top"><em>${tp}</em><i>SLIDES</i></span><b>${t}</b><small>${n} slides · PDF</small><span class="s-go">Open slides ↗</span></a>`).join("")}</div>` : ""}
-    <p class="u-h"><span class="u-h-i"></span> Play the games</p>
+    <p class="u-h h-games"><span class="u-h-i"></span> Play the games <b class="u-n">${u.aktivitas.length}</b></p>
     <div class="panel glass clear"><div class="acts">${u.aktivitas.map(a => `<button class="act" onclick="openAct('${a.id}', this)"><span class="i">${a.ic}</span><span><b>${a.t}</b><small>${a.note || ""}</small></span>${best[a.id] != null ? `<span class="best">BEST ${best[a.id]}</span>` : ""}</button>`).join("")}</div></div>
     <div class="u-row"><button class="cta" onclick="openMateri('${k}', this)">Read the Summary →</button></div>
-    <p class="u-h"><span class="u-h-i"></span> Watch the videos</p>
+    <p class="u-h h-videos"><span class="u-h-i"></span> Watch the videos <b class="u-n">${u.video.length}</b></p>
     <div class="vgrid">${u.video.map(([t, url], i) => { const id = ytId(url); return `<a class="vcard" href="${url}" target="_blank" rel="noopener"><span class="vthumb">${id ? `<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()">` : ""}<i class="vplay">▶</i><em class="vep">EP ${i + 1}</em></span><b>${t}</b></a>`; }).join("")}</div>
     ${(u.inspirasi || []).length ? `<div class="u-row vmore"><span class="lbl">More to explore</span>${u.inspirasi.map(([t, url]) => `<a class="chip glass clear" href="${url}" target="_blank" rel="noopener">${t} ↗</a>`).join("")}</div>` : ""}
   </section>`;
