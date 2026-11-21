@@ -97,11 +97,18 @@ const LAB = {
           ["Which is NOT a characteristic of a legend?", ["Magical elements", "Real setting", "Moral value", "Statistical data"], 3]
         ]},
         { id: "u1-latihan", t: "Practice Unit 1", ic: "📝", type: "quiz", note: "Mixed questions", soal: [
-          ["\"Many years ago, there lived a poor fisherman in Batam.\" The sentence is the…", ["Orientation", "Complication", "Resolution", "Re-orientation"], 0],
-          ["Which is an irregular verb?", ["walked", "planted", "took", "cleaned"], 2],
-          ["\"After that, the village was flooded.\" The sequence word is…", ["village", "after that", "was", "flooded"], 1],
-          ["Implicit information is…", ["written directly", "inferred from clues", "the title", "a vocabulary list"], 1],
-          ["The purpose of a picture-sequencing poster is to…", ["list prices", "tell a story through ordered pictures", "describe a person", "explain a process scientifically"], 1]
+          ["Which one is NOT a characteristic of a legend?", ["It delivers a moral value or lesson", "It gives step-by-step instructions", "It explains the origin of something real", "It has magical or supernatural elements"], 1],
+          ["Which signal words usually appear in the complication of a legend?", ["One day… / Suddenly… / However…", "Once upon a time… / A long time ago…", "Finally… / From that day on…", "There lived a… / In a village near…"], 0],
+          ["What does the resolution of a legend usually explain?", ["Who the characters are and where they live", "What problem changes the calm situation", "What the writer thinks about an issue", "How the problem is solved and the origin of a real place or thing"], 3],
+          ["A community of living things that interact with their environment is called an…", ["extinction", "conservation", "ecosystem", "habitat"], 2],
+          ["In the Three Magic Questions, what is step 3 for finding the main idea?", ["Copy the first sentence of the paragraph", "Conclude: combine the answers into ONE main idea sentence", "Read and search for the keywords", "Underline and note who or what, what happened, and the result"], 1],
+          ["What is the simple past of \"stop\"?", ["stopped", "stoped", "stopt", "stopping"], 0],
+          ["What is the simple past of \"worry\"?", ["worryed", "worrid", "worrying", "worried"], 3],
+          ["Which list contains only irregular verbs (V1 → V2)?", ["walk → walked, stop → stopped, play → played", "go → goed, see → seed, take → taked", "go → went, see → saw, take → took", "live → lived, cry → cried, want → wanted"], 2],
+          ["Action verbs in a legend show…", ["what the moral lesson is", "what happened (the actions of the story)", "who the characters are", "where the story takes place"], 1],
+          ["Which sequence word marks the ending of a story?", ["Finally", "First", "Suddenly", "Then"], 0],
+          ["Which one is NOT one of the four criteria for evaluating a narrative text?", ["Clarity of structure", "Accuracy of language", "Clarity of message", "Number of pages"], 3],
+          ["A text-to-world connection links…", ["a title to its author", "a verb to its tense", "something in a story to something in real life", "two paragraphs in the same story"], 2]
         ]}
       ],
       video: [
@@ -164,10 +171,18 @@ const LAB = {
           ["Fairy tales often teach us about…", ["math formulas", "growing up and values", "weather reports", "recipes"], 1]
         ]},
         { id: "u2-latihan", t: "Practice Unit 2", ic: "📝", type: "quiz", note: "Mixed questions", soal: [
-          ["Which is a noun phrase?", ["run quickly", "a beautiful golden castle", "very fast", "and then"], 1],
-          ["\"The girl who was sitting alone\" can be reduced to…", ["The girl sat alone", "The girl sitting alone", "The girl sits alone", "The alone girl sitting"], 1],
-          ["Character change means…", ["the character's name changes", "the character grows or learns something", "the setting moves", "the story ends"], 1],
-          ["In which part does the main problem appear?", ["Orientation", "Complication", "Coda", "Title"], 1]
+          ["Which question does the complication of a story answer?", ["How is it solved?", "What did the character discover?", "What goes wrong?", "Who? Where? When?"], 2],
+          ["Conflict in a story means…", ["the lesson at the end", "the problem the main character must face", "the place where the story happens", "the person who tells the story"], 1],
+          ["The helper in a story is the character who…", ["guides or supports the main character", "creates the main problem", "tells the lesson to the readers", "writes the story"], 0],
+          ["Which is an example of an internal conflict?", ["A flood destroys the village", "A rival tries to take the prize", "A test is very difficult", "A character is afraid and doubts herself"], 3],
+          ["Which one is an adjective phrase? (It can follow is, was or felt.)", ["the old library", "a trail of lights", "afraid of the dark", "a dark forest"], 2],
+          ["Which sentence puts the adverb of frequency in the correct place?", ["Never he is late.", "He is never late.", "He never is late.", "He is late never."], 1],
+          ["Which group of words is a dependent clause?", ["when she opened the door", "the old wooden door", "she opened the door", "opening the door slowly"], 0],
+          ["Which sentence uses the comma correctly?", ["Although, it was raining they kept walking.", "They kept, walking although it was raining.", "Although it was raining they, kept walking.", "Although it was raining, they kept walking."], 3],
+          ["Choose the correct relative word: This is the school ___ I studied.", ["whose", "which", "where", "who"], 2],
+          ["Reduce the clause: The app which was on his laptop was ready.", ["The app which was on his laptop ready.", "The app on his laptop was ready.", "The app which on his laptop was ready.", "The app was on his laptop was ready."], 1],
+          ["Dimas asked, \"Where is my bag?\" Which is the correct reported question?", ["Dimas asked where his bag was.", "Dimas asked where was his bag.", "Dimas asked where is his bag.", "Dimas asked where my bag was."], 0],
+          ["\"Please close the door,\" Mom said. Which is the correct reported command?", ["Mom asked me close the door.", "Mom asked me that I close the door.", "Mom asked me closing the door.", "Mom asked me to close the door."], 3]
         ]}
       ],
       video: [
@@ -226,10 +241,18 @@ const LAB = {
           ["Green Street Journalism produces…", ["a song", "a written text and a campaign video", "a poem", "a comic"], 1]
         ]},
         { id: "u3-latihan", t: "Practice Unit 3", ic: "📝", type: "quiz", note: "Mixed questions", soal: [
-          ["\"In conclusion, we must keep our rivers clean.\" This is the…", ["Thesis", "Argument", "Reiteration", "Orientation"], 2],
-          ["Which sentence shows cause and effect?", ["The river is long.", "The river is polluted due to factory waste.", "I like rivers.", "Rivers are in Batam."], 1],
-          ["Which is the best evidence?", ["I think it is bad.", "Everyone knows it.", "A 2025 report shows air pollution rose by 20%.", "My friend said so."], 2],
-          ["The thesis contains…", ["the writer's main opinion", "a list of references", "a story ending", "a dialogue"], 0]
+          ["What is the purpose of an analytical exposition?", ["To entertain readers with a story", "To explain how to make something", "To describe a person or a place", "To persuade readers that something is important, with arguments"], 3],
+          ["What does the reiteration do in an analytical exposition?", ["It gives the evidence for each argument", "It tells readers what to do", "It restates the thesis and closes the text", "It introduces the topic and the writer's position"], 2],
+          ["The thesis of an analytical exposition is…", ["the title of the text", "the writer's position on the issue", "a list of facts only", "the final recommendation"], 1],
+          ["Which sentence states a general fact correctly?", ["Plants absorb carbon dioxide.", "Plants absorbed carbon dioxide.", "Plants are absorbed carbon dioxide.", "Plants will absorbing carbon dioxide."], 0],
+          ["What is the simple past of \"fall\"?", ["falled", "fallen", "felt", "fell"], 3],
+          ["Which connector introduces a reason (cause)?", ["as a result", "consequently", "because of", "therefore"], 2],
+          ["It rained heavily. ___, the road was flooded.", ["Although", "As a result", "Because of", "Due to"], 1],
+          ["In Claim-Evidence-Reasoning, the claim is…", ["a statement that answers the question or states the position", "the data that supports the idea", "the explanation that links data to the claim", "a greeting to the reader"], 0],
+          ["Which is the best evidence for the claim \"Plastic bags harm the sea\"?", ["Everyone knows that plastic is bad.", "I feel sad about plastic.", "Plastic bags are very common.", "A study found plastic in 90% of seabirds."], 3],
+          ["Which words are often biased because they are too strong?", ["may, might, could, suggests", "according to the data, in my study", "everyone, always, only, obviously", "many, often, mainly, the data shows"], 2],
+          ["Which is a more careful version of \"Everyone knows that…\"?", ["I am sure that…", "Many students say that…", "Obviously, …", "Nobody can say that…"], 1],
+          ["Which one is NOT a question for judging an argument?", ["Does the text have many paragraphs?", "Is there data?", "Can we trust the source?", "Is there enough evidence?"], 0]
         ]}
       ],
       video: [
@@ -284,10 +307,18 @@ const LAB = {
           ["A podcast is…", ["an audio program", "a printed poster", "a short story", "a math test"], 0]
         ]},
         { id: "u4-latihan", t: "Practice Unit 4", ic: "📝", type: "quiz", note: "Mixed questions", soal: [
-          ["Which modal shows strong obligation?", ["might", "could", "must", "may"], 2],
-          ["\"Data shows 1 in 5 teenagers is overweight.\" This is…", ["Logos", "Pathos", "Ethos", "Coda"], 0],
-          ["The purpose of the recommendation is to…", ["tell readers what to do", "introduce characters", "describe the setting", "give a title"], 0],
-          ["\"Let's\" is followed by…", ["V1 (base verb)", "V2", "V-ing", "to + V1"], 0]
+          ["What does the thesis of a hortatory exposition state?", ["The writer's position on the issue", "The steps to follow", "The characters of the story", "A list of materials"], 0],
+          ["In a hortatory exposition, the arguments…", ["retell events in order", "describe the characters", "list the materials needed", "give reasons and evidence why action is needed"], 3],
+          ["\"Concentrate\" means…", ["to cook food in hot oil", "to choose between two things", "to give all your attention to one thing", "to feel very sleepy"], 2],
+          ["Which sentence is correct?", ["She must sleeps early.", "She ought to sleep early.", "She ought sleep early.", "She should to sleep early."], 1],
+          ["Which modal is the strongest (a rule or a big risk)?", ["must", "should", "ought to", "need to"], 0],
+          ["Which is the correct negative advice?", ["You should not to skip breakfast.", "You not should skip breakfast.", "You should not skipping breakfast.", "You should not skip breakfast."], 3],
+          ["Which sentence is a negative imperative?", ["Not stay up late.", "Don't staying up late.", "Do not stay up late.", "You do not stay up late."], 2],
+          ["It is recommended that the school ___ a new rule.", ["to add", "add", "adds", "adding"], 1],
+          ["Which persuasion strategy appeals to feelings?", ["Pathos", "Logos", "Ethos", "Thesis"], 0],
+          ["Quoting a doctor with 20 years of experience is an example of…", ["logos", "pathos", "reiteration", "ethos"], 3],
+          ["Which criterion asks, \"Do the people involved agree?\"", ["Affordable", "Effective", "Acceptable", "Realistic"], 2],
+          ["A specific recommendation answers which questions?", ["Past? Present? Future? Never?", "Who? What? When? How much?", "Why? Why? Why? Why?", "Where? Which? Whose? Whom?"], 1]
         ]}
       ],
       video: [
