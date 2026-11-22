@@ -63,13 +63,12 @@ const LAB = {
         <h3>Language Features</h3><ul><li><b>Simple past tense</b>: lived, cried, became, went</li><li><b>Action verbs</b>: cut, ran, planted, destroyed</li><li><b>Sequence words</b>: once upon a time, one day, then, after that, finally</li></ul>
         <p><b>Vocabulary:</b> ecosystem, habitat, deforestation, pollution, flood, drought, biodiversity, sustainable.</p>`,
       aktivitas: [
-        { id: "u1-asesmen", t: "Warm-up Quiz Unit 1", ic: "", type: "quiz", note: "What do you know?", soal: [
-          ["What kind of text is a legend?", ["A text that sells a product to buyers", "A narrative text that explains the origin of something", "A text that gives steps to make something", "A text that reports an event of today"], 1],
-          ["What is the generic structure of a legend?", ["Orientation, complication, resolution", "Thesis, arguments, reiteration", "Goal, materials, steps", "Title, list, conclusion"], 0],
-          ["Which language feature is mostly used in a legend?", ["Imperative sentences", "Simple present tense for facts", "Modal verbs for advice", "Action verbs in the simple past tense"], 3],
-          ["A legend usually delivers a…", ["product price", "news headline", "moral value or lesson", "list of materials"], 2],
-          ["Which words help us show the order of events in a legend?", ["Greeting words (hello, thanks)", "Sequence words (first, then, finally)", "Modal verbs (should, must)", "Question words (who, what)"], 1],
-          ["Which topic is the theme of Unit 1?", ["Nature and the environment", "Robots and technology", "Fashion and shopping", "Sports and games"], 0]
+        { id: "u1-asesmen", t: "Warm-up Quiz Unit 1", ic: "", type: "quiz", note: "Let's think first", hook: "You are ready to explore legends and nature in Unit 1!", soal: [
+          ["Have you ever heard a story about how a lake, a mountain or an island got its name?", ["Yes, many times","Yes, once or twice","No, but I want to hear one","I am not sure"], -1, "Those stories are called legends. A legend explains where a real place, animal or thing comes from."],
+          ["In many old stories, people who hurt nature get a big problem. Why do you think storytellers did this?", ["To teach us to protect nature","To make the story scary","To make the story longer","I have another idea"], -1, "Legends often carry a message about respecting nature. Many of them also have magic or a guardian spirit."],
+          ["When you hear \"Once upon a time...\", what do you expect?", ["A story from the past","A news report","A set of instructions","A weather forecast"], -1, "A story is starting! A legend usually has a beginning, a problem and a solution."],
+          ["Tell a friend what you did yesterday. Which words will you use?", ["went, saw, ate","go, see, eat","going, seeing, eating","will go, will see"], -1, "We use the past form for things that already happened. Legends are told in the simple past, too."],
+          ["You are telling a story. Which words help your friend follow the order of events?", ["First, then, finally","Because, so, but","Very, quite, really","Here, there, everywhere"], -1, "Words like first, then and finally show the order. They are called sequence words."]
         ]},
         { id: "u1-sort", t: "Lab Story Structure", ic: "", type: "sort", note: "Put the story in order", intro: "Put the parts of \"The Legend of Telaga Lestari\" in the right order.", items: [
           "Orientation — Long ago, a small village stood near a green forest. The villagers lived happily and took care of the trees.",
@@ -135,13 +134,12 @@ const LAB = {
         <h3>Story Elements</h3><ul><li><b>Characters</b> (protagonist, antagonist)</li><li><b>Setting</b> (time & place)</li><li><b>Conflict</b>: <i>internal</i> (inside the character: fear, doubt) and <i>external</i> (with others, nature, society)</li><li><b>Resolution</b> & <b>Coda</b> (lesson learned)</li></ul>
         <h3>Language Features</h3><ul><li><b>Noun phrase</b>: a brave young princess</li><li><b>Adverbs</b>: quickly, bravely, suddenly</li><li><b>Reduced adjective clause</b>: the girl <i>(who was) sitting</i> by the window → the girl sitting by the window</li><li><b>Reported speech</b>: "I am lost," she said. → She said that she was lost.</li></ul>`,
       aktivitas: [
-        { id: "u2-asesmen", t: "Warm-up Quiz Unit 2", ic: "", type: "quiz", note: "What do you know?", soal: [
-          ["What does self-discovery mean in a story?", ["A character travels to another country", "A character wins a big competition", "A character learns something true about who they really are", "A character finds a hidden treasure"], 2],
-          ["Which types of text do we learn in Unit 2?", ["Business letters", "Fairy tale and fantasy stories", "News reports", "Procedure texts"], 1],
-          ["What is the generic structure of a fairy tale or fantasy story?", ["Orientation, complication, resolution, re-orientation", "Thesis, arguments, reiteration", "Thesis, arguments, recommendation", "Goal, materials, steps"], 0],
-          ["Which are the story elements?", ["Claim, evidence, reasoning", "Thesis, argument, reiteration", "Goal, materials, steps", "Character, setting, conflict, resolution"], 3],
-          ["Which language features do we study in Unit 2?", ["Only greetings and invitations", "Only advice with should and must", "Noun phrases, adverbs, clauses and reported speech", "Only numbers, tables and graphs"], 2],
-          ["Which is a main idea of a story about self-discovery?", ["The writer gives steps to cook a meal", "The character faces a problem and learns about themselves", "The character sells a product to customers", "The writer reports a news event"], 1]
+        { id: "u2-asesmen", t: "Warm-up Quiz Unit 2", ic: "", type: "quiz", note: "Let's think first", hook: "You are ready to discover yourself through stories in Unit 2!", soal: [
+          ["Have you ever felt unsure about who you really are or what you are good at?", ["Yes, often","Sometimes","Not really","I never think about it"], -1, "That feeling is very common! Many fairy tales and fantasy stories are about a character who slowly learns who they really are."],
+          ["In a fantasy story, you find a magic mirror that answers one question. What do you ask?", ["Who am I really?","What will happen tomorrow?","Where is the treasure?","I would run away"], -1, "In stories, magic often helps a character face their own doubts. This is called self-discovery."],
+          ["Which problem is harder to beat?", ["A monster outside","A fear inside me","Both are hard","It depends"], -1, "A problem outside the character is an external conflict. A fear or doubt inside is an internal conflict. Good stories often have both."],
+          ["Which sentence helps you imagine the character better?", ["A girl lived in a village.","A quiet girl from a small village lived near an old forest.","A girl lived.","The girl lived there."], -1, "Adding details around a noun makes a noun phrase. It makes a story clearer and more interesting."],
+          ["Your friend says, \"I am nervous.\" How do you tell another friend what she said?", ["She said that she was nervous.","She said I am nervous.","She nervous said.","She says was nervous."], -1, "When we report what someone said, we change the pronoun and move the tense back. That is reported speech."]
         ]},
         { id: "u2-classify", t: "Lab Conflict Detector", ic: "", type: "classify", note: "Inner or outer?", intro: "Is the conflict internal or external?", groups: ["Internal Conflict", "External Conflict"], items: [
           ["Mira is afraid she is not good enough to join the team.", 0], ["Leo cannot decide whether to tell the truth.", 0], ["The prince doubts his own courage.", 0],
@@ -210,13 +208,11 @@ const LAB = {
         <h3>Claim–Evidence–Reasoning (CER)</h3><ul><li><b>Claim</b>: Plastic waste harms marine life.</li><li><b>Evidence</b>: Millions of tons of plastic enter the ocean every year.</li><li><b>Reasoning</b>: Animals mistake plastic for food, so they get sick or die.</li></ul>
         <h3>Language Features</h3><ul><li>Simple present tense: Trees <b>absorb</b> carbon dioxide.</li><li>Causal conjunctions: <b>because, due to, therefore, thus, as a result</b></li><li>Academic vocabulary: biodiversity, sustainability, ecosystem, emission</li></ul>`,
       aktivitas: [
-        { id: "u3-asesmen", t: "Warm-up Quiz Unit 3", ic: "", type: "quiz", note: "What do you know?", soal: [
-          ["What is the purpose of an analytical exposition?", ["To entertain readers with a story", "To explain how to make something", "To describe a person or a place", "To persuade readers that something is important, with arguments"], 3],
-          ["What is the generic structure of an analytical exposition?", ["Thesis, arguments, recommendation", "Goal, materials, steps", "Thesis, arguments, reiteration", "Orientation, complication, resolution"], 2],
-          ["Which tense is mostly used in an analytical exposition?", ["Future tense only", "Simple present tense", "Simple past tense", "Past perfect tense"], 1],
-          ["Which language feature shows cause and effect?", ["Causal connectors such as because and therefore", "Direct speech with quotation marks", "Imperatives such as read and drink", "Rhymes as in a poem"], 0],
-          ["A strong argument is supported by…", ["personal feelings only", "long and difficult words", "a funny title", "evidence such as data and facts"], 3],
-          ["Which pattern helps us build an argument?", ["Goal, materials, steps", "Greeting, body, closing", "Claim, evidence, reasoning", "Orientation, complication, resolution"], 2]
+        { id: "u3-asesmen", t: "Warm-up Quiz Unit 3", ic: "", type: "quiz", note: "Let's think first", hook: "You are ready to build strong arguments in Unit 3!", soal: [
+          ["Is plastic waste at your school a big problem?", ["Yes, a very big one","A small problem","Not a problem","I have not thought about it"], -1, "A text that argues for a position on an issue is called an analytical exposition. It starts with the writer's position, called the thesis."],
+          ["Which sentence is more convincing?", ["Everyone knows plastic is bad.","Plastic takes hundreds of years to break down.","Plastic is just terrible.","I do not like plastic."], -1, "Facts and data are stronger than opinions. A good argument always uses evidence."],
+          ["Your friend says, \"Obviously, my idea is the only answer!\" Do you trust it?", ["Yes, he sounds sure","Not yet, I want to see proof","Only if many people agree","I do not know"], -1, "Words like obviously, only and everyone can make an argument weak. A careful writer shows data and uses careful words."],
+          ["It rained heavily, ___ the road was flooded.", ["so","but","or","although"], -1, "Words like so, therefore and because link a reason to a result. You will use them to explain why things happen."]
         ]},
         { id: "u3-sort", t: "Lab Text Structure", ic: "", type: "sort", note: "Build the text", intro: "Put the paragraphs in the right order.", items: [
           "Thesis — Protecting the environment around our school is very important for everyone.",
@@ -277,13 +273,11 @@ const LAB = {
         <h3>Persuasive Strategies</h3><ul><li><b>Logos</b> (logic & data): Studies show teenagers need 8–10 hours of sleep.</li><li><b>Pathos</b> (emotion): Imagine how your parents feel when you are sick.</li><li><b>Ethos</b> (credibility): According to the WHO / doctors…</li></ul>
         <h3>Language Features</h3><ul><li>Modals: <b>should, must, need to, ought to</b></li><li>Persuasive phrases: <b>Let's…, It is important to…</b></li><li>Health vocabulary: hydration, nutrition, balanced diet, exercise, sleep, stress</li></ul>`,
       aktivitas: [
-        { id: "u4-asesmen", t: "Warm-up Quiz Unit 4", ic: "", type: "quiz", note: "What do you know?", soal: [
-          ["What is the purpose of a hortatory exposition?", ["To persuade readers to do something", "To retell a past event", "To describe how something works", "To entertain with a magic story"], 0],
-          ["What is the generic structure of a hortatory exposition?", ["Thesis, arguments, reiteration", "Orientation, complication, resolution", "Title, list, conclusion", "Thesis, arguments, recommendation"], 3],
-          ["Which language features are common in a hortatory exposition?", ["Noun phrases for characters", "Reported speech for dialogue", "Modal verbs and imperatives", "Action verbs in the simple past"], 2],
-          ["What does the recommendation part do?", ["It gives the title of the text", "It tells readers what they should do", "It introduces the characters", "It retells a past event"], 1],
-          ["Which persuasion strategies do we learn in Unit 4?", ["Logos, pathos and ethos", "Orientation, complication and resolution", "Past, present and future", "Character, setting and conflict"], 0],
-          ["Which topic fits Unit 4?", ["Space travel", "Ancient kings", "Fashion trends", "A healthy lifestyle"], 3]
+        { id: "u4-asesmen", t: "Warm-up Quiz Unit 4", ic: "", type: "quiz", note: "Let's think first", hook: "You are ready to give strong advice in Unit 4!", soal: [
+          ["How many hours do you usually sleep on school nights?", ["Less than 6 hours","6 to 7 hours","About 8 hours","More than 8 hours"], -1, "Teenagers need about 8 hours. A text that urges readers to change a habit is called a hortatory exposition."],
+          ["Your friend drinks three sweet drinks every day. What would you say?", ["You should drink more water.","Do whatever you want.","You must stop right now!","Nothing"], -1, "Words like should, must and ought to give advice or rules. They are called modal verbs."],
+          ["What makes you change a habit the most?", ["A scary fact","A story about someone I know","Advice from a doctor","Nothing changes my habits"], -1, "Writers persuade with facts (logos), feelings (pathos) and trust (ethos). You will learn to use all three."],
+          ["Which advice is easier to follow?", ["Never eat sugar again.","Drink one more glass of water every day.","Change your whole life tomorrow.","Do everything perfectly."], -1, "A good recommendation is realistic. It says who should do what, and when."]
         ]},
         { id: "u4-classify", t: "Lab Logos · Pathos · Ethos", ic: "", type: "classify", note: "Spot the strategy", intro: "Which strategy does each sentence use?", groups: ["Logos (facts)", "Pathos (feelings)", "Ethos (trust)"], items: [
           ["Research shows that 30 minutes of exercise lowers stress by 25%.", 0], ["Teenagers who sleep 8 hours score higher on tests.", 0],
