@@ -119,7 +119,7 @@ addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
 window.openMateri = (k, el) => openModal(`Summary · Unit ${+L.units[k].no}`, `<div class="mat">${L.units[k].materi}</div>`, el);
 
 let cur;
-window.openAct = (id, el) => { if (el) origin = el.getBoundingClientRect(); cur = ACT[id]; ({ quiz: Quiz, game: Game, sort: Sort, classify: Classify, fill: Fill })[cur.type].start(); };
+window.openAct = (id, el) => { if (el) origin = el.getBoundingClientRect(); cur = ACT[id]; ({ quiz: Quiz, game: Game, sort: Sort, classify: Classify, fill: Fill, drag: Drag })[cur.type].start(); };
 
 function finish(score, extra = "") {
   const old = best[cur.id]; if (old == null || score > old) { best[cur.id] = score; store.set("lab-best", best); }
@@ -235,6 +235,58 @@ const Fill = {
       $(".row").innerHTML = `<p class="fb">${ok} of ${cur.soal.length} correct</p><button class="btn" id="sc">See my score</button>`;
       $("#sc").onclick = () => finish(Math.round(ok / cur.soal.length * 100));
     };
+  }
+};
+
+// ---------- drag and drop text ----------
+const Drag = {
+  start() {
+    if (!document.getElementById("dg-css")) { const s = document.createElement("style"); s.id = "dg-css"; s.textContent = ".dg-text p{line-height:2.5;font-size:1.02rem;margin:0 0 .6rem}.dg-gap{display:inline-flex;align-items:center;justify-content:center;min-width:96px;min-height:36px;padding:0 6px;border:2.5px dashed var(--ink);border-radius:12px;background:var(--cream2);vertical-align:middle;margin:0 2px;transition:background .15s,transform .15s}.dg-gap.over{background:var(--peach);transform:scale(1.08)}.dg-gap.right{background:var(--mint);border-style:solid}.dg-gap.wrong{background:#F2B49A;border-style:solid}.dg-gap s{opacity:.6;margin-right:6px}.dg-bank{display:flex;flex-wrap:wrap;gap:10px;padding:14px;border:2.5px solid var(--ink);border-radius:18px;background:var(--peach3);margin:14px 0;min-height:58px}.dg-chip{display:inline-block;cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none;padding:6px 14px;border:2.5px solid var(--ink);border-radius:999px;background:var(--cream2);font-weight:700;box-shadow:var(--sh);transition:transform .15s}.dg-chip:hover{transform:translate(-2px,-2px) rotate(-2deg)}.dg-chip.sel{background:var(--peach);outline:3px solid var(--red)}.dg-gap .dg-chip{box-shadow:none;padding:3px 10px;margin:2px}.dg-ghost{position:fixed;z-index:99999;pointer-events:none;transform:translate(-50%,-50%) rotate(-5deg);box-shadow:var(--sh2)}.dg-hint{opacity:.75;margin:.2rem 0 .8rem}"; document.head.appendChild(s); }
+    this.paras = cur.text.split("\n").map(p => p.split(/\[\[(.+?)\]\]/)); this.ans = []; this.paras.forEach(p => p.forEach((x, i) => { if (i % 2) this.ans.push(x); }));
+    this.chips = shuffle([...this.ans, ...(cur.extra || [])].map((w, i) => ({ id: i, w }))); this.place = {}; this.sel = null; this.done = false; this.show();
+  },
+  placed() { return Object.values(this.place); },
+  chipHtml(c) { return `<span class="dg-chip${this.sel === c.id ? " sel" : ""}" data-c="${c.id}">${esc(c.w)}</span>`; },
+  show() {
+    let g = 0;
+    const body = this.paras.map(p => `<p>${p.map((x, i) => { if (i % 2 === 0) return esc(x); const k = g++; const c = this.chips.find(c => c.id === this.place[k]);
+      const st = this.done ? (c && c.w === this.ans[k] ? " right" : " wrong") : ""; return `<span class="dg-gap${st}" data-g="${k}">${c ? this.chipHtml(c) : ""}${this.done && st === " wrong" ? ` <b>${esc(this.ans[k])}</b>` : ""}</span>`; }).join("")}</p>`).join("");
+    const free = this.chips.filter(c => !this.placed().includes(c.id));
+    openModal(`${cur.ic} ${cur.t}`, `<p class="intro">${esc(cur.intro)}</p><p class="dg-hint">Drag a word into a gap. You can also tap a word, then tap a gap.</p><div class="dg-text">${body}</div><div class="dg-bank" id="bank">${free.map(c => this.chipHtml(c)).join("")}</div>
+      <div class="row">${this.done ? "" : `<button class="btn" id="ck" ${Object.keys(this.place).length < this.ans.length ? "disabled" : ""}>Check</button>`}</div>`);
+    if (this.done) return;
+    document.querySelectorAll(".dg-chip").forEach(el => el.onpointerdown = e => this.down(e, el));
+    document.querySelectorAll(".dg-gap").forEach(el => el.onclick = e => { if (e.target.closest(".dg-chip")) return; if (this.sel != null) this.put(this.sel, +el.dataset.g); });
+    const ck = $("#ck"); if (ck) ck.onclick = () => this.check();
+  },
+  put(id, gap) {
+    Object.keys(this.place).forEach(k => { if (this.place[k] === id) delete this.place[k]; });
+    this.place[gap] = id; this.sel = null; this.show();
+  },
+  down(e, el) {
+    e.preventDefault(); const id = +el.dataset.c, x0 = e.clientX, y0 = e.clientY; let ghost = null, over = null, moved = false;
+    const gapAt = (x, y) => { const t = document.elementFromPoint(x, y); return t && t.closest ? t.closest(".dg-gap") : null; };
+    const move = ev => {
+      if (!moved && Math.hypot(ev.clientX - x0, ev.clientY - y0) < 6) return; moved = true;
+      if (!ghost) { ghost = el.cloneNode(true); ghost.className = "dg-chip dg-ghost"; document.body.appendChild(ghost); el.style.opacity = ".35"; }
+      ghost.style.left = ev.clientX + "px"; ghost.style.top = ev.clientY + "px";
+      const gp = gapAt(ev.clientX, ev.clientY); if (over && over !== gp) over.classList.remove("over"); over = gp; if (gp) gp.classList.add("over");
+    };
+    const up = ev => {
+      window.removeEventListener("pointermove", move); window.removeEventListener("pointerup", up); window.removeEventListener("pointercancel", up);
+      if (ghost) ghost.remove();
+      if (!moved) { const inGap = el.closest(".dg-gap"); if (inGap) { delete this.place[+inGap.dataset.g]; this.sel = null; } else this.sel = this.sel === id ? null : id; this.show(); return; }
+      const gp = gapAt(ev.clientX, ev.clientY);
+      if (gp) this.put(id, +gp.dataset.g);
+      else if (document.elementFromPoint(ev.clientX, ev.clientY)?.closest(".dg-bank, .dg-text")) { Object.keys(this.place).forEach(k => { if (this.place[k] === id) delete this.place[k]; }); this.show(); }
+      else this.show();
+    };
+    window.addEventListener("pointermove", move); window.addEventListener("pointerup", up); window.addEventListener("pointercancel", up);
+  },
+  check() {
+    this.done = true; this.show(); let ok = 0; this.ans.forEach((w, k) => { const c = this.chips.find(c => c.id === this.place[k]); if (c && c.w === w) ok++; });
+    $(".row").innerHTML = `<p class="fb">${ok} of ${this.ans.length} correct</p><button class="btn" id="sc">See my score</button>`;
+    $("#sc").onclick = () => finish(Math.round(ok / this.ans.length * 100));
   }
 };
 
