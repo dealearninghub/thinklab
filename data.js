@@ -90,6 +90,8 @@ const LAB = {
         { id: "u1-classify", t: "Lab Word Explorers", ic: "", type: "classify", note: "Sort the words", intro: "Put each word in the right group.", groups: ["Action Verb", "Sequence Word", "Environment Noun"], items: [
           ["planted", 0], ["destroyed", 0], ["ran", 0], ["first", 1], ["after that", 1], ["finally", 1], ["habitat", 2], ["drought", 2], ["ecosystem", 2]
         ]},
+        { id: "u1-drag1", t: "Drag & Drop: The Lost Spring", ic: "", type: "drag", note: "Drag the words into the legend", intro: "Drag each word into the right gap to complete the legend. Use the past tense, sequence words and describing words.", text: "Long ago, a small village [[stood]] beside a [[green]] forest. [[First]], the people took good care of the trees.\n[[Then]], greedy men [[cut]] them all down and the river dried up.\n[[Finally]], a kind girl [[planted]] new seeds, and a clear spring appeared.", extra: ["stand","quickly"]},
+        { id: "u1-drag2", t: "Drag & Drop: The Mountain Giant", ic: "", type: "drag", note: "Drag the story signals", intro: "Drag each signal phrase into the legend. These phrases show the structure of a story.", text: "[[Once upon a time]], a giant lived on a tall mountain and guarded the rice fields.\n[[One day]], a terrible storm destroyed all the fields.\n[[Suddenly]], the giant stood up and held back the water with his hands.\n[[In the end]], the village was safe, and the giant turned into a mountain. [[From that day on]], people have called it Giant Mountain.", extra: ["Next week","Yesterday"]},
         { id: "u1-game", t: "English Master Game · Unit 1", ic: "", type: "game", note: "Answer 8 questions to win", soal: [
           ["Which part introduces the characters?", ["Orientation", "Complication", "Resolution", "Coda"], 0],
           ["The past form of \"see\" is…", ["seed", "saw", "seen", "sees"], 1],
@@ -168,6 +170,8 @@ const LAB = {
           "Resolution — Encouraged by her teacher, Rina joined and her drawing won second place.",
           "Coda — Rina learned that believing in herself was the first step to growing up."
         ]},
+        { id: "u2-drag1", t: "Drag & Drop: The Magic Mirror", ic: "", type: "drag", note: "Drag the words into the story", intro: "Drag each word into the right gap. Remember: in reported speech, the tense moves back.", text: "The girl looked into the magic mirror. She [[said]] that she [[was]] afraid of speaking in public.\nThe mirror answered that she [[had]] more courage than she [[thought]].\nThe next day, she told her friend that she [[would]] try again.", extra: ["is","will"]},
+        { id: "u2-drag2", t: "Drag & Drop: The Shy Prince", ic: "", type: "drag", note: "Drag the story signals", intro: "Drag each signal phrase into the fairy tale. These phrases show how the story moves.", text: "[[Once upon a time]], a shy prince lived in a faraway castle. He was afraid to speak in front of people.\n[[One day]], a magic mirror appeared in his room.\n[[Suddenly]], it said that he was braver than he thought.\n[[At last]], the prince stood up and spoke to the whole kingdom. [[From that day on]], he was never afraid again.", extra: ["Last year","Next week"]},
         { id: "u2-game", t: "English Master Game · Unit 2", ic: "", type: "game", note: "Answer 8 questions to win", soal: [
           ["The main character of a story is called the…", ["antagonist", "protagonist", "narrator", "audience"], 1],
           ["\"Suddenly\" is a(n)…", ["noun", "adjective", "adverb", "verb"], 2],
@@ -242,6 +246,8 @@ const LAB = {
           ["Our class survey found 200 plastic bags thrown away in one week.", 1], ["Data shows mangroves can store up to four times more carbon than other forests.", 1],
           ["Because plastic takes hundreds of years to decompose, it fills our land and sea.", 2], ["Since mangroves protect the coast from waves, losing them puts villages at risk.", 2]
         ]},
+        { id: "u3-drag1", t: "Drag & Drop: Plastic at School", ic: "", type: "drag", note: "Drag the words into the argument", intro: "Drag each word into the right gap to build a strong argument.", text: "In my opinion, schools [[should]] ban single-use plastic. [[Firstly]], plastic takes hundreds of years to break down.\n[[Therefore]], it harms the environment. [[Secondly]], a study shows that students throw away hundreds of bottles every week.\n[[In conclusion]], schools [[must]] act now.", extra: ["Once upon a time","could"]},
+        { id: "u3-drag2", t: "Drag & Drop: Later School Start", ic: "", type: "drag", note: "Drag the linking words", intro: "Drag each linking word into the argument. These words connect reasons and results.", text: "I strongly believe that school should start later. [[Because]] teenagers need eight hours of sleep, early classes make them tired.\n[[For example]], a survey found that most students feel sleepy before nine o'clock. [[In addition]], tired students make more mistakes.\n[[As a result]], their grades drop. [[Consequently]], schools should change the timetable.", extra: ["Long ago","Suddenly"]},
         { id: "u3-game", t: "English Master Game · Unit 3", ic: "", type: "game", note: "Answer 8 questions to win", soal: [
           ["The last part of an analytical exposition is the…", ["Thesis", "Argument", "Reiteration", "Resolution"], 2],
           ["Choose the causal conjunction.", ["however", "due to", "although", "whereas"], 1],
@@ -312,6 +318,8 @@ const LAB = {
           "Argument 2 — Second, water helps our body recover after sports and keeps our skin healthy.",
           "Recommendation — So, let's bring a water bottle to school and stop buying sugary drinks!"
         ]},
+        { id: "u4-drag1", t: "Drag & Drop: Healthy Habits", ic: "", type: "drag", note: "Drag the words into the advice", intro: "Drag each word into the right gap. Use the words that give advice and rules.", text: "Teenagers [[should]] sleep at least eight hours every night. You [[must]] turn off your phone before bed.\nIt is [[important]] that you drink enough water. You [[ought to]] eat more vegetables, and you [[should not]] skip breakfast.", extra: ["did","might"]},
+        { id: "u4-drag2", t: "Drag & Drop: Move Every Day", ic: "", type: "drag", note: "Drag the linking phrases", intro: "Drag each phrase into the text. They show the thesis, the arguments and the recommendation.", text: "[[In my opinion]], students need healthy habits. [[First]], research shows that exercise improves focus.\n[[Moreover]], a doctor says that sleep strengthens memory.\n[[Therefore]], I [[recommend]] that every student walks for thirty minutes a day.", extra: ["Long ago","Yesterday"]},
         { id: "u4-game", t: "English Master Game · Unit 4", ic: "", type: "game", note: "Answer 8 questions to win", soal: [
           ["Analytical vs hortatory: hortatory adds a…", ["recommendation", "complication", "orientation", "coda"], 0],
           ["\"You ___ eat more fruit.\"", ["should", "did", "were", "has"], 0],
