@@ -22,7 +22,7 @@ const LAB = {
     { t: "Semester 2 Files", url: "#" }
   ],
   // Unit yang disembunyikan dari murid. Kosongkan jadi [] atau hapus "u3", "u4" untuk menampilkannya lagi.
-  sembunyi: [],
+  sembunyi: ["u3", "u4"],
   // Slide materi (PDF) per unit. Format: ["kode TP", "judul", "file PDF di folder slides/", jumlah slide]
   slides: {
     u1: [
