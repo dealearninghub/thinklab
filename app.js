@@ -135,19 +135,24 @@ function finish(score, extra = "") {
 
 // ---------- quiz ----------
 const Quiz = {
-  start() { this.qs = shuffle(cur.soal); this.i = 0; this.ok = 0; this.show(); },
+  start() { this.hook = !!cur.hook; this.qs = this.hook ? cur.soal : shuffle(cur.soal); this.i = 0; this.ok = 0; this.show(); },
   show() {
-    const [q, opts, ans] = this.qs[this.i];
+    const [q, opts, ans, note] = this.qs[this.i];
     openModal(`${cur.ic} ${cur.t}`, `<div class="prog"><i style="width:${this.i / this.qs.length * 100}%"></i></div>
       <p class="intro">Question ${this.i + 1} of ${this.qs.length}</p><p class="q">${esc(q)}</p>
       ${opts.map((o, j) => `<button class="opt" data-j="${j}">${String.fromCharCode(65 + j)}. ${esc(o)}</button>`).join("")}<div class="fb" id="fb"></div><div class="row" id="nx"></div>`);
     document.querySelectorAll(".opt").forEach(b => b.onclick = () => {
-      const j = +b.dataset.j; document.querySelectorAll(".opt").forEach(x => { x.disabled = true; if (+x.dataset.j === ans) x.classList.add("right"); });
-      if (j === ans) { this.ok++; $("#fb").innerHTML = "Correct!"; } else { b.classList.add("wrong"); $("#fb").innerHTML = "Not quite. The right answer is highlighted."; }
-      $("#nx").innerHTML = `<button class="btn">${this.i + 1 < this.qs.length ? "Next →" : "See my score"}</button>`;
-      $("#nx button").onclick = () => { this.i++; this.i < this.qs.length ? this.show() : finish(Math.round(this.ok / this.qs.length * 100), `<p>${this.ok} of ${this.qs.length} correct</p>`); };
+      const j = +b.dataset.j;
+      if (this.hook) { document.querySelectorAll(".opt").forEach(x => { x.disabled = true; }); b.classList.add("right"); $("#fb").innerHTML = `<b>Nice thinking!</b> ${esc(note || "")}`; }
+      else {
+        document.querySelectorAll(".opt").forEach(x => { x.disabled = true; if (+x.dataset.j === ans) x.classList.add("right"); });
+        if (j === ans) { this.ok++; $("#fb").innerHTML = "Correct!"; } else { b.classList.add("wrong"); $("#fb").innerHTML = "Not quite. The right answer is highlighted."; }
+      }
+      $("#nx").innerHTML = `<button class="btn">${this.i + 1 < this.qs.length ? "Next →" : (this.hook ? "I'm ready!" : "See my score")}</button>`;
+      $("#nx button").onclick = () => { this.i++; if (this.i < this.qs.length) this.show(); else if (this.hook) this.done(); else finish(Math.round(this.ok / this.qs.length * 100), `<p>${this.ok} of ${this.qs.length} correct</p>`); };
     });
-  }
+  },
+  done() { $("#mb").innerHTML = `<div class="result"><p class="q">Warm-up done!</p><p>${esc(cur.hook)}</p><div class="row" style="justify-content:center"><button class="btn" onclick="closeModal()">Start learning</button><button class="btn alt" onclick="openAct('${cur.id}')">Try again</button></div></div>`; }
 };
 
 // ---------- game (millionaire style) ----------
