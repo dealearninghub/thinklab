@@ -63,7 +63,7 @@ const LAB = {
         <h3>Language Features</h3><ul><li><b>Simple past tense</b>: lived, cried, became, went</li><li><b>Action verbs</b>: cut, ran, planted, destroyed</li><li><b>Sequence words</b>: once upon a time, one day, then, after that, finally</li></ul>
         <p><b>Vocabulary:</b> ecosystem, habitat, deforestation, pollution, flood, drought, biodiversity, sustainable.</p>`,
       aktivitas: [
-        { id: "u1-asesmen", t: "Warm-up Quiz Unit 1", ic: "", type: "quiz", note: "Let's think first", hook: "You are ready to explore legends and nature in Unit 1!", soal: [
+        { id: "u1-asesmen", t: "Warm-up Unit 1", ic: "", type: "quiz", note: "Let's think first", hook: "You are ready to explore legends and nature in Unit 1!", soal: [
           ["Have you ever heard a story about how a lake, a mountain or an island got its name?", ["Yes, many times","Yes, once or twice","No, but I want to hear one","I am not sure"], -1, "Those stories are called legends. A legend explains where a real place, animal or thing comes from."],
           ["In many old stories, people who hurt nature get a big problem. Why do you think storytellers did this?", ["To teach us to protect nature","To make the story scary","To make the story longer","I have another idea"], -1, "Legends often carry a message about respecting nature. Many of them also have magic or a guardian spirit."],
           ["When you hear \"Once upon a time...\", what do you expect?", ["A story from the past","A news report","A set of instructions","A weather forecast"], -1, "A story is starting! A legend usually has a beginning, a problem and a solution."],
@@ -141,7 +141,7 @@ const LAB = {
         <h3>Story Elements</h3><ul><li><b>Characters</b> (protagonist, antagonist)</li><li><b>Setting</b> (time & place)</li><li><b>Conflict</b>: <i>internal</i> (inside the character: fear, doubt) and <i>external</i> (with others, nature, society)</li><li><b>Resolution</b> & <b>Coda</b> (lesson learned)</li></ul>
         <h3>Language Features</h3><ul><li><b>Noun phrase</b>: a brave young princess</li><li><b>Adverbs</b>: quickly, bravely, suddenly</li><li><b>Reduced adjective clause</b>: the girl <i>(who was) sitting</i> by the window → the girl sitting by the window</li><li><b>Reported speech</b>: "I am lost," she said. → She said that she was lost.</li></ul>`,
       aktivitas: [
-        { id: "u2-asesmen", t: "Warm-up Quiz Unit 2", ic: "", type: "quiz", note: "Let's think first", hook: "You are ready to discover yourself through stories in Unit 2!", soal: [
+        { id: "u2-asesmen", t: "Warm-up Unit 2", ic: "", type: "quiz", note: "Let's think first", hook: "You are ready to discover yourself through stories in Unit 2!", soal: [
           ["Have you ever felt unsure about who you really are or what you are good at?", ["Yes, often","Sometimes","Not really","I never think about it"], -1, "That feeling is very common! Many fairy tales and fantasy stories are about a character who slowly learns who they really are."],
           ["In a fantasy story, you find a magic mirror that answers one question. What do you ask?", ["Who am I really?","What will happen tomorrow?","Where is the treasure?","I would run away"], -1, "In stories, magic often helps a character face their own doubts. This is called self-discovery."],
           ["Which problem is harder to beat?", ["A monster outside","A fear inside me","Both are hard","It depends"], -1, "A problem outside the character is an external conflict. A fear or doubt inside is an internal conflict. Good stories often have both."],
@@ -222,7 +222,7 @@ const LAB = {
         <h3>Claim–Evidence–Reasoning (CER)</h3><ul><li><b>Claim</b>: Plastic waste harms marine life.</li><li><b>Evidence</b>: Millions of tons of plastic enter the ocean every year.</li><li><b>Reasoning</b>: Animals mistake plastic for food, so they get sick or die.</li></ul>
         <h3>Language Features</h3><ul><li>Simple present tense: Trees <b>absorb</b> carbon dioxide.</li><li>Causal conjunctions: <b>because, due to, therefore, thus, as a result</b></li><li>Academic vocabulary: biodiversity, sustainability, ecosystem, emission</li></ul>`,
       aktivitas: [
-        { id: "u3-asesmen", t: "Warm-up Quiz Unit 3", ic: "", type: "quiz", note: "Let's think first", hook: "You are ready to build strong arguments in Unit 3!", soal: [
+        { id: "u3-asesmen", t: "Warm-up Unit 3", ic: "", type: "quiz", note: "Let's think first", hook: "You are ready to build strong arguments in Unit 3!", soal: [
           ["Is plastic waste at your school a big problem?", ["Yes, a very big one","A small problem","Not a problem","I have not thought about it"], -1, "A text that argues for a position on an issue is called an analytical exposition. It starts with the writer's position, called the thesis."],
           ["Which sentence is more convincing?", ["Everyone knows plastic is bad.","Plastic takes hundreds of years to break down.","Plastic is just terrible.","I do not like plastic."], -1, "Facts and data are stronger than opinions. A good argument always uses evidence."],
           ["Your friend says, \"Obviously, my idea is the only answer!\" Do you trust it?", ["Yes, he sounds sure","Not yet, I want to see proof","Only if many people agree","I do not know"], -1, "Words like obviously, only and everyone can make an argument weak. A careful writer shows data and uses careful words."],
@@ -295,7 +295,7 @@ const LAB = {
         <h3>Persuasive Strategies</h3><ul><li><b>Logos</b> (logic & data): Studies show teenagers need 8–10 hours of sleep.</li><li><b>Pathos</b> (emotion): Imagine how your parents feel when you are sick.</li><li><b>Ethos</b> (credibility): According to the WHO / doctors…</li></ul>
         <h3>Language Features</h3><ul><li>Modals: <b>should, must, need to, ought to</b></li><li>Persuasive phrases: <b>Let's…, It is important to…</b></li><li>Health vocabulary: hydration, nutrition, balanced diet, exercise, sleep, stress</li></ul>`,
       aktivitas: [
-        { id: "u4-asesmen", t: "Warm-up Quiz Unit 4", ic: "", type: "quiz", note: "Let's think first", hook: "You are ready to give strong advice in Unit 4!", soal: [
+        { id: "u4-asesmen", t: "Warm-up Unit 4", ic: "", type: "quiz", note: "Let's think first", hook: "You are ready to give strong advice in Unit 4!", soal: [
           ["How many hours do you usually sleep on school nights?", ["Less than 6 hours","6 to 7 hours","About 8 hours","More than 8 hours"], -1, "Teenagers need about 8 hours. A text that urges readers to change a habit is called a hortatory exposition."],
           ["Your friend drinks three sweet drinks every day. What would you say?", ["You should drink more water.","Do whatever you want.","You must stop right now!","Nothing"], -1, "Words like should, must and ought to give advice or rules. They are called modal verbs."],
           ["What makes you change a habit the most?", ["A scary fact","A story about someone I know","Advice from a doctor","Nothing changes my habits"], -1, "Writers persuade with facts (logos), feelings (pathos) and trust (ethos). You will learn to use all three."],
