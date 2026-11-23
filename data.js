@@ -102,6 +102,18 @@ const LAB = {
           ["The moral value of a legend about cutting trees is probably…", ["Trees are useless", "We must protect nature", "Rivers are dangerous", "Money is everything"], 1],
           ["Which is NOT a characteristic of a legend?", ["Magical elements", "Real setting", "Moral value", "Statistical data"], 3]
         ]},
+        { id: "u1-prequiz", t: "Pre-quiz Unit 1", ic: "", type: "quiz", note: "Check the topics before the test", soal: [
+          ["What is the correct order of the generic structure of a legend?", ["Orientation, complication, resolution","Complication, orientation, resolution","Resolution, complication, orientation","Orientation, resolution, complication"], 0],
+          ["Which part of a legend introduces the characters and the setting?", ["Complication","Orientation","Resolution","Re-orientation"], 1],
+          ["What is the main purpose of a legend?", ["To report news about today","To describe a product for sale","To explain how a place or thing began","To give instructions for a task"], 2],
+          ["Which word means the natural home of a plant or an animal?", ["Drought","Habitat","Pollution","Erosion"], 1],
+          ["Which verb form do we use to tell the events in a legend?", ["Simple present tense","Present continuous","Future tense","Simple past tense"], 3],
+          ["Which sentence uses the correct past form?", ["The villagers plant new trees yesterday.","The villagers planted new trees.","The villagers plants new trees.","The villagers planting new trees."], 1],
+          ["What is the past form of the irregular verb \"begin\"?", ["began","begun","beginned","begins"], 0],
+          ["Which group contains only sequence words?", ["Brave, kind, clever","Forest, river, lake","First, then, finally","Run, jump, plant"], 2],
+          ["Which sentence has correct subject-verb agreement?", ["The animals was hungry.","The old man were tired.","The river were clean.","The villagers were afraid."], 3],
+          ["A legend about nature is effective when it has...", ["no problem for the characters","a clear message about caring for nature","only very difficult words","no setting at all"], 1]
+        ]},
         { id: "u1-latihan", t: "Practice Unit 1", ic: "", type: "quiz", note: "Mixed questions", soal: [
           ["Which one is NOT a characteristic of a legend?", ["It delivers a moral value or lesson", "It gives step-by-step instructions", "It explains the origin of something real", "It has magical or supernatural elements"], 1],
           ["Which signal words usually appear in the complication of a legend?", ["One day… / Suddenly… / However…", "Once upon a time… / A long time ago…", "Finally… / From that day on…", "There lived a… / In a village near…"], 0],
@@ -182,6 +194,18 @@ const LAB = {
           ["A motion comic is…", ["a printed newspaper", "a digital comic with movement and sound", "a song", "a speech"], 1],
           ["Fairy tales often teach us about…", ["math formulas", "growing up and values", "weather reports", "recipes"], 1]
         ]},
+        { id: "u2-prequiz", t: "Pre-quiz Unit 2", ic: "", type: "quiz", note: "Check the topics before the test", soal: [
+          ["Which part of a narrative tells how the problem is solved?", ["Orientation","Complication","Resolution","Introduction"], 2],
+          ["What does the orientation of a story usually tell us?", ["The final lesson only","The writer's opinion","Steps to follow","The characters, place and time"], 3],
+          ["Which sentence shows an internal conflict?", ["Mia fought a storm on the mountain.","Mia doubted herself before she spoke on stage.","A giant blocked the bridge.","Mia lost her bag on the bus."], 1],
+          ["Which sentence shows an external conflict?", ["The boy felt ashamed of his grades.","She worried that nobody liked her.","He argued with a classmate who laughed at him.","She wondered if she was good enough."], 2],
+          ["What is a turning point in a story?", ["The first sentence of the story","The title of the story","The last word of the story","The moment that starts to change the character"], 3],
+          ["How can we show that a character has changed?", ["Compare the character at the beginning and at the end","Count the paragraphs in the story","Look only at the title","Check the length of the sentences"], 0],
+          ["Which word means not sure about your own ability?", ["Confident","Insecure","Proud","Careless"], 1],
+          ["Which sentence is the reduced form of \"The girl who is sitting alone is my friend\"?", ["The girl sat alone is my friend.","The girl who sitting alone is my friend.","The girl sitting alone is my friend.","The girl is sitting alone my friend."], 2],
+          ["Mia said, \"I am nervous.\" Which is the correct reported speech?", ["Mia said that I was nervous.","Mia said that she was nervous.","Mia said that she am nervous.","Mia said that she will nervous."], 1],
+          ["Which one is a noun phrase?", ["a shy girl with a sketchbook","runs very quickly","because she was afraid","slowly and quietly"], 0]
+        ]},
         { id: "u2-latihan", t: "Practice Unit 2", ic: "", type: "quiz", note: "Mixed questions", soal: [
           ["Which question does the complication of a story answer?", ["How is it solved?", "What did the character discover?", "What goes wrong?", "Who? Where? When?"], 2],
           ["Conflict in a story means…", ["the lesson at the end", "the problem the main character must face", "the place where the story happens", "the person who tells the story"], 1],
@@ -258,6 +282,18 @@ const LAB = {
           ["Sustainability means…", ["using resources so they last for the future", "wasting energy", "building more factories", "cutting trees"], 0],
           ["Green Street Journalism produces…", ["a song", "a written text and a campaign video", "a poem", "a comic"], 1]
         ]},
+        { id: "u3-prequiz", t: "Pre-quiz Unit 3", ic: "", type: "quiz", note: "Check the topics before the test", soal: [
+          ["What is the generic structure of an analytical exposition?", ["Orientation, complication, resolution","Thesis, arguments, reiteration","Goal, materials, steps","Thesis, arguments, recommendation"], 1],
+          ["What does the thesis do in an analytical exposition?", ["It tells the story of a hero","It lists the steps of a process","It states the writer's position on the issue","It thanks the readers"], 2],
+          ["What is the purpose of the reiteration?", ["To introduce the topic","To list new facts","To tell a short story","To restate the writer's position at the end"], 3],
+          ["Which word means all the living things and their environment working together?", ["Pollution","Landfill","Ecosystem","Deforestation"], 2],
+          ["Which word means using resources so that future generations can still use them?", ["Extinction","Sustainability","Deforestation","Pollution"], 1],
+          ["Which sentence uses the simple present tense correctly?", ["Plastic pollutes the sea.","Plastic pollute the sea.","Plastic polluting the sea.","Plastic polluted the sea now."], 0],
+          ["Which word can start a sentence to show a result?", ["Although","Unless","While","Therefore"], 3],
+          ["Which sentence uses \"due to\" correctly?", ["Due to heavy rain, the school yard flooded.","Due to the school yard flooded, it rained.","The yard flooded due to it rains.","Due to flooded, the heavy rain."], 0],
+          ["In Claim-Evidence-Reasoning, what is the evidence?", ["The writer's opinion","Data or facts that support the claim","The title of the text","A greeting to the reader"], 1],
+          ["Which source is the most credible for data about waste?", ["A rumor from social media","A friend's guess","A government environment report","An advertisement for a product"], 2]
+        ]},
         { id: "u3-latihan", t: "Practice Unit 3", ic: "", type: "quiz", note: "Mixed questions", soal: [
           ["What is the purpose of an analytical exposition?", ["To entertain readers with a story", "To explain how to make something", "To describe a person or a place", "To persuade readers that something is important, with arguments"], 3],
           ["What does the reiteration do in an analytical exposition?", ["It gives the evidence for each argument", "It tells readers what to do", "It restates the thesis and closes the text", "It introduces the topic and the writer's position"], 2],
@@ -329,6 +365,18 @@ const LAB = {
           ["Which is a recommendation?", ["Sleep is important.", "Many students sleep late.", "We must sleep at least 8 hours.", "I slept late yesterday."], 2],
           ["A good recommendation should be…", ["realistic and relevant", "impossible", "unrelated", "very long"], 0],
           ["A podcast is…", ["an audio program", "a printed poster", "a short story", "a math test"], 0]
+        ]},
+        { id: "u4-prequiz", t: "Pre-quiz Unit 4", ic: "", type: "quiz", note: "Check the topics before the test", soal: [
+          ["What is the generic structure of a hortatory exposition?", ["Thesis, arguments, reiteration","Orientation, events, re-orientation","Goal, materials, steps","Thesis, arguments, recommendation"], 3],
+          ["What is the purpose of a hortatory exposition?", ["To entertain with a magic story","To persuade readers to do or not do something","To describe how a machine works","To report a news event"], 1],
+          ["Which part tells the reader what to do?", ["Thesis","Argument","Recommendation","Title"], 2],
+          ["Which phrase means moving your body to stay healthy?", ["Mental health","Physical activity","Screen time","Junk food"], 1],
+          ["Which word is about eating healthy food for growth and energy?", ["Exercise","Stress","Screen","Nutrition"], 3],
+          ["Which sentence gives a suggestion?", ["Students should drink more water.","Students drank water.","Students are drinking water.","Students have a bottle."], 0],
+          ["Which sentence uses \"need to\" correctly?", ["Teenagers needs to sleeping eight hours.","Teenagers need sleep to eight hours.","Teenagers need to sleep eight hours.","Teenagers need to slept eight hours."], 2],
+          ["Which sentence is an imperative?", ["Students drink water.","He drinks water.","They were drinking water.","Drink water every day."], 3],
+          ["Which sentence appeals to feelings (pathos)?", ["Studies show that exercise lowers heart risk.","A doctor with 20 years of experience says so.","Imagine how happy you feel after a good run!","The data come from a national survey."], 2],
+          ["Which recommendation is the most realistic for a busy student?", ["Run for five hours every day.","Walk for 20 minutes after school.","Never eat any sugar again.","Quit all school activities."], 1]
         ]},
         { id: "u4-latihan", t: "Practice Unit 4", ic: "", type: "quiz", note: "Mixed questions", soal: [
           ["What does the thesis of a hortatory exposition state?", ["The writer's position on the issue", "The steps to follow", "The characters of the story", "A list of materials"], 0],
