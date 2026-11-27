@@ -36,14 +36,16 @@ const LAB = {
       ["TP 2.3", "Project Day: Motion Comic", "slides/unit2-tp2-3.pdf", 20]
     ],
     u3: [
-      ["TP 3.1", "Why Are Our Classrooms So Hot?", "slides/unit3-tp3-1.pdf", 35],
-      ["TP 3.2", "Let the Data Speak for You", "slides/unit3-tp3-2.pdf", 29],
-      ["TP 3.3", "Is This Argument Strong Enough?", "slides/unit3-tp3-3.pdf", 19]
+      ["TP 3.1", "Why Are Our Classrooms So Hot?", "slides/unit3-tp3-1.pdf", 30],
+      ["TP 3.2", "Let the Data Speak for You", "slides/unit3-tp3-2.pdf", 28],
+      ["TP 3.3", "Is This Argument Strong Enough?", "slides/unit3-tp3-3.pdf", 19],
+      ["TP 3.4", "Your Own Final Project", "slides/unit3-tp3-4.pdf", 16]
     ],
     u4: [
-      ["TP 4.1", "Why Should We Live Healthy?", "slides/unit4-tp4-1.pdf", 27],
-      ["TP 4.2", "The Language of Advice and Action", "slides/unit4-tp4-2.pdf", 23],
-      ["TP 4.3", "Is Our Idea Realistic Enough?", "slides/unit4-tp4-3.pdf", 13]
+      ["TP 4.1", "Why Should We Live Healthy?", "slides/unit4-tp4-1.pdf", 24],
+      ["TP 4.2", "The Language of Advice and Action", "slides/unit4-tp4-2.pdf", 25],
+      ["TP 4.3", "Is Our Idea Realistic Enough?", "slides/unit4-tp4-3.pdf", 14],
+      ["TP 4.4", "Your Own Campaign", "slides/unit4-tp4-4.pdf", 17]
     ]
   },
   semester: [
