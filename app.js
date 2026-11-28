@@ -18,74 +18,97 @@ const vis = k => !(LAB.sembunyi || []).includes(k);
 const TABS0 = [["beranda", "", "Home"], ["u1", "", "Sem 1"], ["u3", "", "Sem 2"], ["profil", "", "Teacher"]];
 const TABS = TABS0.filter(t => vis(t[0]));
 
+// ---------- dashboard: side menu, one view at a time, side panel ----------
+const SVG = d => `<svg viewBox="0 0 24 24" aria-hidden="true">${d}</svg>`;
+const ICON = {
+  beranda: SVG('<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>'),
+  unit: SVG('<path d="M12 6c-2-2-5-2-8-1v14c3-1 6-1 8 1 2-2 5-2 8-1V5c-3-1-6-1-8 1z"/><path d="M12 6v14"/>'),
+  grammar: SVG('<path d="M4 17L8 7l4 10"/><path d="M5.5 13.5h5"/><circle cx="17" cy="14" r="3"/><path d="M20 11v6"/>'),
+  profil: SVG('<circle cx="12" cy="8" r="4"/><path d="M4 20c1-4 4-6 8-6s7 2 8 6"/>')
+};
+const UNITS = () => Object.keys(L.units).filter(vis);
+const slidesOf = k => (LAB.slides || {})[k] || [];
+const ext = url => /^https?:|\.pdf$/.test(url) ? ' target="_blank" rel="noopener"' : "";
+const semOf = k => L.semester.find(s => s.units.includes(k));
+let view = "beranda"; const tab = {};
+
+function fromHash() { const h = location.hash.slice(1); return h === "profil" || UNITS().includes(h) ? h : "beranda"; }
 function render() {
-  $("#beranda").innerHTML = MESH(["#7b7cff", "#ff8cc6", "#ffc16b"]) + `
-    <p class="eyebrow">Bahasa Inggris Tingkat Lanjut · Grade XI</p>
-    <h1 class="display">Welcome to<br><em>Think Lab</em></h1>
-    <p class="teacher-name">${L.guru}</p>
-    <p class="lede">${L.tagline}</p>
-    <div class="chips">${L.heroLinks.concat(L.driveLinks.filter(d => d.url !== "#")).map(l => `<a class="chip glass clear" href="${l.url}"${/^https?:/.test(l.url) ? ' target="_blank" rel="noopener"' : ""}>${l.t}</a>`).join("")}</div>`;
-  $("#sems").innerHTML = L.semester.map((s, si) => s.units.filter(vis).map((k, i) => unitSection(k, L.units[k], i === 0 ? s : null, si)).join("")).join("");
-  $("#profil").innerHTML = `<p class="eyebrow" style="color:var(--accent)">Your Teacher</p><div class="prof"><div class="ava">DA</div><div><h3>${L.guru}</h3><p>${L.jabatan}</p></div></div>
-    <p class="foot">© 2026 Think Lab · Bahasa Inggris Tingkat Lanjut XI · SMAN 1 Batam</p>`;
-  $("#seg").innerHTML = `<i class="blob" id="segBlob"></i>` + Object.entries(L.units).filter(([k]) => vis(k)).map(([k, u]) => `<a href="#${k}" data-k="${k}">${u.emoji} <span>Unit ${+u.no}</span></a>`).join("");
-  $("#tabbar").innerHTML = `<i class="blob" id="tabBlob"></i>` + TABS.map(([k, e, t]) => `<a href="#${k}" data-k="${k}"><b>${e}</b><span>${t}</span></a>`).join("");
-  wireGlass(); onScroll();
+  view = fromHash();
+  const item = (href, key, icon, label) => `<a href="${href}"${view === key ? ' class="on" aria-current="page"' : ""}>${icon}<span>${label}</span></a>`;
+  $("#side").innerHTML = `<a class="logo-tl" href="#beranda" aria-label="Think Lab, home">TL</a>
+    ${item("#beranda", "beranda", ICON.beranda, "Home")}
+    ${UNITS().map(k => item("#" + k, k, ICON.unit, "Unit " + +L.units[k].no)).join("")}
+    ${item("grammar.html", "grammar", ICON.grammar, "Grammar")}
+    ${item("#profil", "profil", ICON.profil, "Teacher")}`;
+  $("#view").innerHTML = view === "beranda" ? homeView() : view === "profil" ? teacherView() : unitSection(view, L.units[view]);
+  $("#rail").innerHTML = rail();
+  document.title = view === "beranda" ? "Think Lab" : `${view === "profil" ? "Teacher" : "Unit " + +L.units[view].no} · Think Lab`;
+  wireGlass();
+}
+function homeView() {
+  return `<section class="hero" id="beranda">
+      <p class="eyebrow">Bahasa Inggris Tingkat Lanjut · Grade XI</p>
+      <h1 class="display">Welcome to <em>Think Lab</em></h1>
+      <p class="lede">${L.tagline}</p>
+    </section>
+    <h2 class="dash-h">Your units</h2>
+    <div class="ugrid">${UNITS().map((k, i) => { const u = L.units[k]; return `<article class="ucard c${i % 2}">
+        <span class="uno">${u.no}</span><small>${u.jenis}</small><h3>${u.judul}</h3>
+        <div class="ubtns">
+          <button onclick="go('${k}','slides')">Slides <b>${slidesOf(k).length}</b></button>
+          <button onclick="go('${k}','games')">Games <b>${u.aktivitas.length}</b></button>
+          <button onclick="go('${k}','videos')">Videos <b>${u.video.length}</b></button>
+        </div>
+        <a class="ugo" href="corner.html?u=${+u.no}">${CORNER_NAME[k]} →</a>
+      </article>`; }).join("")}</div>
+    <h2 class="dash-h">Quick play</h2>
+    <div class="qgrid">${UNITS().flatMap(k => { const u = L.units[k]; return [u.aktivitas[0], u.aktivitas.find(a => a.type === "game")].filter(Boolean); })
+      .map((a, i) => `<button class="qcard c${i % 4}" onclick="openAct('${a.id}', this)"><b>${a.t}</b><small>${a.note || ""}</small><span>Play →</span></button>`).join("")}</div>`;
+}
+function teacherView() {
+  return `<section class="plain" id="profil"><p class="eyebrow">Your Teacher</p><div class="prof"><div class="ava">DA</div><div><h3>${L.guru}</h3><p>${L.jabatan}</p></div></div>
+    <p class="foot">© 2026 Think Lab · Bahasa Inggris Tingkat Lanjut XI · SMAN 1 Batam</p></section>`;
 }
 const ytId = u => (u.match(/(?:youtu\.be\/|[?&]v=)([\w-]{11})/) || [])[1];
-function unitSection(k, u, sem, si) {
-  return `<section class="unit tone-dark" id="${k}" data-tab="${si ? "u3" : "u1"}" data-unit="${k}" style="--bg:${UNIT_BG[k]}">
-    ${MESH(["rgba(255,255,255,.35)", "rgba(255,255,255,.18)", "rgba(0,0,0,.25)"])}
-    ${sem ? `<div class="sem-label glass clear">${sem.nama} · ${sem.sub}</div>` : ""}
-    <div class="u-top"><span class="u-emoji">${u.emoji}</span><span class="eyebrow" style="margin:0">Unit ${u.no} · ${u.jenis}</span></div>
-    <h2 class="u-title">${u.judul}</h2>
-    <p class="u-desk">${u.desk}</p>
-    <p class="u-topics"><b>Topics</b> ${u.tags.join(" · ")}</p>
+function unitSection(k, u) {
+  const sem = semOf(k), sl = slidesOf(k);
+  const T = [["slides", "Slides", sl.length], ["games", "Games", u.aktivitas.length], ["videos", "Videos", u.video.length]].filter(t => t[2]);
+  const cur = T.some(t => t[0] === tab[k]) ? tab[k] : T[0][0];
+  const body = {
+    slides: () => `<div class="sgrid">${sl.map(([tp, t, file, n], i) => `<a class="scard c${i % 4}" href="${file}" target="_blank" rel="noopener"><span class="s-top"><em>${tp}</em><i>SLIDES</i></span><b>${t}</b><small>${n} slides · PDF</small><span class="s-go">Open slides ↗</span></a>`).join("")}</div>`,
+    games: () => `<div class="panel"><div class="acts">${u.aktivitas.map(a => `<button class="act" onclick="openAct('${a.id}', this)"><span class="i">${a.ic}</span><span><b>${a.t}</b><small>${a.note || ""}</small></span>${best[a.id] != null ? `<span class="best">BEST ${best[a.id]}</span>` : ""}</button>`).join("")}</div></div>`,
+    videos: () => `<div class="vgrid">${u.video.map(([t, url], i) => { const id = ytId(url); return `<a class="vcard" href="${url}" target="_blank" rel="noopener"><span class="vthumb">${id ? `<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()">` : ""}<i class="vplay">▶</i><em class="vep">EP ${i + 1}</em></span><b>${t}</b></a>`; }).join("")}</div>
+      ${(u.inspirasi || []).length ? `<div class="u-row vmore"><span class="lbl">More to explore</span>${u.inspirasi.map(([t, url]) => `<a class="chip" href="${url}" target="_blank" rel="noopener">${t} ↗</a>`).join("")}</div>` : ""}`
+  };
+  return `<section class="unit" id="${k}" data-unit="${k}">
+    <header class="uhead">
+      ${sem ? `<p class="eyebrow">${sem.nama} · Unit ${u.no} · ${u.jenis}</p>` : ""}
+      <h2 class="u-title">${u.judul}</h2>
+      <p class="u-desk">${u.desk}</p>
+      <p class="u-tags">${u.tags.map(t => `<span>${t}</span>`).join("")}</p>
+    </header>
     <a class="corner-card" href="corner.html?u=${+u.no}">
       <span class="cc-ic">${String(+u.no).padStart(2, "0")}</span>
-      <span class="cc-body"><em class="cc-badge">Start here</em><b class="cc-name">${CORNER_NAME[k]}</b><small class="cc-sub">Theory · Steps · Simulation · LKPD</small><span class="cc-desc">Your main lab for this unit: learn the theory, practice step by step, and finish your worksheets.</span></span>
-      <span class="cc-go">Enter the Corner →</span>
+      <span class="cc-body"><em class="cc-badge">Start here</em><b class="cc-name">${CORNER_NAME[k]}</b><small class="cc-sub">Theory · Steps · Simulation · LKPD</small></span>
+      <span class="cc-go">Enter →</span>
     </a>
-    ${((LAB.slides || {})[k] || []).length ? `<p class="u-h h-slides"><span class="u-h-i"></span> Slides <b class="u-n">${LAB.slides[k].length}</b></p>
-    <div class="sgrid">${LAB.slides[k].map(([tp, t, file, n], i) => `<a class="scard c${i % 4}" href="${file}" target="_blank" rel="noopener"><span class="s-top"><em>${tp}</em><i>SLIDES</i></span><b>${t}</b><small>${n} slides · PDF</small><span class="s-go">Open slides ↗</span></a>`).join("")}</div>` : ""}
-    <p class="u-h h-games"><span class="u-h-i"></span> Play the games <b class="u-n">${u.aktivitas.length}</b></p>
-    <div class="panel glass clear"><div class="acts">${u.aktivitas.map(a => `<button class="act" onclick="openAct('${a.id}', this)"><span class="i">${a.ic}</span><span><b>${a.t}</b><small>${a.note || ""}</small></span>${best[a.id] != null ? `<span class="best">BEST ${best[a.id]}</span>` : ""}</button>`).join("")}</div></div>
-    <div class="u-row"><button class="cta" onclick="openMateri('${k}', this)">Read the Summary →</button></div>
-    <p class="u-h h-videos"><span class="u-h-i"></span> Watch the videos <b class="u-n">${u.video.length}</b></p>
-    <div class="vgrid">${u.video.map(([t, url], i) => { const id = ytId(url); return `<a class="vcard" href="${url}" target="_blank" rel="noopener"><span class="vthumb">${id ? `<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()">` : ""}<i class="vplay">▶</i><em class="vep">EP ${i + 1}</em></span><b>${t}</b></a>`; }).join("")}</div>
-    ${(u.inspirasi || []).length ? `<div class="u-row vmore"><span class="lbl">More to explore</span>${u.inspirasi.map(([t, url]) => `<a class="chip glass clear" href="${url}" target="_blank" rel="noopener">${t} ↗</a>`).join("")}</div>` : ""}
+    <div class="utabs" role="tablist">${T.map(([id, label, n]) => `<button role="tab" aria-selected="${id === cur}" onclick="go('${k}','${id}')">${label} <b>${n}</b></button>`).join("")}
+      <button class="sum" onclick="openMateri('${k}', this)">Summary</button></div>
+    ${body[cur]()}
   </section>`;
 }
-
-// ---------- controls: adaptive tint, active blob, shrink on scroll ----------
-function moveBlob(blob, el) { if (!blob || !el) return; blob.style.left = el.offsetLeft + "px"; blob.style.width = el.offsetWidth + "px"; }
-function toneUnder(el) {
-  const r = el.getBoundingClientRect(), y = r.top + r.height / 2;
-  const hit = [...document.querySelectorAll("#content > section, #sems > section")].find(s => { const b = s.getBoundingClientRect(); return b.top <= y && b.bottom >= y; });
-  el.classList.toggle("on-light", !!hit && hit.classList.contains("tone-light"));
-  el.classList.toggle("on-dark", !hit || hit.classList.contains("tone-dark"));
+function rail() {
+  const list = view === "beranda" || view === "profil" ? UNITS() : [view];
+  const rows = list.flatMap(k => slidesOf(k)).map(([tp, t, file]) => `<a class="rrow" href="${file}" target="_blank" rel="noopener"><span><b>${tp}</b><small>${t}</small></span><i>Open</i></a>`).join("");
+  const links = L.heroLinks.concat(L.driveLinks.filter(d => d.url !== "#"));
+  return `<a class="rme" href="#profil"><span class="rava">DA</span><span><b>${L.guru}</b><small>English teacher</small></span></a>
+    ${rows ? `<h2 class="dash-h">${view === "beranda" || view === "profil" ? "All slides" : "Slides for this unit"}</h2>${rows}` : ""}
+    <h2 class="dash-h">Quick links</h2>${links.map(l => `<a class="rrow link" href="${l.url}"${ext(l.url)}><span>${l.t}</span><i>→</i></a>`).join("")}`;
 }
-let lastY = scrollY, ticking = false;
-function onScroll() {
-  const y = scrollY; document.body.classList.toggle("compact", y > lastY + 4 && y > 120); if (y < lastY - 4 || y < 120) document.body.classList.remove("compact"); lastY = y;
-  toneUnder($("#topbar")); toneUnder($("#tabbar"));
-  const mid = innerHeight * .4;
-  const sec = [...document.querySelectorAll("#content > section, #sems > section")].find(s => { const b = s.getBoundingClientRect(); return b.top <= mid && b.bottom > mid; });
-  if (sec) {
-    const tab = document.querySelector(`#tabbar a[data-k="${sec.dataset.tab}"]`);
-    document.querySelectorAll("#tabbar a").forEach(a => a.classList.toggle("on", a === tab)); moveBlob($("#tabBlob"), tab);
-    const seg = document.querySelector(`#seg a[data-k="${sec.dataset.unit}"]`);
-    $("#segBlob").style.opacity = seg ? 1 : 0; document.querySelectorAll("#seg a").forEach(a => a.classList.toggle("on", a === seg)); if (seg) moveBlob($("#segBlob"), seg);
-  }
-}
-addEventListener("scroll", () => { if (!ticking) { requestAnimationFrame(() => { onScroll(); ticking = false; }); ticking = true; } }, { passive: true });
-addEventListener("resize", onScroll);
-// specular highlight follows the pointer (and device tilt on phones)
-function wireGlass() {
-  document.querySelectorAll(".glass").forEach(g => g.onpointermove = e => { const r = g.getBoundingClientRect(); g.style.setProperty("--mx", (e.clientX - r.left) + "px"); g.style.setProperty("--my", (e.clientY - r.top) + "px"); });
-}
-addEventListener("deviceorientation", e => { if (e.gamma == null) return; document.documentElement.style.setProperty("--mx", (50 + e.gamma) + "%"); document.documentElement.style.setProperty("--my", Math.max(0, e.beta - 30) + "%"); });
-if (/Chrome\//.test(navigator.userAgent) && !/Edg\/|OPR\//.test(navigator.userAgent) && matchMedia("(min-width:701px)").matches) document.documentElement.classList.add("lens");
+window.go = (k, t) => { tab[k] = t; if (location.hash === "#" + k) render(); else location.hash = k; };
+addEventListener("hashchange", () => { if (location.hash.startsWith("#act=")) return; const was = view; render(); if (was !== view) scrollTo(0, 0); });
+function wireGlass() {}
 
 // ---------- sheet: morphs out of the tapped control (FLIP + spring) ----------
 let origin = null;
@@ -291,7 +314,5 @@ const Drag = {
 };
 
 render();
-["#tabbar", "#topbar"].forEach(s => $(s).addEventListener("transitionend", () => { moveBlob($("#tabBlob"), $("#tabbar a.on")); }));
-setTimeout(onScroll, 400);
 // open a game from a link like lms/#act=u1-quiz (used by the LKPD Practice tab)
-if (location.hash.startsWith("#act=")) { const id = location.hash.slice(5); if (ACT[id]) setTimeout(() => { const u = document.getElementById(ACT[id].unit === L.units.u1 ? "u1" : Object.keys(L.units).find(k => L.units[k] === ACT[id].unit)); if (u) u.scrollIntoView(); openAct(id); }, 450); }
+if (location.hash.startsWith("#act=")) { const id = location.hash.slice(5); if (ACT[id]) setTimeout(() => { const k = Object.keys(L.units).find(k => L.units[k] === ACT[id].unit); if (k) { history.replaceState(null, "", "#" + k); tab[k] = "games"; render(); } openAct(id); }, 450); }

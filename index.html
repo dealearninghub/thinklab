@@ -3,37 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#F2B5A7">
+<meta name="theme-color" content="#960911">
 <title>Think Lab</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=1795030000">
 <link rel="stylesheet" href="retro.css?v=1795030000">
 <link rel="stylesheet" href="neo.css?v=1795037000">
+<link rel="stylesheet" href="dash.css?v=1795900000">
 </head>
 <body>
-<!-- SVG lens filter: refraction for the glass (Chromium) -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <filter id="lens" x="-10%" y="-10%" width="120%" height="120%">
-    <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" seed="7" result="n"/>
-    <feGaussianBlur in="n" stdDeviation="2" result="nb"/>
-    <feDisplacementMap in="SourceGraphic" in2="nb" scale="22" xChannelSelector="R" yChannelSelector="G"/>
-  </filter>
-</svg>
-
-<!-- ===== Layer 1: content (full-bleed) ===== -->
-<main id="content">
-  <section class="hero tone-dark" id="beranda" data-tab="beranda"></section>
-  <div id="sems"></div>
-  <section class="plain tone-light" id="profil" data-tab="profil"></section>
-</main>
-
-<!-- ===== Layer 2: floating controls ===== -->
-<header class="topbar glass regular" id="topbar">
-  <a class="brand" href="#beranda"><span>Think Lab</span></a>
-  <nav class="seg" id="seg"><i class="blob" id="segBlob"></i></nav>
-</header>
-<nav class="tabbar glass regular" id="tabbar"><i class="blob" id="tabBlob"></i></nav>
+<div class="dash">
+  <nav class="side" id="side" aria-label="Main menu"></nav>
+  <main id="view"></main>
+  <aside class="rail" id="rail" aria-label="Teacher and quick links"></aside>
+</div>
 
 <div class="scrim" id="scrim" hidden></div>
 <div class="sheet glass regular" id="sheet" hidden role="dialog" aria-modal="true">
@@ -42,6 +26,6 @@
 </div>
 
 <script src="data.js?v=1795780000"></script>
-<script src="app.js?v=1795340000"></script>
+<script src="app.js?v=1795900000"></script>
 </body>
 </html>
