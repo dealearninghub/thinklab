@@ -23,29 +23,29 @@ const LAB = {
   ],
   // Unit yang disembunyikan dari murid. Kosongkan jadi [] atau hapus "u3", "u4" untuk menampilkannya lagi.
   sembunyi: ["u3", "u4"],
-  // Slide materi (PDF) per unit. Format: ["kode TP", "judul", "file PDF di folder slides/", jumlah slide]
+  // Slide materi (PDF) per unit. Format: ["nama materi", "judul slide", "file PDF di folder slides/", jumlah slide]
   slides: {
     u1: [
-      ["TP 1.1", "The Legend Detectives", "slides/Materi Siswa Unit 1 - TP 1.1 The Legend Detectives.pdf", 10],
-      ["TP 1.2", "The Legend Toolkit", "slides/Materi Siswa Unit 1 - TP 1.2 The Legend Toolkit.pdf", 14],
-      ["TP 1.3", "Evaluate & Reflect", "slides/Materi Siswa Unit 1 - TP 1.3 Evaluate and Reflect.pdf", 6]
+      ["Legend Structure, Vocabulary & Main Idea", "The Legend Detectives", "slides/Materi Siswa Unit 1 - TP 1.1 The Legend Detectives.pdf", 10],
+      ["Simple Past, Action Verbs & Sequence Words", "The Legend Toolkit", "slides/Materi Siswa Unit 1 - TP 1.2 The Legend Toolkit.pdf", 14],
+      ["Text Evaluation & Text-to-World Connection", "Evaluate & Reflect", "slides/Materi Siswa Unit 1 - TP 1.3 Evaluate and Reflect.pdf", 6]
     ],
     u2: [
-      ["TP 2.1", "Story Structure & Elements", "slides/unit2-tp2-1.pdf", 18],
-      ["TP 2.2", "Language Features", "slides/unit2-tp2-2.pdf", 21],
-      ["TP 2.3", "Project Day: Motion Comic", "slides/unit2-tp2-3.pdf", 20]
+      ["Story Structure & Story Elements", "The Mirror of Selara", "slides/unit2-tp2-1.pdf", 18],
+      ["Noun Phrases, Clauses & Reported Speech", "Language Features", "slides/unit2-tp2-2.pdf", 21],
+      ["Group Project: Motion Comic", "Project Day", "slides/unit2-tp2-3.pdf", 20]
     ],
     u3: [
-      ["TP 3.1", "Why Are Our Classrooms So Hot?", "slides/unit3-tp3-1.pdf", 30],
-      ["TP 3.2", "Let the Data Speak for You", "slides/unit3-tp3-2.pdf", 28],
-      ["TP 3.3", "Is This Argument Strong Enough?", "slides/unit3-tp3-3.pdf", 19],
-      ["TP 3.4", "Your Own Final Project", "slides/unit3-tp3-4.pdf", 16]
+      ["Because, So, Although & Text Structure", "Why Are Our Classrooms So Hot?", "slides/unit3-tp3-1.pdf", 30],
+      ["Cause and Effect & Claim, Evidence, Reasoning", "Let the Data Speak for You", "slides/unit3-tp3-2.pdf", 28],
+      ["Evaluating Arguments: Data, Source & Bias", "Is This Argument Strong Enough?", "slides/unit3-tp3-3.pdf", 19],
+      ["Final Project: Analytical Exposition", "Your Own Final Project", "slides/unit3-tp3-4.pdf", 16]
     ],
     u4: [
-      ["TP 4.1", "Why Should We Live Healthy?", "slides/unit4-tp4-1.pdf", 24],
-      ["TP 4.2", "The Language of Advice and Action", "slides/unit4-tp4-2.pdf", 25],
-      ["TP 4.3", "Is Our Idea Realistic Enough?", "slides/unit4-tp4-3.pdf", 14],
-      ["TP 4.4", "Your Own Campaign", "slides/unit4-tp4-4.pdf", 17]
+      ["Hortatory Structure, Health Words & Survey Data", "Why Should We Live Healthy?", "slides/unit4-tp4-1.pdf", 24],
+      ["Modal Verbs, Imperatives & Persuasion", "The Language of Advice and Action", "slides/unit4-tp4-2.pdf", 25],
+      ["Judging & Improving Recommendations", "Is Our Idea Realistic Enough?", "slides/unit4-tp4-3.pdf", 14],
+      ["Final Project: Hortatory Exposition", "Your Own Campaign", "slides/unit4-tp4-4.pdf", 17]
     ]
   },
   semester: [
