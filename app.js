@@ -28,6 +28,9 @@ const ICON = {
 };
 const UNITS = () => Object.keys(L.units).filter(vis);
 const slidesOf = k => (LAB.slides || {})[k] || [];
+// activities with type "quiz" go to the Quiz tab, all other types go to Games
+const tabOf = x => x.type === "quiz" ? "quiz" : "games";
+const actsOf = (u, t) => u.aktivitas.filter(x => tabOf(x) === t);
 const ext = url => /^https?:|\.pdf$/.test(url) ? ' target="_blank" rel="noopener"' : "";
 const semOf = k => L.semester.find(s => s.units.includes(k));
 let view = "beranda"; const tab = {};
@@ -57,7 +60,8 @@ function homeView() {
         <span class="uno">${u.no}</span><small>${u.jenis}</small><h3>${u.judul}</h3>
         <div class="ubtns">
           <button onclick="go('${k}','slides')">Slides <b>${slidesOf(k).length}</b></button>
-          <button onclick="go('${k}','games')">Games <b>${u.aktivitas.length}</b></button>
+          <button onclick="go('${k}','games')">Games <b>${actsOf(u, "games").length}</b></button>
+          <button onclick="go('${k}','quiz')">Quiz <b>${actsOf(u, "quiz").length}</b></button>
           <button onclick="go('${k}','videos')">Videos <b>${u.video.length}</b></button>
         </div>
         <a class="ugo" href="corner.html?u=${+u.no}">${CORNER_NAME[k]} →</a>
@@ -73,11 +77,13 @@ function teacherView() {
 const ytId = u => (u.match(/(?:youtu\.be\/|[?&]v=)([\w-]{11})/) || [])[1];
 function unitSection(k, u) {
   const sem = semOf(k), sl = slidesOf(k);
-  const T = [["slides", "Slides", sl.length], ["games", "Games", u.aktivitas.length], ["videos", "Videos", u.video.length]].filter(t => t[2]);
+  const T = [["slides", "Slides", sl.length], ["games", "Games", actsOf(u, "games").length], ["quiz", "Quiz", actsOf(u, "quiz").length], ["videos", "Videos", u.video.length]].filter(t => t[2]);
   const cur = T.some(t => t[0] === tab[k]) ? tab[k] : T[0][0];
+  const acts = t => `<div class="panel"><div class="acts">${actsOf(u, t).map(a => `<button class="act" onclick="openAct('${a.id}', this)"><span class="i">${a.ic}</span><span><b>${a.t}</b><small>${a.note || ""}</small></span>${best[a.id] != null ? `<span class="best">BEST ${best[a.id]}</span>` : ""}</button>`).join("")}</div></div>`;
   const body = {
     slides: () => `<div class="sgrid">${sl.map(([tp, t, file, n], i) => `<a class="scard c${i % 4}" href="${file}" target="_blank" rel="noopener"><span class="s-top"><em>${tp}</em><i>SLIDES</i></span><b>${t}</b><small>${n} slides · PDF</small><span class="s-go">Open slides ↗</span></a>`).join("")}</div>`,
-    games: () => `<div class="panel"><div class="acts">${u.aktivitas.map(a => `<button class="act" onclick="openAct('${a.id}', this)"><span class="i">${a.ic}</span><span><b>${a.t}</b><small>${a.note || ""}</small></span>${best[a.id] != null ? `<span class="best">BEST ${best[a.id]}</span>` : ""}</button>`).join("")}</div></div>`,
+    games: () => acts("games"),
+    quiz: () => acts("quiz"),
     videos: () => `<div class="vgrid">${u.video.map(([t, url], i) => { const id = ytId(url); return `<a class="vcard" href="${url}" target="_blank" rel="noopener"><span class="vthumb">${id ? `<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()">` : ""}<i class="vplay">▶</i><em class="vep">EP ${i + 1}</em></span><b>${t}</b></a>`; }).join("")}</div>
       ${(u.inspirasi || []).length ? `<div class="u-row vmore"><span class="lbl">More to explore</span>${u.inspirasi.map(([t, url]) => `<a class="chip" href="${url}" target="_blank" rel="noopener">${t} ↗</a>`).join("")}</div>` : ""}`
   };
@@ -315,4 +321,4 @@ const Drag = {
 
 render();
 // open a game from a link like lms/#act=u1-quiz (used by the LKPD Practice tab)
-if (location.hash.startsWith("#act=")) { const id = location.hash.slice(5); if (ACT[id]) setTimeout(() => { const k = Object.keys(L.units).find(k => L.units[k] === ACT[id].unit); if (k) { history.replaceState(null, "", "#" + k); tab[k] = "games"; render(); } openAct(id); }, 450); }
+if (location.hash.startsWith("#act=")) { const id = location.hash.slice(5); if (ACT[id]) setTimeout(() => { const k = Object.keys(L.units).find(k => L.units[k] === ACT[id].unit); if (k) { history.replaceState(null, "", "#" + k); tab[k] = tabOf(ACT[id]); render(); } openAct(id); }, 450); }

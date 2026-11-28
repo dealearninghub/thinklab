@@ -28,7 +28,7 @@ body{background:var(--peach);padding:18px}
 .ucard .uno{align-self:flex-start;font-family:var(--disp);font-weight:800;font-size:18px;background:var(--peach);border:2.5px solid var(--ink);border-radius:12px;padding:1px 12px}
 .ucard small{font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink2)}
 .ucard h3{font-family:var(--disp);font-weight:800;letter-spacing:-.02em;font-size:21px;line-height:1.15;margin:0;color:var(--red);flex:1}
-.ubtns{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.ubtns{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
 .ubtns button{background:var(--cream2);border:2px solid var(--ink);border-radius:12px;padding:6px 2px;font-weight:700;font-size:12.5px;color:var(--ink)}
 .ubtns button b{display:block;font-family:var(--disp);font-size:17px}
 .ubtns button:hover{background:var(--mint)}
